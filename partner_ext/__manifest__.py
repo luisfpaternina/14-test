@@ -14,6 +14,7 @@
     'depends': [
 
         'contacts',
+        'base_address_city',
     ],
 
     'data': [
