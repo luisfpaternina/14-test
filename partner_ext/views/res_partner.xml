@@ -48,7 +48,7 @@
                       <field name="cardinal3_id" options="{'no_create': True, 'no_create_edit':True}"/>
                   </group>
                   <group name="right" string="Complete address DIAN">
-                       <field name="complete_address"/>
+                       <field name="complete_address" readonly="1"/>
                   </group>
                 </group>
             </xpath>
