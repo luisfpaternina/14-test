@@ -84,6 +84,8 @@ class ResPartner(models.Model):
     res_partner_city = fields.Many2one(
         'res.partner.city',
         string="City")
+    rut = fields.Binary(string="Rut")
+    chamber_commerce = fields.Binary(string="Chamber commerce")
 
 
     _sql_constraints = [
