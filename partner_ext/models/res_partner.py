@@ -84,7 +84,7 @@ class ResPartner(models.Model):
     @api.onchange('nomenclature_id','number1','letter','cardinal_id')
     def _onchange_nombre_completo(self):
         self.complete_address = "%s %s %s %s" % (
-            self.nomenclature_id.name if self.nomenclature_id.name else "",
+            self.nomenclature_id.code if self.nomenclature_id.code else "",
             self.number1 if self.number1 else "",
             self.letter if self.letter else "",
             self.cardinal_id.name if self.cardinal_id.name else "")
