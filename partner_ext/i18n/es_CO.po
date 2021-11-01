@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-01 16:59+0000\n"
-"PO-Revision-Date: 2021-11-01 16:59+0000\n"
+"POT-Creation-Date: 2021-11-01 17:32+0000\n"
+"PO-Revision-Date: 2021-11-01 17:32+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -166,9 +166,7 @@ msgstr ""
 
 #. module: partner_ext
 #: model:ir.model.fields,help:partner_ext.field_res_partner_address__message_has_error
-#: model:ir.model.fields,help:partner_ext.field_res_partner_address__message_has_sms_error
 #: model:ir.model.fields,help:partner_ext.field_res_partner_address_cardinals__message_has_error
-#: model:ir.model.fields,help:partner_ext.field_res_partner_address_cardinals__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
 
@@ -182,7 +180,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner__is_colombia
 #: model:ir.model.fields,field_description:partner_ext.field_res_users__is_colombia
 msgid "Is colombia"
-msgstr ""
+msgstr "Es Colombia"
 
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner____last_update
@@ -236,12 +234,12 @@ msgstr ""
 #. module: partner_ext
 #: model:res.groups,name:partner_ext.res_partner_address_group
 msgid "Manager partner address DIAN"
-msgstr "Administrador dirección tipo DIAN"
+msgstr "Administrador de direcciones"
 
 #. module: partner_ext
 #: model:res.groups,comment:partner_ext.res_partner_address_group
 msgid "Manager partner address DIAN Permission Group"
-msgstr "Grupo de permisos dirección tipo DIAN"
+msgstr "Grupo de permisos administrador de direcciones"
 
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__message_has_error
@@ -308,12 +306,6 @@ msgid "Number of unread messages"
 msgstr ""
 
 #. module: partner_ext
-#: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__message_has_sms_error
-#: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__message_has_sms_error
-msgid "SMS Delivery error"
-msgstr ""
-
-#. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner__second_last_name
 #: model:ir.model.fields,field_description:partner_ext.field_res_users__second_last_name
 msgid "Second last name"
@@ -354,16 +346,9 @@ msgid "Verification"
 msgstr "Verificación"
 
 #. module: partner_ext
-#: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__website_message_ids
-#: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__website_message_ids
-msgid "Website Messages"
-msgstr ""
-
-#. module: partner_ext
-#: model:ir.model.fields,help:partner_ext.field_res_partner_address__website_message_ids
-#: model:ir.model.fields,help:partner_ext.field_res_partner_address_cardinals__website_message_ids
-msgid "Website communication history"
-msgstr ""
+#: model:ir.model.constraint,message:partner_ext.constraint_res_partner_vat_uniq
+msgid "You can not have two contacts with the same identification number!"
+msgstr "No se puede registrar contactos con el mismo número de identificación!"
 
 #. module: partner_ext
 #: model_terms:ir.ui.view,arch_db:partner_ext.view_res_partner_address_cardinals_form
