@@ -81,6 +81,7 @@ class ResPartner(models.Model):
     cardinal3_id = fields.Many2one(
         'res.partner.address.cardinals',
         string="Cardinal point")
+    street = fields.Char(compute="address_dian_colombia")
 
 
     @api.onchange('first_name','second_name','last_name','second_last_name')
