@@ -81,10 +81,13 @@ class ResPartner(models.Model):
     cardinal3_id = fields.Many2one(
         'res.partner.address.cardinals',
         string="Cardinal point")
-    
+
 
     _sql_constraints = [
-        ('vat_uniq', 'UNIQUE (vat)',  'You can not have two contacts with the same identification number!')
+        (
+            'vat_uniq',
+            'UNIQUE (vat)',
+            'You can not have two contacts with the same identification number!')
     ]
 
 
