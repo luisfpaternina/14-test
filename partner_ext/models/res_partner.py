@@ -105,6 +105,9 @@ class ResPartner(models.Model):
     certificate_freedom = fields.Binary(
         string="Certificate of freedom",
         tracking=True)
+    establishment_photo = fields.Binary(
+        string="Establishment photo",
+        tracking=True)
 
 
     _sql_constraints = [
