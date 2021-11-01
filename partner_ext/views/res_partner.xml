@@ -77,7 +77,12 @@
                         <field name="chamber_commerce"/>
                     </group>
                     <group>
-                        
+                        <field name="data_update"/>
+                        <field name="rent_last_years"/>
+                        <field name="financial_statements"/>
+                        <field name="commercial_references"/>
+                        <field name="certificate_freedom"/>
+                        <field name="establishment_photo"/>
                     </group>
                   </group>
                 </page>
