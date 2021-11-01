@@ -35,13 +35,12 @@
             <xpath expr="//form[1]/sheet[1]/group[1]" position="after">
                 <group name="principal" attrs="{'invisible': [('is_colombia', '!=', True)]}">
                   <group name="left" string="Dian address">
-                      
+                      <field name="is_colombia" invisible="1"/>
+                      <field name="nomenclature_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'required': [('is_colombia', '=', True)]}"/>
+                      <field name="number1" attrs="{'required': [('is_colombia', '=', True)]}"/>
+                      <field name="letter"/>
+                      <field name="cardinal_id" options="{'no_create': True, 'no_create_edit':True}"/>
                   </group>
-                  <field name="is_colombia" invisible="1"/>
-                  <field name="nomenclature_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'required': [('is_colombia', '=', True)]}"/>
-                  <field name="number1" attrs="{'required': [('is_colombia', '=', True)]}"/>
-                  <field name="letter"/>
-                  <field name="cardinal_id" options="{'no_create': True, 'no_create_edit':True}"/>
                   <group name="right" string="Complete address DIAN">
                        <field name="complete_address"/>
                   </group>
