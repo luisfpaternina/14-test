@@ -73,8 +73,8 @@
                 <page string="Documentation" name="documentation" attrs="{'invisible': [('partner_state', '!=', 'verification')]}">
                   <group>
                     <group string="Documents for creation">
-                        <field name="rut"/>
-                        <field name="chamber_commerce"/>
+                        <field name="rut" attrs="{'required': [('partner_state', '=', 'verification')]}"/>
+                        <field name="chamber_commerce" attrs="{'required': [('partner_state', '=', 'verification')]}"/>
                     </group>
                     <group string="Documents for credit">
                         <field name="data_update"/>
