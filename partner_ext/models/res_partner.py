@@ -84,10 +84,10 @@ class ResPartner(models.Model):
 
 
     _sql_constraints = [
-        (
+        (_(
             'vat_uniq',
             'UNIQUE (vat)',
-            'You can not have two contacts with the same identification number!')
+            'You can not have two contacts with the same identification number!'))
     ]
 
 
