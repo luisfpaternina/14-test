@@ -61,6 +61,14 @@
                 <attribute name="attrs">{"readonly": [["type","=","contact"],["parent_id","!=",False]], "invisible": [["is_colombia","=",True]]}</attribute>
             </xpath>
 
+            <xpath expr="//field[(@name='street2')]" position="after">
+                <field name="res_partner_city"/>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/div[1]/field[@name='zip']" position="attributes">
+                <attribute name="attrs">{"invisible": [], "readonly": [["type","=","contact"],["parent_id","!=",False]]}</attribute>
+            </xpath>
+
         </field>
     </record>
 </odoo>     
