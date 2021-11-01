@@ -71,6 +71,9 @@ class ResPartner(models.Model):
         string="Number",
         tracking=True)
     letter2 = fields.Selection(letters)
+    cardinal2_id = fields.Many2one(
+        'res.partner.address.cardinals',
+        string="Cardinal point")
 
 
     @api.onchange('first_name','second_name','last_name','second_last_name')
@@ -81,13 +84,15 @@ class ResPartner(models.Model):
         self.second_last_name = self.second_last_name.upper() if self.second_last_name else False
 
 
-    @api.onchange('nomenclature_id','number1','letter','cardinal_id')
+    @api.onchange('nomenclature_id', 'number1', 'letter', 'cardinal_id', 'number2',' letter2')
     def _onchange_nombre_completo(self):
         self.complete_address = "%s %s %s %s" % (
             self.nomenclature_id.code if self.nomenclature_id.code else "",
             self.number1 if self.number1 else "",
             self.letter if self.letter else "",
-            self.cardinal_id.name if self.cardinal_id.name else "")
+            self.cardinal_id.name if self.cardinal_id.name else "",
+            self.number2 if self.number2 else "",
+            self.letter2 if self.letter2 else "")
 
 
     @api.onchange('first_name', 'second_name', 'last_name', 'second_last_name')
