@@ -6,6 +6,7 @@ class ResPartnerAddress(models.Model):
     _name = 'res.partner.address'
     _inherit = 'mail.thread'
     _description = 'DIAN nomenclature'
+    _rec_name = 'code'
 
     name = fields.Char(
         string="Name",
