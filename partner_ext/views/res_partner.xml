@@ -72,11 +72,11 @@
             <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
                 <page string="Documentation" name="documentation" attrs="{'invisible': [('partner_state', '!=', 'verification')]}">
                   <group>
-                    <group>
+                    <group string="Documents for creation">
                         <field name="rut"/>
                         <field name="chamber_commerce"/>
                     </group>
-                    <group>
+                    <group string="Documents for credit">
                         <field name="data_update"/>
                         <field name="rent_last_years"/>
                         <field name="financial_statements"/>
