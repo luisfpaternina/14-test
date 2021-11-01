@@ -147,7 +147,8 @@ class ResPartner(models.Model):
 
     @api.depends('country_id')
     def address_dian_colombia(self):
-        if self.country_id:
-            self.street = self.complete_address
-        else:
-            self.street = False
+        for record in self:
+            if record.country_id:
+                record.street = record.complete_address
+            else:
+                record.street = False
