@@ -40,6 +40,8 @@
                       <field name="number1" attrs="{'required': [('is_colombia', '=', True)]}"/>
                       <field name="letter"/>
                       <field name="cardinal_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                      <field name="number2" required="1"/>
+                      <field name="letter2"/>
                   </group>
                   <group name="right" string="Complete address DIAN">
                        <field name="complete_address"/>
