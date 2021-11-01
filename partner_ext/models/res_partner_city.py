@@ -17,6 +17,9 @@ class ResPartnerCity(models.Model):
         string="Active",
         tracking=True,
         default=True)
+    country_id = fields.Many2one(
+        'res.country',
+        string="Country")
 
 
     @api.onchange('name','code')
