@@ -3,8 +3,8 @@
 	<data noupdate="0">
 
 	    <record id="res_partner_address_group" model="res.groups">
-	        <field name="name">Manager partner address</field>
-	        <field name="comment">Manager partner address Permission Group</field>
+	        <field name="name">Manager partner address DIAN</field>
+	        <field name="comment">Manager partner address DIAN Permission Group</field>
 	    </record>
 
 	</data>
