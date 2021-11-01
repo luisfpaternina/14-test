@@ -84,8 +84,24 @@ class ResPartner(models.Model):
     res_partner_city = fields.Many2one(
         'res.partner.city',
         string="City")
-    rut = fields.Binary(string="Rut")
-    chamber_commerce = fields.Binary(string="Chamber commerce")
+    rut = fields.Binary(
+        string="Rut",
+        tracking=True)
+    chamber_commerce = fields.Binary(
+        string="Chamber commerce",
+        tracking=True)
+    data_update = fields.Binary(
+        string="Data update / credit application",
+        tracking=True)
+    rent_last_years = fields.Binary(
+        string="Rent last years",
+        tracking=True)
+    financial_statements = fields.Binary(
+        string="Financial statements",
+        tracking=True)
+    commercial_references = fields.Binary(
+        string="Commercial references",
+        tracking=True)
 
 
     _sql_constraints = [
