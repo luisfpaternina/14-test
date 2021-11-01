@@ -61,6 +61,10 @@
                 <attribute name="attrs">{"readonly": [["type","=","contact"],["parent_id","!=",False]], "invisible": [["is_colombia","=",True]]}</attribute>
             </xpath>
 
+            <xpath expr="//field[@name='city']" position="replace" >
+                <field name="res_partner_city"/>
+            </xpath>
+
         </field>
     </record>
 </odoo>     
