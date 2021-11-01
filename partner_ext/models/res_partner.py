@@ -102,6 +102,9 @@ class ResPartner(models.Model):
     commercial_references = fields.Binary(
         string="Commercial references",
         tracking=True)
+    certificate_freedom = fields.Binary(
+        string="Certificate of freedom",
+        tracking=True)
 
 
     _sql_constraints = [
