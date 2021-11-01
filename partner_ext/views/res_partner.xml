@@ -88,6 +88,18 @@
                 </page>
             </xpath>
 
+            <xpath expr="//page[@name='sales_purchases']" position="attributes">
+                <attribute name="attrs">{"invisible": [["partner_state","=","contact"]]}</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='accounting']" position="attributes">
+                <attribute name="attrs">{"invisible": ["&amp;","&amp;",["is_company","=",False],["parent_id","!=",False],["partner_state","=","contact"]]}</attribute>
+            </xpath>
+            
+            <xpath expr="//page[@name='internal_notes']" position="attributes">
+                <attribute name="attrs">{"invisible": [["partner_state","=","contact"]]}</attribute>
+            </xpath>
+
         </field>
     </record>
 </odoo>     
