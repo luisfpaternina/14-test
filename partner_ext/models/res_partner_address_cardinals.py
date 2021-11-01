@@ -18,6 +18,7 @@ class ResPartnerAddressCardinals(models.Model):
         tracking=True,
         default=True)
 
+
     @api.onchange('name','code')
     def _upper_name(self):        
         self.name = self.name.upper() if self.name else False
