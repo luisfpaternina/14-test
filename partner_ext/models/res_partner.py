@@ -81,6 +81,9 @@ class ResPartner(models.Model):
     cardinal3_id = fields.Many2one(
         'res.partner.address.cardinals',
         string="Cardinal point")
+    res_partner_city = fields.Many2one(
+        'res.partner.city',
+        string="City")
 
 
     _sql_constraints = [
