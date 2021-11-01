@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-01 17:32+0000\n"
-"PO-Revision-Date: 2021-11-01 17:32+0000\n"
+"POT-Creation-Date: 2021-11-01 19:31+0000\n"
+"PO-Revision-Date: 2021-11-01 19:31+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,12 +18,14 @@ msgstr ""
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__message_needaction
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__message_needaction
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__message_needaction
 msgid "Action Needed"
 msgstr ""
 
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__active
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__active
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__active
 msgid "Active"
 msgstr "Activo"
 
@@ -42,6 +44,7 @@ msgstr "Dirección/puntos cardinales"
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__message_attachment_count
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__message_attachment_count
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__message_attachment_count
 msgid "Attachment Count"
 msgstr ""
 
@@ -61,10 +64,43 @@ msgid "Cardinals points"
 msgstr "Puntos cardinales"
 
 #. module: partner_ext
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner__certificate_freedom
+#: model:ir.model.fields,field_description:partner_ext.field_res_users__certificate_freedom
+msgid "Certificate of freedom"
+msgstr "Certificado de libertad y tradición"
+
+#. module: partner_ext
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner__chamber_commerce
+#: model:ir.model.fields,field_description:partner_ext.field_res_users__chamber_commerce
+msgid "Chamber commerce"
+msgstr "Cámara de comercio"
+
+#. module: partner_ext
+#: model:ir.actions.act_window,name:partner_ext.action_view_partner_city
+#: model:ir.model,name:partner_ext.model_res_partner_city
+#: model:ir.ui.menu,name:partner_ext.menu_partner_city
+msgid "Cities"
+msgstr "Ciudades"
+
+#. module: partner_ext
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner__res_partner_city
+#: model:ir.model.fields,field_description:partner_ext.field_res_users__res_partner_city
+#: model_terms:ir.ui.view,arch_db:partner_ext.inherit_view_res_partner_form_coondev
+msgid "City"
+msgstr "Ciudad"
+
+#. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__code
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__code
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__code
 msgid "Code"
 msgstr "Código"
+
+#. module: partner_ext
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner__commercial_references
+#: model:ir.model.fields,field_description:partner_ext.field_res_users__commercial_references
+msgid "Commercial references"
+msgstr "Referencias comerciales"
 
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner__complete_address
@@ -80,20 +116,28 @@ msgid "Contact"
 msgstr "Contacto"
 
 #. module: partner_ext
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__country_id
+msgid "Country"
+msgstr "País"
+
+#. module: partner_ext
 #: model_terms:ir.actions.act_window,help:partner_ext.action_view_partner_address
 #: model_terms:ir.actions.act_window,help:partner_ext.action_view_partner_address_cardinals
+#: model_terms:ir.actions.act_window,help:partner_ext.action_view_partner_city
 msgid "Create new record"
 msgstr "Crear nuevo registro"
 
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__create_uid
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__create_uid
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__create_uid
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__create_date
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__create_date
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__create_date
 msgid "Created on"
 msgstr "Creado en"
 
@@ -108,6 +152,12 @@ msgid "DIAN nomenclature"
 msgstr "Nomenclatura"
 
 #. module: partner_ext
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner__data_update
+#: model:ir.model.fields,field_description:partner_ext.field_res_users__data_update
+msgid "Data update / credit application"
+msgstr "Actualización de datos/Solicitud de crédito"
+
+#. module: partner_ext
 #: model_terms:ir.ui.view,arch_db:partner_ext.inherit_view_res_partner_form_coondev
 msgid "Dian address"
 msgstr "Dirección tipo DIAN"
@@ -116,8 +166,26 @@ msgstr "Dirección tipo DIAN"
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner__display_name
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__display_name
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__display_name
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__display_name
 msgid "Display Name"
 msgstr "Nombre mostrado"
+
+#. module: partner_ext
+#: model_terms:ir.ui.view,arch_db:partner_ext.inherit_view_res_partner_form_coondev
+msgid "Documentation"
+msgstr "Documentación"
+
+#. module: partner_ext
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner__establishment_photo
+#: model:ir.model.fields,field_description:partner_ext.field_res_users__establishment_photo
+msgid "Establishment photo"
+msgstr "Foto establecimiento de comercio"
+
+#. module: partner_ext
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner__financial_statements
+#: model:ir.model.fields,field_description:partner_ext.field_res_users__financial_statements
+msgid "Financial statements"
+msgstr "Estados financieros"
 
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner__first_name
@@ -128,18 +196,21 @@ msgstr "Primer nombre"
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__message_follower_ids
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__message_follower_ids
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__message_follower_ids
 msgid "Followers"
 msgstr "Seguidores"
 
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__message_channel_ids
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__message_channel_ids
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__message_channel_ids
 msgid "Followers (Channels)"
 msgstr "Seguidores"
 
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__message_partner_ids
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__message_partner_ids
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__message_partner_ids
 msgid "Followers (Partners)"
 msgstr "Seguidores"
 
@@ -153,6 +224,7 @@ msgstr "Nombre completo"
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner__id
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__id
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__id
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__id
 msgid "ID"
 msgstr ""
 
@@ -161,18 +233,22 @@ msgstr ""
 #: model:ir.model.fields,help:partner_ext.field_res_partner_address__message_unread
 #: model:ir.model.fields,help:partner_ext.field_res_partner_address_cardinals__message_needaction
 #: model:ir.model.fields,help:partner_ext.field_res_partner_address_cardinals__message_unread
+#: model:ir.model.fields,help:partner_ext.field_res_partner_city__message_needaction
+#: model:ir.model.fields,help:partner_ext.field_res_partner_city__message_unread
 msgid "If checked, new messages require your attention."
 msgstr ""
 
 #. module: partner_ext
 #: model:ir.model.fields,help:partner_ext.field_res_partner_address__message_has_error
 #: model:ir.model.fields,help:partner_ext.field_res_partner_address_cardinals__message_has_error
+#: model:ir.model.fields,help:partner_ext.field_res_partner_city__message_has_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
 
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__message_is_follower
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__message_is_follower
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__message_is_follower
 msgid "Is Follower"
 msgstr ""
 
@@ -186,18 +262,21 @@ msgstr "Es Colombia"
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner____last_update
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address____last_update
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals____last_update
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city____last_update
 msgid "Last Modified on"
 msgstr "Última modificación el"
 
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__write_uid
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__write_uid
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__write_uid
 msgid "Last Updated by"
 msgstr ""
 
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__write_date
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__write_date
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__write_date
 msgid "Last Updated on"
 msgstr ""
 
@@ -228,6 +307,7 @@ msgstr "Letras"
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__message_main_attachment_id
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__message_main_attachment_id
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__message_main_attachment_id
 msgid "Main Attachment"
 msgstr ""
 
@@ -244,18 +324,21 @@ msgstr "Grupo de permisos administrador de direcciones"
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__message_has_error
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__message_has_error
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__message_has_error
 msgid "Message Delivery error"
 msgstr ""
 
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__message_ids
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__message_ids
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__message_ids
 msgid "Messages"
 msgstr ""
 
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__name
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__name
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__name
 msgid "Name"
 msgstr "Nombre"
 
@@ -278,32 +361,49 @@ msgstr "Número"
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__message_needaction_counter
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__message_needaction_counter
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__message_needaction_counter
 msgid "Number of Actions"
 msgstr ""
 
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__message_has_error_counter
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__message_has_error_counter
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__message_has_error_counter
 msgid "Number of errors"
 msgstr ""
 
 #. module: partner_ext
 #: model:ir.model.fields,help:partner_ext.field_res_partner_address__message_needaction_counter
 #: model:ir.model.fields,help:partner_ext.field_res_partner_address_cardinals__message_needaction_counter
+#: model:ir.model.fields,help:partner_ext.field_res_partner_city__message_needaction_counter
 msgid "Number of messages which requires an action"
 msgstr ""
 
 #. module: partner_ext
 #: model:ir.model.fields,help:partner_ext.field_res_partner_address__message_has_error_counter
 #: model:ir.model.fields,help:partner_ext.field_res_partner_address_cardinals__message_has_error_counter
+#: model:ir.model.fields,help:partner_ext.field_res_partner_city__message_has_error_counter
 msgid "Number of messages with delivery error"
 msgstr ""
 
 #. module: partner_ext
 #: model:ir.model.fields,help:partner_ext.field_res_partner_address__message_unread_counter
 #: model:ir.model.fields,help:partner_ext.field_res_partner_address_cardinals__message_unread_counter
+#: model:ir.model.fields,help:partner_ext.field_res_partner_city__message_unread_counter
 msgid "Number of unread messages"
 msgstr ""
+
+#. module: partner_ext
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner__rent_last_years
+#: model:ir.model.fields,field_description:partner_ext.field_res_users__rent_last_years
+msgid "Rent last years"
+msgstr "Renta dos últimos años"
+
+#. module: partner_ext
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner__rut
+#: model:ir.model.fields,field_description:partner_ext.field_res_users__rut
+msgid "Rut"
+msgstr "RUT"
 
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner__second_last_name
@@ -331,12 +431,14 @@ msgstr "Tercero contable"
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__message_unread
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__message_unread
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__message_unread
 msgid "Unread Messages"
 msgstr ""
 
 #. module: partner_ext
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address__message_unread_counter
 #: model:ir.model.fields,field_description:partner_ext.field_res_partner_address_cardinals__message_unread_counter
+#: model:ir.model.fields,field_description:partner_ext.field_res_partner_city__message_unread_counter
 msgid "Unread Messages Counter"
 msgstr ""
 
@@ -348,7 +450,8 @@ msgstr "Verificación"
 #. module: partner_ext
 #: model:ir.model.constraint,message:partner_ext.constraint_res_partner_vat_uniq
 msgid "You can not have two contacts with the same identification number!"
-msgstr "No se puede registrar contactos con el mismo número de identificación!"
+msgstr ""
+"No se puede registrar contactos con el mismo número de identificación!"
 
 #. module: partner_ext
 #: model_terms:ir.ui.view,arch_db:partner_ext.view_res_partner_address_cardinals_form
