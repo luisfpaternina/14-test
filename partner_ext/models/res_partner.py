@@ -142,3 +142,11 @@ class ResPartner(models.Model):
     def _compute_check_country_id(self):
         for record in self:
             record.is_colombia = True if record.country_id and record.country_id[0].name  == 'Colombia' else False
+
+
+    @api.depends('country_id')
+    def address_dian_colombia(self):
+        if self.country_id:
+            self.street = self.complete_address
+        else:
+            self.street = False
