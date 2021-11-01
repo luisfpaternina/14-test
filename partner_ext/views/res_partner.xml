@@ -53,6 +53,14 @@
                 </group>
             </xpath>
 
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/div[1]/field[@name='street']" position="attributes">
+                <attribute name="attrs">{"readonly": [["type","=","contact"],["parent_id","!=",False]], "invisible": [["is_colombia","=",True]]}</attribute>
+            </xpath>
+            
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/div[1]/field[@name='street2']" position="attributes">
+                <attribute name="attrs">{"readonly": [["type","=","contact"],["parent_id","!=",False]], "invisible": [["is_colombia","=",True]]}</attribute>
+            </xpath>
+
         </field>
     </record>
 </odoo>     

@@ -81,7 +81,6 @@ class ResPartner(models.Model):
     cardinal3_id = fields.Many2one(
         'res.partner.address.cardinals',
         string="Cardinal point")
-    street = fields.Char(compute="address_dian_colombia")
 
 
     @api.onchange('first_name','second_name','last_name','second_last_name')
@@ -143,12 +142,3 @@ class ResPartner(models.Model):
     def _compute_check_country_id(self):
         for record in self:
             record.is_colombia = True if record.country_id and record.country_id[0].name  == 'Colombia' else False
-
-
-    @api.depends('country_id')
-    def address_dian_colombia(self):
-        for record in self:
-            if record.country_id:
-                record.street = record.complete_address
-            else:
-                record.street = False
