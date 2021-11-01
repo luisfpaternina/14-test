@@ -69,6 +69,19 @@
                 <attribute name="attrs">{"invisible": [["active","=",True]], "readonly": [["type","=","contact"],["parent_id","!=",False]]}</attribute>
             </xpath>
 
+            <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+                <page string="Documentation" name="documentation">
+                  <group>
+                    <group>
+                        
+                    </group>
+                    <group>
+                        
+                    </group>
+                  </group>
+                </page>
+            </xpath>
+
         </field>
     </record>
 </odoo>     
