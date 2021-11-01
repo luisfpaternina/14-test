@@ -82,6 +82,10 @@ class ResPartner(models.Model):
         'res.partner.address.cardinals',
         string="Cardinal point")
 
+    _sql_constraints = [
+        ('vat_uniq', 'UNIQUE (vat)',  'You can not have two contacts with the same identification number!')
+    ]
+
 
     @api.onchange('first_name','second_name','last_name','second_last_name')
     def _upper_fields(self):        
