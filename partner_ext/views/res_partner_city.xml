@@ -38,6 +38,12 @@
                                <field name="code"/>
                            </group>
                            <group>
+                               <field name="country_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                           </group>
+                           <group>
+                               
+                           </group>
+                           <group>
                                <field name="active" widget="boolean_toggle"/>
                            </group>
                         </group>
