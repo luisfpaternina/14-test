@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_view_res_partner_form_coondev" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//form[1]/div[1]" position="before">
+                <header>
+                    <field name="partner_state" options="{'clickable': '1'}" widget="statusbar"/>
+                </header>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/div[not(@name)][1]/div[1]/field[@name='parent_id']" position="attributes">
+                <attribute name="attrs">{}</attribute>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='type']" position="before">
+                <field name="first_name" attrs="{&quot;invisible&quot;: [[&quot;company_type&quot;,&quot;!=&quot;,&quot;person&quot;]], &quot;required&quot;: [[&quot;company_type&quot;,&quot;=&quot;,&quot;person&quot;]]}"/>
+                <field name="second_name" attrs="{&quot;invisible&quot;: [[&quot;company_type&quot;,&quot;!=&quot;,&quot;person&quot;]]}"/>
+                <field name="last_name" attrs="{&quot;invisible&quot;: [[&quot;company_type&quot;,&quot;!=&quot;,&quot;person&quot;]], &quot;required&quot;: [[&quot;company_type&quot;,&quot;=&quot;,&quot;person&quot;]]}"/>
+                <field name="second_last_name" attrs="{&quot;invisible&quot;: [[&quot;company_type&quot;,&quot;!=&quot;,&quot;person&quot;]]}"/>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/div[not(@name)][1]/h1[1]/field[@name='name']" position="attributes">
+                <attribute name="attrs">{"invisible": [["company_type","=","person"]], "required": [["company_type","=","company"]]}</attribute>
+            </xpath>
+
+            <xpath expr="//field[(@name='name')]" position="after">
+                <field name="fullname" readonly="1"/>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/group[1]" position="after">
+                <group name="principal" attrs="{'invisible': [('is_colombia', '!=', True)]}">
+                  <group name="left" string="Dian address">
+                      
+                  </group>
+                  <field name="is_colombia" invisible="1"/>
+                  <field name="nomenclature_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'required': [('is_colombia', '=', True)]}"/>
+                  <field name="number1" attrs="{'required': [('is_colombia', '=', True)]}"/>
+                  <field name="letter"/>
+                  <field name="cardinal_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                  <group name="right" string="Complete address DIAN">
+                       <field name="complete_address"/>
+                  </group>
+                </group>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>     

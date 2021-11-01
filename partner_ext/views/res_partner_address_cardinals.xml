@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+
+        <record id="view_res_partner_address_cardinals_tree" model="ir.ui.view">
+            <field name="name">res.partner.address.cardinals.tree</field>
+            <field name="model">res.partner.address.cardinals</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="partner_address_cardinals_tree">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_res_partner_address_cardinals_form" model="ir.ui.view">
+            <field name="name">res.partner.address.cardinals.form</field>
+            <field name="model">res.partner.address.cardinals</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="address_cardinals_form">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                        <group>
+                           <group>
+                               <field name="name" required="1"/>
+                               <field name="code"/>
+                           </group>
+                           <group>
+                               <field name="active" widget="boolean_toggle"/>
+                           </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_view_partner_address_cardinals">
+            <field name="name">Address cardinals</field>
+            <field name="res_model">res.partner.address.cardinals</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create new record
+                </p>
+            </field>
+        </record>
+
+        <menuitem 
+            id="menu_partner_address_cardinals" 
+            name="Address cardinals" 
+            parent="partner_ext.menu_partner_dian_address"
+            action="action_view_partner_address_cardinals"
+            sequence="73"
+            />
+
+    </data>
+</odoo> 
