@@ -196,7 +196,6 @@ class ResPartner(models.Model):
 
     @api.constrains('phone')
     def check_name(self):
-        """ make sure name 10-15 alphabets and spaces"""
         for rec in self:
             if not 10 <= len(rec.phone) <= 15 or not re.match(r"^[a-zA-Z][ a-zA-Z]*", rec.phone):
                 raise ValidationError(_('your message about 10-15 alphabets and spaces'))
