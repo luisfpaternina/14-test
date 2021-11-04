@@ -199,4 +199,4 @@ class ResPartner(models.Model):
         for rec in self:
             if len(rec.phone) < 6 or re.match(r"^[a-zA-Z][ a-zA-Z]*", rec.phone):
                 raise ValidationError(_(
-                    'The phone number must be a minimum of 10 characters and cannot contain letters'))
+                    'The phone number must be a minimum of 6 characters and cannot contain letters'))
