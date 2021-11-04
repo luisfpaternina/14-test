@@ -207,4 +207,4 @@ class ResPartner(models.Model):
         for rec in self:
             if len(rec.mobile) < 10 or re.match(r"^[a-zA-Z][ a-zA-Z]*", rec.mobile):
                 raise ValidationError(_(
-                    'The phone number must be a minimum of 10 characters and cannot contain letters'))
+                    'The mobile number must be a minimum of 10 characters and cannot contain letters'))
