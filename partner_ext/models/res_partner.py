@@ -118,7 +118,11 @@ class ResPartner(models.Model):
     ]
 
 
-    @api.onchange('first_name','second_name','last_name','second_last_name')
+    @api.onchange(
+        'first_name',
+        'second_name',
+        'last_name',
+        'second_last_name')
     def _upper_fields(self):        
         self.first_name = self.first_name.upper() if self.first_name else False
         self.second_name = self.second_name.upper() if self.second_name else False
