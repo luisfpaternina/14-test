@@ -1,4 +1,5 @@
 from odoo import models, fields, api, _
+import re
 
 letters = [
     ('A', 'A'),
