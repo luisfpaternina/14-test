@@ -193,14 +193,9 @@ class ResPartner(models.Model):
         self.name = self.name.upper() if self.name else False
 
 
-    def _check_value(self):
-        record = self.browse(cr, uid, ids)
-        pattern ="^[0-9]{10}$"
-        for data in record:
-            if re.match(pattern, data.phone):
-                return True
-            else:
-                return False
-        return {}
-        _constraints = [(is_phone, 'Error: Invalid phone', ['phone']), ]
-        
+    @api.constrains('name')
+    def check_name(self):
+        """ make sure name 10-15 alphabets and spaces"""
+        for rec in self:
+            if not 10 <= len(rec.name) <= 15 or not re.match(r"^[a-zA-Z][ a-zA-Z]*", rec.name):
+                raise exceptions.ValidationError(_('your message about 10-15 alphabets and spaces'))
