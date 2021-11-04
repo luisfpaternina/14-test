@@ -193,12 +193,14 @@ class ResPartner(models.Model):
         self.name = self.name.upper() if self.name else False
 
 
-    @api.onchange('phone')
     def _check_value(self):
-        for val in self.browse():
-            if val.phone and isinstance(val.phone, int):
+        record = self.browse(cr, uid, ids)
+        pattern ="^[0-9]{10}$"
+        for data in record:
+            if re.match(pattern, data.phone):
                 return True
-        return False
-        _constraints = [
-        (_check_value, 'You cannot add value other than integer".', ['phone']),
-        ]
+            else:
+                return False
+        return {}
+        _constraints = [(is_phone, 'Error: Invalid phone', ['phone']), ]
+        
