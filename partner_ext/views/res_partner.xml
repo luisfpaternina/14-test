@@ -70,7 +70,7 @@
             </xpath>
 
             <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
-                <page string="Documentation" name="documentation" attrs="{'invisible': [('partner_state', '!=', 'verification')]}">
+                <page string="Documentation" name="documentation" attrs="{'invisible': [('partner_state', '=', 'contact')]}">
                   <group>
                     <group string="Documents for creation">
                         <field name="rut" attrs="{'required': [('partner_state', '!=', 'contact')]}"/>
