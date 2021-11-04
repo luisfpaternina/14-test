@@ -151,7 +151,11 @@ class ResPartner(models.Model):
             self.cardinal3_id.name if self.cardinal3_id.name else "")
 
 
-    @api.onchange('first_name', 'second_name', 'last_name', 'second_last_name')
+    @api.onchange(
+        'first_name',
+        'second_name',
+        'last_name',
+        'second_last_name')
     def _onchange_complete_address(self):
         if self.company_type == 'person':
             self.first_name = self.first_name.upper() if self.first_name else False
