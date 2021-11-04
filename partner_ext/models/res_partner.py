@@ -194,9 +194,12 @@ class ResPartner(models.Model):
         self.name = self.name.upper() if self.name else False
 
 
-    @api.constrains('phone')
+    @api.constrains('phone','mobile')
     def check_name(self):
         for rec in self:
             if len(rec.phone) < 10 or re.match(r"^[a-zA-Z][ a-zA-Z]*", rec.phone):
                 raise ValidationError(_(
-                    'The phone number must be a minimum of 10 characters and cannot contain letters'))
+                    'The phone number must be a minimum of 6 characters and cannot contain letters'))
+            elif len(rec.mobile) < 10 or re.match(r"^[a-zA-Z][ a-zA-Z]*", rec.mobile):
+                raise ValidationError(_(
+                    'The mobile number must be a minimum of 10 characters and cannot contain letters'))
