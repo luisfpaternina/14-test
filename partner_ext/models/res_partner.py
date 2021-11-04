@@ -193,11 +193,11 @@ class ResPartner(models.Model):
         self.name = self.name.upper() if self.name else False
 
 
-    def _check_value(self, cr, uid, ids, context=None):        
-    for val in self.browse(cr, uid, ids, context=context):
-        if val.phone and isinstance(val.phone, int):
-            return True
-    return False
-    _constraints = [
-    (_check_value, 'You cannot add value other than integer".', ['phone']),
-    ]
+    def _check_value(self, cr, uid, ids, context=None):
+        for val in self.browse(cr, uid, ids, context=context):
+            if val.phone and isinstance(val.phone, int):
+                return True
+        return False
+        _constraints = [
+        (_check_value, 'You cannot add value other than integer".', ['phone']),
+        ]
