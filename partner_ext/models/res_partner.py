@@ -194,8 +194,8 @@ class ResPartner(models.Model):
 
 
     @api.onchange('phone')
-    def _check_value(self, cr, uid, ids, context=None):
-        for val in self.browse(cr, uid, ids, context=context):
+    def _check_value(self):
+        for val in self.browse():
             if val.phone and isinstance(val.phone, int):
                 return True
         return False
