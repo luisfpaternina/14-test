@@ -208,3 +208,12 @@ class ResPartner(models.Model):
             if len(rec.mobile) < 10 or re.match(r"^[a-zA-Z][ a-zA-Z]*", rec.mobile):
                 raise ValidationError(_(
                     'The mobile number cannot contain letters'))
+
+
+    @api.constrains('email')
+    def validate_email(self):
+        for rec in self:
+            if rec.email:
+                if re.match("^.+\\@(\\[?)[a-zA-Z0-9\\-\\.]+\\.([a-zA-Z]{2,3}|[0-9]{1,3})(\\]?)$", rec.email):
+                    raise ValidationError(_(
+                    'Invalid email format!'))
