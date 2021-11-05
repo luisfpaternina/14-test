@@ -197,17 +197,19 @@ class ResPartner(models.Model):
     @api.constrains('phone')
     def validate_phone(self):
         for rec in self:
-            if len(rec.phone) < 6 or re.match(r"^[a-zA-Z][ a-zA-Z]*", rec.phone):
-                raise ValidationError(_(
-                    'The phone number cannot contain letters'))
+            if rec.phone:
+                if len(rec.phone) < 6 or re.match(r"^[a-zA-Z][ a-zA-Z]*", rec.phone):
+                    raise ValidationError(_(
+                        'The phone number cannot contain letters'))
 
 
     @api.constrains('mobile')
     def validate_mobile(self):
         for rec in self:
-            if len(rec.mobile) < 10 or re.match(r"^[a-zA-Z][ a-zA-Z]*", rec.mobile):
-                raise ValidationError(_(
-                    'The mobile number cannot contain letters'))
+            if rec.mobile:
+                if len(rec.mobile) < 10 or re.match(r"^[a-zA-Z][ a-zA-Z]*", rec.mobile):
+                    raise ValidationError(_(
+                        'The mobile number cannot contain letters'))
 
 
     @api.constrains('email')
