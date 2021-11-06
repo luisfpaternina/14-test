@@ -12,13 +12,26 @@
 
             <xpath expr="//field[(@name='payment_term_id')]" position="after">
                 <field name="population_id" options="{'no_create': True, 'no_create_edit':True}"/>
-            </xpath>
+            </xpath> 
 
-            <xpath expr="//field[(@name='partner_id')]" position="after">
-                <field name="sale_type_id" options="{'no_create': True, 'no_create_edit':True}" required="1"/>
+            <xpath expr="//field[(@name='partner_id')]" position="after"> 
                 <field name="is_create_task" invisible="1"/>
+                <field name="check_contract_type" invisible="1"/>
+                <field name="sale_type_id" options="{'no_create': True, 'no_create_edit':True}" required="1"/>
+                <field name="type_contract" attrs="{'invisible': [('check_contract_type', '!=', True)]}"/>
             </xpath>
-
+            <xpath expr="//form/sheet/notebook/page[(@name='customer_signature')]" position="after">
+                <page string="Contract" name="type_service_contract">
+                    <group>
+                        <field name="type_service_id">
+                            <tree string="Check type Contract Service" editable="bottom">
+                                <field name="item" readonly="True" force_save="True"/>
+                                <field name="type_service_id"/>
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </xpath> 
         </field> 
     </record>
 </odoo>

@@ -10,6 +10,9 @@ class SaleOrderType(models.Model):
     name = fields.Char(
         string="Name",
         tracking=True)
+    code = fields.Char(
+        string="Code",
+        tracking=True)
     active  = fields.Boolean(
         string="Active",
         tracking=True,

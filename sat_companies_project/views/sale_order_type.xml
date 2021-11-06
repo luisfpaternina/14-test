@@ -8,6 +8,7 @@
             <field name="priority" eval="8" />
             <field name="arch" type="xml">
                 <tree string="contract_tree">
+                    <field name="code"/>
                     <field name="name"/>
                 </tree>
             </field>
@@ -32,6 +33,9 @@
                             </h1>
                         </div>
                         <group>
+                            <group>
+                                <field name="code"/>
+                            </group>
                             <group>
                                 <field name="active" widget="boolean_toggle"/>
                             </group>

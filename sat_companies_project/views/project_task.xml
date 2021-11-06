@@ -125,17 +125,21 @@
             <xpath expr="//page[@name='gadgets']/group[1]" position="after">
                 <group>
                     <group>
-                        <field name="from_gadget"  
-                            attrs="{'invisible':[('product_id', '=', False)],'required': [('product_id', '!=', False)]}"
+                        <field name="from_gadget"
+                            required="True"  
+                            attrs="{'invisible':[('product_id', '=', False)],'required': [('product_id', '=', True)]}"
                         />
                         <field name="to_gadget"
-                            attrs="{'invisible': [('product_id', '=', False)],'required': [('product_id', '!=', False)]}"
+                            required="True"
+                            attrs="{'invisible': [('product_id', '=', False)],'required': [('product_id', '=', True)]}"
                         />
                         <field name="from_zone"
-                            attrs="{'invisible':[('product_id', '=', False)],'required': [('product_id', '!=', False)]}"
+                            required="True"
+                            attrs="{'invisible':[('product_id', '=', False)],'required': [('product_id', '=', True)]}"
                         />
                         <field name="to_zone"
-                            attrs="{'invisible':[('product_id', '=', False)],'required': [('product_id', '!=', False)]}"
+                            required="True"
+                            attrs="{'invisible':[('product_id', '=', False)],'required': [('product_id', '=', True)]}"
                         />
                     </group>
 
