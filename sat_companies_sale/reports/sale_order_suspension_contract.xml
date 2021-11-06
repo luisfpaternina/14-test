@@ -2,14 +2,14 @@
 <odoo>
     <data>
         <report
-                id="report_custom_template_sale_suspension_contract"
+                id="report_custom_template_sale_suspension"
                 string="Resolución / Suspensión de Contrato"
                 model="sale.order"
                 report_type="qweb-pdf"
-                name="sat_companies_sale.report_custom_template_sale_suspension_contract"
+                name="sat_companies_sale.report_custom_template_sale_suspension"
         />
 
-        <template id="report_custom_template_sale_suspension_contract">
+        <template id="report_custom_template_sale_suspension">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="o">                    
                     <div class="header">
