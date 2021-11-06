@@ -184,3 +184,8 @@ class ResPartner(models.Model):
                 if not re.match("^.+\\@(\\[?)[a-zA-Z0-9\\-\\.]+\\.([a-zA-Z]{2,3}|[0-9]{1,3})(\\]?)$", rec.email):
                     raise ValidationError(_(
                     'Invalid email format!'))
+
+
+    @api.onchange('name')
+    def _upper_contact_name(self):        
+        self.name = self.name.upper() if self.name else False
