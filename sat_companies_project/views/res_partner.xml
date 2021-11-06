@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_view_res_partner_sat_companies_project" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[(@name='type')]" position="before">
+                <field name="is_potential_client"/>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/div[1]/field[@name='street']" position="attributes">
+                <attribute name="attrs">{"readonly": [["type","=","contact"],["parent_id","!=",False]], "required": [["is_potential_client","!=",True]]}</attribute>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/div[1]/field[@name='city']" position="attributes">
+                <attribute name="attrs">{"readonly": [["type","=","contact"],["parent_id","!=",False]], "required": [["is_potential_client","!=",True]]}</attribute>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/div[1]/field[@name='state_id']" position="attributes">
+                <attribute name="attrs">{"readonly": [["type","=","contact"],["parent_id","!=",False]], "required": [["is_potential_client","!=",True]]}</attribute>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/div[1]/field[@name='country_id']" position="attributes">
+                <attribute name="attrs">{"readonly": [["type","=","contact"],["parent_id","!=",False]], "required": [["is_potential_client","!=",True]]}</attribute>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/div[1]/field[@name='zip']" position="attributes">
+                <attribute name="attrs">{"readonly": [["type","=","contact"],["parent_id","!=",False]], "required": [["is_potential_client","!=",True]]}</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>     

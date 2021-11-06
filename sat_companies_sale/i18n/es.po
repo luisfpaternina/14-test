@@ -1,0 +1,250 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sat_companies_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-06 19:36+0000\n"
+"PO-Revision-Date: 2021-10-06 19:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__managed_by__admin
+msgid "Administrator"
+msgstr "Administrador"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__client_type
+msgid "Client type"
+msgstr "Tipo de cliente"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__client_type__companies
+msgid "Companies/builders"
+msgstr "Compañias/constructoras"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__display_name
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__display_name
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__id
+msgid "ID"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_needaction
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_has_error
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_is_follower
+msgid "Is Follower"
+msgstr "Es seguidor"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__is_external
+msgid "Is external"
+msgstr "Es externo"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead____last_update
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type____last_update
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model,name:sat_companies_sale.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__managed_by
+msgid "Managed by"
+msgstr "Gestionada por"
+
+#. module: sat_companies_sale
+#: model:res.groups,name:sat_companies_sale.oportunity_type_manager_group
+msgid "Manager oportunity type"
+msgstr "Administrador tipo de oportunidad"
+
+#. module: sat_companies_sale
+#: model:res.groups,comment:sat_companies_sale.oportunity_type_manager_group
+msgid "Manager oportunity type Permission Group"
+msgstr "Administrador grupo de permisos tipo de oportunidad"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_has_error
+msgid "Message Delivery error"
+msgstr "Mensajes de error"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__client_type__neighborhood_community
+msgid "Neighborhood community"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model,name:sat_companies_sale.model_crm_lead_type
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__oportunity_type_id
+msgid "Oportunity type"
+msgstr "Tipo de oportunidad"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__managed_by__president
+msgid "President"
+msgstr "Presidente"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__client_type__public_organisms
+msgid "Public organisms"
+msgstr "Organismos publicos"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error en la entrega"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__sale_type_id
+msgid "Sale type"
+msgstr "Tipo de presupuesto"
+
+#. module: sat_companies_sale
+#: model:ir.model,name:sat_companies_sale.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__client_type__family_home
+msgid "Single-family private homes"
+msgstr "Viviendas Particulares Unifamiliares"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__website_message_ids
+msgid "Website Messages"
+msgstr "Mnesajes del website"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__website_message_ids
+msgid "Website communication history"
+msgstr ""
