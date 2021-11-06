@@ -113,7 +113,8 @@ class HrEmployee(models.Model):
         'pants_size',
         'polo_size',
         'raincoat_size',
-        'name')
+        'name',
+        'type_driving_license')
     def _upper_sizes(self):        
         self.shoe_size = self.shoe_size.upper() if self.shoe_size else False
         self.shirt_size = self.shirt_size.upper() if self.shirt_size else False
@@ -124,3 +125,4 @@ class HrEmployee(models.Model):
         self.polo_size = self.polo_size.upper() if self.polo_size else False
         self.raincoat_size = self.raincoat_size.upper() if self.raincoat_size else False
         self.name = self.name.upper() if self.name else False
+        self.type_driving_license = self.type_driving_license.upper() if self.type_driving_license else False
