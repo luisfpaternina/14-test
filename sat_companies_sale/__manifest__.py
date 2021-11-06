@@ -35,7 +35,7 @@
         'data/sale_order_maintenance_offer.xml',
         'data/crm_lead_opportunity_notify.xml',
         'data/base_automatization.xml',
-        #'reports/sale_order_suspension_contract.xml',
+        'reports/sale_order_suspension_contract.xml',
         
     ],
     'installable': True
