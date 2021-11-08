@@ -1,6 +1,8 @@
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 import re
+import logging
+
 
 letters = [
     ('A', 'A'),
@@ -219,3 +221,16 @@ class ResPartner(models.Model):
                 if not re.match("^.+\\@(\\[?)[a-zA-Z0-9\\-\\.]+\\.([a-zA-Z]{2,3}|[0-9]{1,3})(\\]?)$", rec.email):
                     raise ValidationError(_(
                     'Invalid email format!'))
+
+
+    @api.model
+    def create_from_ui(self, partner):
+        if 'is_company' in partner:
+            partner['is_company'] = partner['is_company'] == 'true'
+        return super(ResPartner, self).create_from_ui(partner)
+
+
+    @api.model
+    def get_names_order(self):
+        """Allow POS frontend to retrieve 'partner_names_order'"""
+        return self._get_names_order()
