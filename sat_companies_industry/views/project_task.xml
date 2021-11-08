@@ -78,12 +78,6 @@
                             <field name="verification_date"/>
                         </group>
                         <group>
-                            <field name="received_material"/>
-                        </group>
-                        <group>
-                            
-                        </group>
-                        <group>
                             <field name="is_pending_validate"/>
                         </group>
                         <group>
