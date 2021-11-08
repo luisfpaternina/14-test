@@ -38,6 +38,10 @@ class ResPartnerRoutes(models.Model):
     users_ids = fields.Many2many('res.users',
         string="Users")
     
+
+    _sql_constraints = [
+        ('code_uniq', 'unique (code)','This code already exists!')
+    ]
     
     @api.onchange('name')
     def _upper_name(self):        

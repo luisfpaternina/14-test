@@ -24,6 +24,10 @@ class ResPartnerGuardZones(models.Model):
         related="delegation_id.name")
     
 
+    _sql_constraints = [
+        ('code_uniq', 'unique (code)','This code already exists!')
+    ]
+    
     @api.onchange('name')
     def _upper_name(self):        
         self.name = self.name.upper() if self.name else False
