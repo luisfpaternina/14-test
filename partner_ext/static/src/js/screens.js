@@ -68,8 +68,8 @@ odoo.define('pos_partner_firstname.screens', function (require) {
                         }
                         else
                         {
-                            $('.lastname').val(clientname.val());
-                            $('.firstname').val('');
+                            $('.last_name').val(clientname.val());
+                            $('.first_name').val('');
                         }
                     };
                 });
