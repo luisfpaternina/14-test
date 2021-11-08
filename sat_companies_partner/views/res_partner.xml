@@ -66,8 +66,6 @@
                     <group name="maintainer_group">
                         <group name="adm_left">
                             <field name="is_admin" invisible="1"/>
-                            <field name="high_date"/>
-                            <field name="low_date"/>
                         </group>
                         <group name="adm_right">
                             
@@ -79,7 +77,7 @@
                             
                         </group>
                         <group>
-                            <field name="user_partner_contact_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                           
                         </group>
                         <group>
                             
