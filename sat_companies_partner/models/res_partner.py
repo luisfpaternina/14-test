@@ -10,10 +10,7 @@ class ResPartner(models.Model):
     code = fields.Char(
         string="Code",
         tracking=True,
-        readonly=True,
-        required=True,
-        copy=False,
-        default='New')
+        copy=False)
     high_date = fields.Date(
         string="High date",
         tracking=True)
@@ -143,15 +140,6 @@ class ResPartner(models.Model):
                 record.gadget_ids = products.ids
             else:
                 record.gadget_ids = False
-
-
-    # Ejecutar Secuencia 
-    @api.model
-    def create(self, vals):
-        if vals.get('code', 'New') == 'New':
-            vals['code'] = self.env['ir.sequence'].next_by_code('partner') or 'New'
-        result = super(ResPartner, self).create(vals)
-        return result
 
 
     @api.constrains('percentaje_mto', 'percentaje_rep')

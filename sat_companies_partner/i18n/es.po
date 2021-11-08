@@ -59,7 +59,7 @@ msgstr "Código"
 #. module: sat_companies_partner
 #: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
 msgid "Comercial recruitment"
-msgstr ""
+msgstr "Comercial captación"
 
 #. module: sat_companies_partner
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__user_partner_contact_id
@@ -70,7 +70,7 @@ msgstr "Comercial"
 #. module: sat_companies_partner
 #: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
 msgid "Commercial maintenance"
-msgstr "Comercial captación"
+msgstr "Comercial mantenimiento"
 
 #. module: sat_companies_partner
 #: model:ir.model,name:sat_companies_partner.model_res_partner_communities
