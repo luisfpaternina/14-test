@@ -15,17 +15,18 @@
                 <field name="partner_type_id" options="{'no_create': True, 'no_create_edit':True}" invisible="1"/>
             </xpath>
 
+            <xpath expr="//field[(@name='category_id')]" position="after">
+                <field name="delegation_id" options="{'no_create': True, 'no_create_edit':True}"/>
+            </xpath>
+
             <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
                 <page string="Administrator teacher" name="administrator_page" attrs="{'invisible': [('is_admin', '!=', True)]}" groups="sat_companies_partner.administrator_teacher_manager_group">
                   <group name="administrator_principal_group">
                     <group name="adm_left">
                         <field name="is_admin" invisible="1"/>
-                        <field name="code"/>
-                        <field name="high_date"/>
-                        <field name="low_date"/>
                     </group>
                     <group name="adm_right">
-                        <field name="delegation_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        
                     </group>
                     <group>
                         <field name="user_partner_contact_id" options="{'no_create': True, 'no_create_edit':True}"/>
