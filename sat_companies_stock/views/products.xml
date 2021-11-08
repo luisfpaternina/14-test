@@ -29,7 +29,7 @@
                                 <field name="high_date_call_center"/>
                             </group>
                             <group>
-                                <field name="partner_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_admin','=',True)]"/>
+                                <field name="partner_id" options="{'no_create': True, 'no_create_edit':True}"/>
                             </group>
                             <group>
                                 
