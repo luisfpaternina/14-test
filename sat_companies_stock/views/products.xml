@@ -23,7 +23,6 @@
                                 <field name="zone_name"/>
                             </group>
                             <group>
-                                <field name="code"/>
                                 <field name="ref"/>
                                 <field name="edifice"/>
                             </group>
