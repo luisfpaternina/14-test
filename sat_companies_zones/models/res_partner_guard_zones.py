@@ -12,10 +12,8 @@ class ResPartnerGuardZones(models.Model):
     code = fields.Char(
         string="Code", 
         tracking=True,
-        readonly=True,
         required=True,
-        copy=False,
-        default='New')
+        copy=False)
     delegation_id = fields.Many2one(
         'res.partner.delegation',
         string="Delegation",
@@ -25,14 +23,6 @@ class ResPartnerGuardZones(models.Model):
         tracking=True,
         related="delegation_id.name")
     
-
-    # Ejecutar Secuencia 
-    @api.model
-    def create(self, vals):
-        if vals.get('code', 'New') == 'New':
-            vals['code'] = self.env['ir.sequence'].next_by_code('guard.zone') or 'New'
-        result = super(ResPartnerGuardZones, self).create(vals)
-        return result
 
     @api.onchange('name')
     def _upper_name(self):        
