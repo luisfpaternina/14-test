@@ -25,6 +25,7 @@
     'views/res_partner_address.xml',
     'views/res_partner_address_cardinals.xml',
     'views/res_partner_city.xml',
+    'views/assets.xml',
                    
     ],
     'installable': True
