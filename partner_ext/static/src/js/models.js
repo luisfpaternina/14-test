@@ -3,6 +3,6 @@ odoo.define('pos_partner_firstname.models', function (require) {
 
   var models = require('point_of_sale.models');
 
-  models.load_fields("res.partner", ["firstname", "second_name"]);
+  models.load_fields("res.partner", ["first_name", "second_name"]);
 
 });
