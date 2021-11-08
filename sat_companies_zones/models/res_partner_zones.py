@@ -12,10 +12,8 @@ class ResPartnerZones(models.Model):
     code = fields.Char(
         string="Code", 
         tracking=True,
-        readonly=True,
         required=True,
-        copy=False,
-        default='New')
+        copy=False)
     country_id = fields.Many2one('res.country',
         string="Country",
         tracking=True)
@@ -73,14 +71,6 @@ class ResPartnerZones(models.Model):
     users_ids = fields.Many2many('res.users',
         string="Users")
 
-    
-    # Ejecutar Secuencia 
-    @api.model
-    def create(self, vals):
-        if vals.get('code', 'New') == 'New':
-            vals['code'] = self.env['ir.sequence'].next_by_code('zone') or 'New'
-        result = super(ResPartnerZones, self).create(vals)
-        return result
 
     @api.onchange('name')
     def _upper_name(self):        
