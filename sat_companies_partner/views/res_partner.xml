@@ -17,6 +17,8 @@
 
             <xpath expr="//field[(@name='category_id')]" position="after">
                 <field name="delegation_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                <field name="high_date"/>
+                <field name="low_date"/>
             </xpath>
 
             <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='sales_purchases']/group[@name='container_row_2']/group[@name='sale']/field[@name='user_id']" position="after">
