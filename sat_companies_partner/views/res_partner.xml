@@ -55,25 +55,17 @@
                     <group name="maintainer_group">
                         <group name="adm_left">
                             <field name="is_admin" invisible="1"/>
-                            <field name="code"/>
                             <field name="high_date"/>
                             <field name="low_date"/>
                         </group>
                         <group name="adm_right">
-                            <field name="delegation_id" options="{'no_create': True, 'no_create_edit':True}"/>
-                            <field name="population_id" options="{'no_create': True, 'no_create_edit':True}"/>
-                            <field name="country_state_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            
                         </group>
                         <group>
                             
                         </group>
                         <group>
-                            <field name="contact_person"/>
-                            <field name="phone1"/>
-                            <field name="phone2"/>
-                            <field name="phone3"/>
-                            <field name="fax"/>
-                            <field name="email_address"/>
+                            
                         </group>
                         <group>
                             <field name="user_partner_contact_id" options="{'no_create': True, 'no_create_edit':True}"/>
