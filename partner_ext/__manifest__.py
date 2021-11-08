@@ -17,6 +17,10 @@
         'base_address_city',
     ],
 
+    'qweb': [
+        'static/src/xml/pos.xml'
+    ],
+
     'data': [
 
     'security/security.xml',
