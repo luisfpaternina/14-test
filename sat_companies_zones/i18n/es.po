@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-13 15:01+0000\n"
-"PO-Revision-Date: 2021-10-13 15:01+0000\n"
+"POT-Creation-Date: 2021-11-08 20:30+0000\n"
+"PO-Revision-Date: 2021-11-08 20:30+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -135,11 +135,6 @@ msgstr "Aparatos"
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__employee_greasing_id
 msgid "Greasing operator"
 msgstr "Operador de engrase"
-
-#. module: sat_companies_zones
-#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_zones_form
-msgid "Greasing operator dates"
-msgstr "Fechas operador de engrase"
 
 #. module: sat_companies_zones
 #: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_zones_search
@@ -361,11 +356,6 @@ msgid "Operator notice"
 msgstr "Operador de aviso"
 
 #. module: sat_companies_zones
-#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_zones_form
-msgid "Operator notice dates"
-msgstr "Fechas operador de aviso"
-
-#. module: sat_companies_zones
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__employee_id
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__responsable_id
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__user_id
@@ -381,6 +371,7 @@ msgstr "Tipo de ruta"
 #. module: sat_companies_zones
 #: model:ir.actions.act_window,name:sat_companies_zones.action_view_res_partner_routes
 #: model:ir.model,name:sat_companies_zones.model_res_partner_routes
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_users__routes_ids
 #: model:ir.ui.menu,name:sat_companies_zones.menu_res_partner_routes
 msgid "Routes"
 msgstr "Rutas"
@@ -404,6 +395,13 @@ msgid "Search partner zone"
 msgstr ""
 
 #. module: sat_companies_zones
+#: model:ir.model.constraint,message:sat_companies_zones.constraint_res_partner_guard_zones_code_uniq
+#: model:ir.model.constraint,message:sat_companies_zones.constraint_res_partner_routes_code_uniq
+#: model:ir.model.constraint,message:sat_companies_zones.constraint_res_partner_zones_code_uniq
+msgid "This code already exists!"
+msgstr "Este código ya existe!"
+
+#. module: sat_companies_zones
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__message_unread
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__message_unread
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__message_unread
@@ -421,6 +419,8 @@ msgstr ""
 
 #. module: sat_companies_zones
 #: model:ir.model,name:sat_companies_zones.model_res_users
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__users_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__users_ids
 msgid "Users"
 msgstr "Usuarios"
 
@@ -441,6 +441,7 @@ msgid "Website communication history"
 msgstr ""
 
 #. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__zone_id
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__zone_id
 msgid "Zone"
 msgstr "Zona"
@@ -448,6 +449,7 @@ msgstr "Zona"
 #. module: sat_companies_zones
 #: model:ir.actions.act_window,name:sat_companies_zones.action_view_res_partner_zones
 #: model:ir.model,name:sat_companies_zones.model_res_partner_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_users__zones_ids
 #: model:ir.ui.menu,name:sat_companies_zones.menu_res_partner_zones
 msgid "Zones"
 msgstr "Zonas"
