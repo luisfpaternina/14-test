@@ -123,6 +123,9 @@ class ResPartner(models.Model):
         'res.partner.communities',
         'partner_id',
         string="Community")
+    delegation_name = fields.Char(
+        string="Delegation name",
+        related="delegation_id.name")
 
 
     _sql_constraints = [
