@@ -23,8 +23,8 @@ odoo.define('pos_partner_firstname.screens', function (require) {
 
         _update_client_name: function(checked){
             if (!checked) {
-                var lastname = $('.lastname').val() || '';
-                var firstname = $('.firstname').val() || '';
+                var lastname = $('.last_name').val() || '';
+                var firstname = $('.first_name').val() || '';
                 var name = null;
                 if (this.partner_names_order === 'last_first_comma') {
                     name = lastname + ', ' + firstname;
