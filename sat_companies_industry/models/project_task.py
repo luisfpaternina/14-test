@@ -115,10 +115,7 @@ class ProjectTask(models.Model):
         for record in self:
             dt = datetime.datetime.today()
             record.month_date = dt.month
-            logging.info("**********************************")
-            logging.info(record.month_date)
-
-
+    
 
     """
     @api.onchange('checklist_ids','user_id')
