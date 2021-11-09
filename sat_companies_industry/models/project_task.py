@@ -61,7 +61,8 @@ class ProjectTask(models.Model):
         string="Delegation name",
         related="delegation_id.name")
     ot_date = fields.Date(
-        string="Date")
+        string="Date",
+        default= fields.Datetime().now())
     ot_ref = fields.Char(
         string="Ref. Obra OT")
     received_material = fields.Char(
