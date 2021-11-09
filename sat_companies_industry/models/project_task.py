@@ -1,5 +1,6 @@
 from odoo import models, fields, api, _
-from datetime import datetime,date,timedelta
+from datetime import date
+import datetime
 
 class ProjectTask(models.Model):
     _inherit = 'project.task'
