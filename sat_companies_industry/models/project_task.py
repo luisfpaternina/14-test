@@ -1,5 +1,4 @@
-from odoo import models, fields, api
-import datetimemonth = datetime.strptime (ot_date, '% Y-% m-% d'). strftime ('% m')
+from odoo import models, fields, api, _
 
 class ProjectTask(models.Model):
     _inherit = 'project.task'
