@@ -1,6 +1,7 @@
 from odoo import models, fields, api, _
 from datetime import date
 import datetime
+import logging
 
 class ProjectTask(models.Model):
     _inherit = 'project.task'
@@ -65,7 +66,8 @@ class ProjectTask(models.Model):
         string="Date",
         default=date.today())
     month_date = fields.Char(
-        string="Month")
+        string="Month",
+        compute="calculate_month")
     ot_ref = fields.Char(
         string="Ref. Obra OT")
     received_material = fields.Char(
@@ -106,6 +108,17 @@ class ProjectTask(models.Model):
     @api.onchange('contact_person')
     def _capitalizate_name(self):        
         self.contact_person = self.contact_person.title() if self.contact_person else False
+
+
+    @api.depends('ot_date')
+    def calculate_month(self):
+        for record in self:
+            dt = datetime.datetime.today()
+            record.month_date = dt.month
+            logging.info("**********************************")
+            logging.info(record.month_date)
+
+
 
     """
     @api.onchange('checklist_ids','user_id')
