@@ -1,4 +1,4 @@
-odoo.define('pos_partner_firstname.screens', function (require) {
+odoo.define('pos_partner_ext.screens', function (require) {
     "use strict";
 
     var Screens = require('point_of_sale.screens');
