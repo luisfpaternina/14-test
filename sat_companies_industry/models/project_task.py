@@ -62,7 +62,7 @@ class ProjectTask(models.Model):
         related="delegation_id.name")
     ot_date = fields.Date(
         string="Date",
-        default=date.today().strftime('%m'))
+        default=date.today().month)
     ot_ref = fields.Char(
         string="Ref. Obra OT")
     received_material = fields.Char(
