@@ -135,7 +135,7 @@ class ResPartner(models.Model):
 
     def compute_gadgets_partner(self):
         for record in self:
-            products = self.env['product.template'].search([('partner_id','=',self.id)])
+            products = self.env['product.template'].search([('partner_admin_id','=',self.id)])
             if products:
                 record.gadget_ids = products.ids
             else:
