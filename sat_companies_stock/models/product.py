@@ -275,7 +275,8 @@ class ProductTemplate(models.Model):
         'stock.maintenance.frequency',
         string="Maintenance frequency")
     frequency_name = fields.Char(
-        string="Frequency name")
+        string="Frequency name",
+        related="maintenance_frequency_id.name")
     planning_type_id = fields.Many2one(
         'stock.planning.type',
         string="Planning type")
