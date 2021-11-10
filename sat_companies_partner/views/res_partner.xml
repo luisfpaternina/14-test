@@ -176,6 +176,7 @@
                     <filter string="Is admin" name="is_admin" domain="[('is_admin', '!=', False)]"/>
                     <filter string="Is O.C.A" name="is_oca" domain="[('is_oca', '!=', False)]"/>
                     <filter string="Contact type" name="partner_type_id" domain="[('partner_type_id', '!=', False)]"/>
+                    <filter string="Is maintainer" name="is_maintainer" domain="[('is_maintainer', '!=', False)]"/>
                 </xpath>
 
             </field>
