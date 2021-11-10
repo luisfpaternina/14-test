@@ -329,7 +329,7 @@ msgstr "Es administrador"
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__is_maintainer
 #: model_terms:ir.ui.view,arch_db:sat_companies_partner.custom_view_res_partner_search
 msgid "Is maintainer"
-msgstr "Mantenedora"
+msgstr "Es Mantenedora"
 
 #. module: sat_companies_partner
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner____last_update
