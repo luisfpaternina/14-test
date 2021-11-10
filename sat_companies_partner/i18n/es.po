@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-08 19:20+0000\n"
-"PO-Revision-Date: 2021-11-08 19:20+0000\n"
+"POT-Creation-Date: 2021-11-10 12:33+0000\n"
+"PO-Revision-Date: 2021-11-10 12:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -70,7 +70,7 @@ msgstr "Comercial"
 #. module: sat_companies_partner
 #: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
 msgid "Commercial maintenance"
-msgstr "Comercial mantenimiento"
+msgstr "Comercial captación"
 
 #. module: sat_companies_partner
 #: model:ir.model,name:sat_companies_partner.model_res_partner_communities
@@ -305,6 +305,11 @@ msgstr "Es seguidor"
 
 #. module: sat_companies_partner
 #: model_terms:ir.ui.view,arch_db:sat_companies_partner.custom_view_res_partner_search
+msgid "Is Maintainer"
+msgstr "Es mantenedora"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.custom_view_res_partner_search
 msgid "Is O.C.A"
 msgstr "Es O.C.A"
 
@@ -322,6 +327,7 @@ msgstr "Es administrador"
 #. module: sat_companies_partner
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__is_maintainer
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__is_maintainer
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.custom_view_res_partner_search
 msgid "Is maintainer"
 msgstr "Mantenedora"
 
