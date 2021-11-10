@@ -86,6 +86,12 @@
                                 <field name="increse_type_name"/>
                             </group>
                             <group>
+                                <field name="maintenance_frequency_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            </group>
+                            <group>
+                                <field name="frequency_name"/>
+                            </group>
+                            <group>
                                 <field name="billing_period_id" options="{'no_create': True, 'no_create_edit':True}"/>
                             </group>
                             <group>
