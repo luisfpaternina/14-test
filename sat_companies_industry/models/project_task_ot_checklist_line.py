@@ -21,7 +21,11 @@ class ProjectTaskOtChecklistLine(models.Model):
         string="Type of deffect",
         tracking=True,
         related="minute_point_id.type_deffect_id")
-    is_reviewed = fields.Boolean(string="Is reviewed")
+    is_reviewed = fields.Boolean(
+        string="Is reviewed")
+    minute_point_description = fields.Text(
+        string="Description",
+        related="minute_point_id.description")
 
 
     @api.onchange('name')
