@@ -105,15 +105,6 @@
                         <field name="observations" placeholder="Add observations..."/>
                     </group>
                 </page>
-                <page string="O.C.A" name="oca_page" groups="sat_companies_partner.administrator_teacher_manager_group" attrs="{'invisible': [('is_oca', '!=', True)]}">
-                    <group>
-                        <group>
-                            <field name="fiscal_name"/>
-                            <field name="fiscal_name2"/>
-                        </group>
-                        <field name="observations_oca" placeholder="Observations"/>
-                    </group>
-                </page>
                 <page string="Gagdets" name="gadgest">
                     <group>
                         <group>
