@@ -167,6 +167,7 @@
                     <filter string="Is admin" name="is_admin" context="{'group_by':'is_admin'}"/>
                     <filter string="Is O.C.A" name="is_oca" context="{'group_by':'is_oca'}"/>
                     <filter string="Contact type" name="partner_type_id" context="{'group_by':'partner_type_id'}"/>
+                    <filter string="Is Maintainer" name="is_maintainer" context="{'group_by':'is_maintainer'}"/>
                 </xpath>
 
                 <xpath expr="//search/filter[@name='type_person']" position="after">
