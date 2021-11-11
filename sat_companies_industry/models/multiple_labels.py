@@ -17,6 +17,12 @@ class MultipleLabels(models.Model):
         string="Formated date",
         store=True,
         compute='_compute_formate_date')
+    day = fields.Char(
+        string="Day")
+    month = fields.Char(
+        string="Month")
+    year = fields.Char(
+        string="Year")
 
 
     @api.depends('create_date')
