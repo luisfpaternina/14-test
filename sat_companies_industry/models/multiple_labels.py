@@ -6,3 +6,18 @@ class MultipleLabels(models.Model):
     _name = 'multiple.labels'
     _inherit = 'mail.thread'
     _description = 'Multiple labels'
+
+
+
+
+
+
+
+
+
+
+
+class MultipleLabelsLines(models.Model):
+    _name = 'multiple.labels.lines'
+    _inherit = 'mail.thread'
+    _description = 'Multiple labels lines'
