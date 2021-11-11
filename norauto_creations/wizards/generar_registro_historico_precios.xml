@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="generar_registro_form">
+            <field name="name">update.registro_historico.form</field>
+            <field name="model">update.registro_historico</field>
+            <field name="arch" type="xml">
+                <form string="Asignar fechas de inicio y fin para el nuevo precio">
+                    <group>
+                        <field name="new_precio_venta" required="1"/>
+                        <field name="new_fecha_inicio" required="1"/>
+                        <field name="new_fecha_fin" required="1"/>
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" name="guardar_registro" string="Generar Registro" type="object"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

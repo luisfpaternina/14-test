@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="hacer_invisible" model="res.groups">
+        <field name="name">Invisible</field>
+    </record>
+
+    <record model="ir.ui.menu" id="stock_account.menu_valuation">
+        <field name="groups_id" eval="[(6,0,[ref('hacer_invisible')])]"/>
+    </record>
+
+</odoo>

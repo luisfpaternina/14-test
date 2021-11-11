@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="norauto_group_finanzas_aprobacion_ordenes" model="res.groups">
+            <field name="name">Finanzas aprobación ordenes de compra</field>
+            <field name="category_id" ref="norauto_rights.module_management"/>
+        </record>
+    </data>
+</odoo>
+

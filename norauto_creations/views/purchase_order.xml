@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="purchase_editing_view_form_add_grupo_comprador" model="ir.ui.view">
+        <field name="name">purchase.order.form.add_grupo_comprador</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form" />
+        <field name="arch" type="xml">
+
+            <xpath expr='//field[@name="partner_id"]' position="after">
+                <field name="creado_por_tienda" readonly="1"/>
+            </xpath>
+
+            <xpath expr='//field[@name="user_id"]' position="after">
+                <field name="grupo_comprador_usuario"/>
+            </xpath>
+
+            <xpath expr="//sheet" position="before">
+                <div class="alert alert-info" role="alert" style="margin-bottom:0px;" attrs="{'invisible': [('state', '!=', 'aprobacion_finanzas')]}">
+                    Su grupo comprador 
+                    <field name="grupo_comprador_usuario" readonly="True"/>
+                    ha excedido el limite mensual de compras. Esta orden debe ser aprobada por un Administrador de Finanzas.
+                </div>
+            </xpath>
+
+            <xpath expr="//sheet" position="before">
+                <div class="alert alert-info" role="alert" style="margin-bottom:0px;" attrs="{'invisible': [('state', '!=', 'aprobacion_central_compras')]}">
+                    La orden de compra confirmada debe ser aprobada por un usuario de Central de Compras.
+                </div>
+            </xpath>
+
+            <xpath expr="//button[@name='button_approve']" position="attributes">
+                <attribute name="string">Aprobar (Gerente de Compras)</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='button_approve']" position="after">
+                <button name="segunda_validacion" string="Aprobar por Finanzas" type="object" attrs="{'invisible': [('state', '!=', 'aprobacion_finanzas')]}"/>
+            </xpath>
+
+            <xpath expr="//button[@name='button_approve']" position="after">
+                <button name="button_confirm_central_compras" string="Aprobar por Central de Compras" class="oe_highlight" groups="norauto_rights.group_CCA" type="object" attrs="{'invisible': [('state', '!=', 'aprobacion_central_compras')]}"/>
+            </xpath>
+
+            <xpath expr="//button[@name='button_cancel']" position="attributes">
+                <attribute name="states">draft,to approve,sent,purchase,aprobacion_finanzas,aprobacion_central_compras</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='action_view_picking']" position="attributes">
+                <attribute name="attrs">{'invisible': [('state','not in','purchase')]}</attribute>
+            </xpath>
+
+
+
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_res_partner_suppliers_form" model="ir.ui.view">
+        <field name="name">res.partner.suppliers.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <field name="type" position="before">
+                <!-- <button type="object" name='carga_proveedores' string="Carga Proveedores" groups="base.group_system"/> -->
+                <field name="supplier_rank" invisible="1"/>
+                <field name="codigo_proveedor" attrs="{'required': [('supplier_rank', '&gt;', 0)], 'invisible': [('supplier_rank', '&lt;', 1)]}"/>
+
+            </field>
+
+            <field name="street" position="attributes">
+                <attribute name="attrs">{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)], 'required': [('supplier_rank', '&gt;', 0)]}</attribute>
+            </field>
+
+            <field name="state_id" position="attributes">
+                <attribute name="attrs">{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)], 'required': [('supplier_rank', '&gt;', 0)]}</attribute>
+            </field>
+
+            <field name="state_id" position="attributes">
+                <attribute name="attrs">{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)], 'required': [('supplier_rank', '&gt;', 0)]}</attribute>
+            </field>
+
+            <field name="phone" position="after">
+                <field name="fecha_alta" attrs="{'invisible': [('supplier_rank', '&lt;', 1)]}" />
+            </field>
+
+            <field name="phone" position="attributes">
+                <attribute name="attrs">{'required': [('supplier_rank', '&gt;', 0)]}</attribute>
+            </field>
+ 
+            <xpath expr='//page[1]' position="after">
+                <page name="campos_norauto" string="Norauto Campos" attrs="{'invisible': [('supplier_rank', '&lt;', 1)]}">
+                    <group col="4">
+                        <field name="condcpa" attrs="{'required': [('supplier_rank', '&gt;', 0)]}" />
+                        <field name="imputacml" />
+                        <field name="imputacme" />
+                        <field name="agrupa" />
+                        <field name="retiva" attrs="{'required': [('supplier_rank', '&gt;', 0)]}" />
+                        <field name="retgan" />
+                        <field name="retsus" />
+                        <field name="retconstru" />
+                        <field name="ordencheq" attrs="{'required': [('supplier_rank', '&gt;', 0)]}" />
+                        <field name="codigo_cuit" />
+                        <field name="exclusioniva" />
+                        <field name="fecvtoexi" />
+                        <field name="exclusiongan" />
+                        <field name="fecvtoexg" />
+                        <field name="fecinfbco" />
+                        <field name="formapago" />
+                        <field name="cuenta" />
+                        <field name="servicios" />
+                        <field name="fiscal" />
+                        <field name="ccostosml" />
+                        <field name="ccostosme" />
+                        <field name="anegocioml" />
+                        <field name="anegociome" />
+                        <field name="imputacrml" />
+                        <field name="imputacrme" />
+                        <field name="ccostosrml" />
+                        <field name="ccostosrme" />
+                        <field name="anegociorml" />
+                        <field name="tercermoneda" />
+                        <field name="codpais" />
+                        <field name="rg3164" />
+                        <field name="condgan" />
+                        <field name="idtributaria1" />
+                        <field name="situaciontrib" />
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_res_partner_suppliers_l10n_ar_form" model="ir.ui.view">
+        <field name="name">res.partner.suppliers-l10n_ar.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="l10n_ar.base_view_partner_form"/>
+        <field name="arch" type="xml">
+            <field name="l10n_ar_afip_responsibility_type_id" position="after">
+                <field name="igrbrt" attrs="{'invisible': [('supplier_rank', '&lt;', 1)]}" />
+                <field name="codigo_facturacion" attrs="{'required': [('supplier_rank', '&gt;', 0)], 'invisible': [('supplier_rank', '&lt;', 1)]}" />
+            </field>
+            <field name="l10n_ar_afip_responsibility_type_id" position="attributes">
+                <attribute name="attrs">{'readonly': [('parent_id','!=',False)], 'required': [('supplier_rank', '&gt;', 0)]}</attribute>
+            </field>
+        </field>
+    </record>
+
+</odoo>

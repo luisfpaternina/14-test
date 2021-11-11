@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="pricing_editing_view_form" model="ir.ui.view">
+        <field name="name">product.template.form.pricing_editing</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view" />
+        <field name="arch" type="xml">
+
+            <xpath expr='//field[@name="barcode"]' position="after">
+                <field name="es_usuario_pricing" attrs="{'invisible': True, 'readonly': True}"/>
+            </xpath>
+
+            <xpath expr='//field[@name="list_price"]' position="attributes">
+                <attribute name="attrs">{'readonly':True}</attribute>
+            </xpath>
+
+            <xpath expr='//field[@name="list_price"]' position="after">
+                <button name='cambiar_precio_venta' type='object' string='Cambiar precio de venta' groups="norauto_rights.group_pricing"/>
+            </xpath>
+
+            <xpath expr='//button[@name="352"]' position="attributes">
+                <attribute name="attrs">{'invisible':[('es_usuario_pricing','=', False)]}</attribute>
+                <attribute name="groups">norauto_rights.group_pricing</attribute>
+            </xpath>
+
+
+        </field>
+    </record>
+
+</odoo>

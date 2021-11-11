@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="view_product_form_inherit_motos" model="ir.ui.view">
+        <field name="name">product.template.new_fields</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+
+            <xpath expr='//field[@name="type"]' position="after">
+                <field name="marca_vehiculo" attrs="{'invisible':[('tipoart_dos', '=', '1')]}"/>
+                <field name="modelo_vehiculo" attrs="{'invisible':[('tipoart_dos', '=', '1')]}"/>
+                <field name="patente_vehiculo" attrs="{'invisible':[('tipoart_dos', '=', '1')]}"/>
+            </xpath>
+
+            <xpath expr='//field[@name="categ_id"]' position="before">
+                <field name="idart"/>
+            </xpath>
+
+            <xpath expr='//field[@name="categ_id"]' position="after">
+                <field name="fecha_creacion"/>
+            </xpath>
+
+            <xpath expr='//field[@name="type"]' position="attributes">
+                <attribute name="required">False</attribute>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr='//field[@name="type"]' position="after">
+                <field name="tipoart_dos"/>
+                <field name="tipoart_uno"/>
+                <field name="acondicionamiento_tienda" attrs="{'invisible':[('tipoart_dos', '!=', '1')], 'required':True}"/>
+                <field name="acondicionamiento_almacen" attrs="{'invisible':[('tipoart_dos', '!=', '1')]}"/>
+            </xpath>
+
+            <xpath expr='//field[@name="barcode"]' position="after">
+                <field name="rgp_niveluno"/>
+                <field name="rgp_niveldos"/>
+                <field name="rgp_niveltres"/>
+                <field name="rgp_nivelcuatro"/>
+                <field name="familia"/>
+            </xpath>
+
+            <xpath expr='//field[@name="uom_po_id"]' position="after">
+                <field name="grupo_comprador"/>
+                <field name="nomenclatura_prov"/>
+                <field name="clase"/>
+                <field name="es_usuario_CCA" attrs="{'invisible': True}"/>
+                <field name="precio_cesion" widget="monetary" options="{'currency_field': 'currency_id'}" attrs="{'readonly':[('es_usuario_CCA','=', False)]}"/>
+                <field name="acumulado_impuestos" widget="monetary"/>
+                <field name="precio_con_impuestos" widget="monetary"/>
+            </xpath>
+
+            <xpath expr="//page[@name='general_information']" position="after">
+                <!-- <page name="locations" string="Gestión de las ubicaciones">
+                    <group name="group_locations" modifiers="{}" attrs="{'invisible':[('tipoart_dos', '=', '2')]}">
+                        <separator string="Góndola" colspan="2"/>
+                        <field name="nombre_gondola"  attrs="{'required':[('tipoart_dos','=','1')]}"/>
+                        <field name="id_gondola" attrs="{'required':[('tipoart_dos','=','1')]}"/>
+                        <field name="nombre_modulo" attrs="{'required':[('tipoart_dos','=','1')]}"/>
+                        <field name="nombre_posicion" attrs="{'required':[('tipoart_dos','=','1')]}"/>
+                    </group>
+                </page> -->
+
+                <page name="other_fields" string="Otros Campos">
+                    <group name="group_other_fields">
+                        <field name="family_code"/>
+                        <field name="vendor_no"/>
+                        <field name="referencia_catalogo"/>
+                        <field name="supplier_article_num"/>
+                    </group>
+                </page>
+
+            </xpath>
+
+            
+
+        </field>
+    </record>
+
+    <!-- SEARCH INHERIT -->
+    <record model="ir.ui.view" id="norauto_produt_template_search">
+        <field name="name">product.template.search</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="priority">25</field>
+        <field name="arch" type="xml"> 
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="idart" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

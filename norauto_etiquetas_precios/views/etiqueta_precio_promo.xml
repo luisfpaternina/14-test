@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <report id='report_etiqueta_promo'
+            string='Etiqueta promo (A4)'
+            model='product.template'
+            report_type='qweb-pdf'
+            name='norauto_etiquetas_precios.report_etiqueta_promo_template'
+            file='norauto_etiquetas_precios.report_etiqueta_promo_template_landscape'
+            paperformat="norauto_etiquetas_precios.paperformat_etiqueta_precio"
+    />
+
+    <template id='report_etiqueta_promo_template'>
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <div class="page" style="text-align: center;">
+                    <t t-foreach="docs" t-as="product">
+                        <br/>
+                        <br/>
+                        <span style='font-weight: bold; font-size: 85px; top: 200px;'><t t-esc='product.name'/></span>
+                        <br/>
+                        <span style='font-weight: bold; font-size: 190px; margin-top: 50px;'>$ <t t-esc="'%.2f'% product.precio_con_impuestos"/></span>
+                        <br/>
+                        <t t-set='precio_anterior_con_impuestos' t-value="product.precio_anterior + product.acumulado_impuestos"/>
+                        <span style='font-size: 120px; margin-top: 50px;'>$ <del><t t-esc="'%.2f'% precio_anterior_con_impuestos"/></del></span>
+                        <br/>
+                        <span style="position: relative; font-size: 35px; font-weight: bold; left: -300px;"><span t-esc='product.precio_uni_med'/></span>
+                        <span style="position: relative; font-size: 35px; font-weight: bold; left: -280px;"><span>$ / <t t-esc='product.unimes'/></span></span>
+                        <span style='position: relative; font-weight: bold; left: 450px;'><t t-esc="product.idart"/></span>
+                        <p style="page-break-after:always;"/>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

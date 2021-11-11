@@ -1,0 +1,1 @@
+from . import generar_registro_historico_precios
