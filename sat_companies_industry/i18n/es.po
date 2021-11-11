@@ -6,74 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-11 18:47+0000\n"
-"PO-Revision-Date: 2021-11-11 18:47+0000\n"
+"POT-Creation-Date: 2021-11-11 22:01+0000\n"
+"PO-Revision-Date: 2021-11-11 22:01+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_10
-msgid "10ª"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_11
-msgid "11ª"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_12
-msgid "12ª"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_1
-msgid "1ª"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_2
-msgid "2ª"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_3
-msgid "3ª"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_4
-msgid "4ª"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_5
-msgid "5ª"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_6
-msgid "6ª"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_7
-msgid "7ª"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_8
-msgid "8ª"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_9
-msgid "9ª"
-msgstr ""
 
 #. module: sat_companies_industry
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template
@@ -227,6 +167,11 @@ msgid "Address 3"
 msgstr "Dirección 3"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_4
+msgid "April"
+msgstr "Abril"
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__associated_type_id
 msgid "Associated type"
 msgstr "Tipo de asociado"
@@ -244,6 +189,11 @@ msgstr "Tipo de asociado"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_attachment_count
 msgid "Attachment Count"
 msgstr ""
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_8
+msgid "August"
+msgstr "Agosto"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__checklist_ids
@@ -325,6 +275,11 @@ msgid "Day"
 msgstr "Día"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_12
+msgid "December"
+msgstr "Diciembre"
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__delegation_id
 msgid "Delegation"
 msgstr "Delegación"
@@ -369,6 +324,11 @@ msgstr "Correo"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__fax_contact
 msgid "FAX"
 msgstr ""
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_2
+msgid "February"
+msgstr "Febrero"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields.selection,name:sat_companies_industry.selection__project_task__situation__finished
@@ -536,6 +496,21 @@ msgid "Is reviewed"
 msgstr "Revisado"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_1
+msgid "January"
+msgstr "Enero"
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_7
+msgid "July"
+msgstr "Julio"
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_6
+msgid "June"
+msgstr "Junio"
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point____last_update
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect____last_update
 #: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels____last_update
@@ -650,6 +625,16 @@ msgid "Manager type deffect Permission Group"
 msgstr "Administrador grupo de permisos tipo de defecto"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_3
+msgid "March"
+msgstr "Marzo"
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_5
+msgid "May"
+msgstr "Mayo"
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__message
 msgid "Message"
 msgstr "Mensaje"
@@ -732,6 +717,11 @@ msgstr "Nombre"
 #: model:ir.model.fields.selection,name:sat_companies_industry.selection__project_task_ot_checklist__accomplished__not
 msgid "Not"
 msgstr "No"
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_11
+msgid "November"
+msgstr "Noviembre"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_needaction_counter
@@ -851,6 +841,11 @@ msgid "Observations"
 msgstr "Observaciones"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_10
+msgid "October"
+msgstr "Octubre"
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__user_id
 msgid "Operator"
 msgstr "Operario"
@@ -959,6 +954,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_maintenance_minute_point_search
 msgid "Search ot minute point"
 msgstr ""
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_9
+msgid "September"
+msgstr "Septiembre"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__task_signature
