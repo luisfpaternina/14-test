@@ -13,6 +13,24 @@ class MultipleLabels(models.Model):
         string="Gadgets")
     message = fields.Char(
         string="Message")
+    formated_date = fields.Char(
+        string="Formated date",
+        store=True,
+        compute='_compute_formate_date')
+
+
+    @api.depends('create_date')
+    def _compute_formate_date(self):
+        for product in self:
+            if product.create_date:
+                dia = str(product.create_date.strftime("%d"))
+                mes = str(product.create_date.strftime("%m"))
+                anno = str(product.create_date.strftime("%y"))
+                format_date = str(dia + ' ' + mes)
+                format_date_2 = str(format_date + ' ' + anno)
+                product.formated_date = format_date_2
+            else:
+                product.formated_date = ''
 
 
     def action_print(self):
