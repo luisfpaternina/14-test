@@ -52,7 +52,7 @@
                                 <field name="create_uid"/>
                             </group>
                             <group>
-                                
+                                <field name="formated_date"/>
                             </group>
                             <group>
                                 
