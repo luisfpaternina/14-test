@@ -63,7 +63,7 @@ class ProjectTaskOtChecklist(models.Model):
         return result
 
 
-    @api.depends('ot_date')
+    @api.depends('create_date')
     def calculate_month(self):
         for record in self:
             dt = datetime.datetime.today()
