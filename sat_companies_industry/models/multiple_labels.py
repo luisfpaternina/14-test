@@ -28,3 +28,6 @@ class MultipleLabelsLines(models.Model):
     product_id = fields.Many2one(
         'product.template',
         string="Gadget")
+    task_id = fields.Many2one(
+        'project.task',
+        string="Task")
