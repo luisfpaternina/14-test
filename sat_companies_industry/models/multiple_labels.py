@@ -24,3 +24,6 @@ class MultipleLabelsLines(models.Model):
     wizard_id = fields.Many2one(
         'multiple.labels',
         string="Print wizard")
+    product_id = fields.Many2one(
+        'product.template',
+        string="Gadget")
