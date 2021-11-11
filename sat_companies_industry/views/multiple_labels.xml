@@ -29,6 +29,9 @@
                             icon="fa-print" 
                             class="btn-primary mt8 mb8"/>
                     </header>
+                    <div class="alert alert-info text-center mb-3" attrs="{'invisible':[('message', '=', False)]}" role="alert">
+                        <field name="message"/>
+                    </div>
                     <sheet>
                         <div class="oe_title">
                             <h1>
