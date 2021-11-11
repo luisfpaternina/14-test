@@ -7,7 +7,9 @@ class ProjectTaskOtChecklistLine(models.Model):
     _inherit = 'mail.thread'
     _description = 'OT checklist line'
 
-    name = fields.Char(string="Name", tracking=True)
+    name = fields.Char(
+        string="Name",
+        tracking=True)
     task_id = fields.Many2one(
         'project.task',
         string="Task",
