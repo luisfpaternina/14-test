@@ -28,6 +28,11 @@ class ProjectTaskOtChecklistLine(models.Model):
     minute_point_description = fields.Text(
         string="Description",
         related="minute_point_id.description")
+    checklist_id = fields.Many2one(
+        'project.task.ot.checklist',
+        string="Checklist")
+    is_reviewed_checklist = fields.Boolean(
+        string="Is reviewed")
 
 
     @api.onchange('name')
