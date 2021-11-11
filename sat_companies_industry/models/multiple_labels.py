@@ -41,7 +41,7 @@ class MultipleLabels(models.Model):
 
     def action_print(self):
         for rec in self:
-            print("Aqui va el codigo")
+            print("Testing! print")
 
 
 
