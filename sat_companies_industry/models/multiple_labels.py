@@ -21,3 +21,6 @@ class MultipleLabelsLines(models.Model):
     _name = 'multiple.labels.lines'
     _inherit = 'mail.thread'
     _description = 'Multiple labels lines'
+
+    is_selected = fields.Boolean(
+        string="Print")
