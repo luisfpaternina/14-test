@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-10 21:05+0000\n"
-"PO-Revision-Date: 2021-11-10 21:05+0000\n"
+"POT-Creation-Date: 2021-11-11 18:47+0000\n"
+"PO-Revision-Date: 2021-11-11 18:47+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -178,6 +178,8 @@ msgstr "Logrado"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_needaction
@@ -232,6 +234,8 @@ msgstr "Tipo de asociado"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_attachment_count
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__message_attachment_count
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_attachment_count
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_attachment_count
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_attachment_count
@@ -243,6 +247,7 @@ msgstr ""
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__checklist_ids
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__checklist_id
 msgid "Checklist"
 msgstr ""
 
@@ -272,6 +277,7 @@ msgstr "Contacto"
 #. module: sat_companies_industry
 #: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_inspection
 #: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_minute_point
+#: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_multiple_labels
 #: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_ot_checklist
 #: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_ot_checklist_location
 #: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_ot_type
@@ -283,6 +289,8 @@ msgstr "Crear nuevo registro"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__create_uid
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__create_uid
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__create_uid
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__create_uid
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__create_uid
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__create_uid
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__create_uid
@@ -295,6 +303,8 @@ msgstr "Creado por"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__create_date
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__create_date
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__create_date
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__create_date
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__create_date
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__create_date
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__create_date
@@ -308,6 +318,11 @@ msgstr "Creado en"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__ot_date
 msgid "Date"
 msgstr "Fecha"
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__day
+msgid "Day"
+msgstr "Día"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__delegation_id
@@ -333,6 +348,8 @@ msgstr "Descripción"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__display_name
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__display_name
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__display_name
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__display_name
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__display_name
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__display_name
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__display_name
@@ -361,6 +378,8 @@ msgstr "Finalizada"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_follower_ids
@@ -373,6 +392,8 @@ msgstr "Seguidores"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_channel_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__message_channel_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_channel_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_channel_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_channel_ids
@@ -385,6 +406,8 @@ msgstr "Seguidores"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_partner_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__message_partner_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_partner_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_partner_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_partner_ids
@@ -395,6 +418,12 @@ msgid "Followers (Partners)"
 msgstr "Seguidores"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__formated_date
+msgid "Formated date"
+msgstr "Formato fecha"
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__product_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__gadget_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__product_id
 msgid "Gadget"
@@ -406,6 +435,7 @@ msgid "Gadget code"
 msgstr "Código del aparato"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__label_ids
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_sat_companies
 msgid "Gadgets"
 msgstr "Aparato"
@@ -413,6 +443,8 @@ msgstr "Aparato"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__id
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__id
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__id
@@ -428,6 +460,10 @@ msgstr "Id"
 #: model:ir.model.fields,help:sat_companies_industry.field_maintenance_minute_point__message_unread
 #: model:ir.model.fields,help:sat_companies_industry.field_maintenance_type_deffect__message_needaction
 #: model:ir.model.fields,help:sat_companies_industry.field_maintenance_type_deffect__message_unread
+#: model:ir.model.fields,help:sat_companies_industry.field_multiple_labels__message_needaction
+#: model:ir.model.fields,help:sat_companies_industry.field_multiple_labels__message_unread
+#: model:ir.model.fields,help:sat_companies_industry.field_multiple_labels_lines__message_needaction
+#: model:ir.model.fields,help:sat_companies_industry.field_multiple_labels_lines__message_unread
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_inspection__message_needaction
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_inspection__message_unread
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist__message_needaction
@@ -448,6 +484,10 @@ msgstr ""
 #: model:ir.model.fields,help:sat_companies_industry.field_maintenance_minute_point__message_has_sms_error
 #: model:ir.model.fields,help:sat_companies_industry.field_maintenance_type_deffect__message_has_error
 #: model:ir.model.fields,help:sat_companies_industry.field_maintenance_type_deffect__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_industry.field_multiple_labels__message_has_error
+#: model:ir.model.fields,help:sat_companies_industry.field_multiple_labels__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_industry.field_multiple_labels_lines__message_has_error
+#: model:ir.model.fields,help:sat_companies_industry.field_multiple_labels_lines__message_has_sms_error
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_inspection__message_has_error
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_inspection__message_has_sms_error
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist__message_has_error
@@ -478,6 +518,8 @@ msgstr "Inspecciones"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_is_follower
@@ -489,12 +531,15 @@ msgstr "Es un seguidor"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__is_reviewed
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__is_reviewed_checklist
 msgid "Is reviewed"
 msgstr "Revisado"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point____last_update
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect____last_update
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels____last_update
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines____last_update
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task____last_update
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection____last_update
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist____last_update
@@ -508,6 +553,8 @@ msgstr "Última modificación el"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__write_uid
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__write_uid
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__write_uid
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__write_uid
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__write_uid
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__write_uid
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__write_uid
@@ -520,6 +567,8 @@ msgstr "Última actualización por"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__write_date
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__write_date
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__write_date
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__write_date
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__write_date
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__write_date
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__write_date
@@ -539,6 +588,8 @@ msgstr "Ubicación"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_main_attachment_id
@@ -599,8 +650,15 @@ msgid "Manager type deffect Permission Group"
 msgstr "Administrador grupo de permisos tipo de defecto"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__message
+msgid "Message"
+msgstr "Mensaje"
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_has_error
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__message_has_error
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_has_error
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_has_error
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_has_error
@@ -613,6 +671,8 @@ msgstr ""
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_ids
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__message_ids
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__message_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_ids
@@ -636,9 +696,23 @@ msgid "Minute point"
 msgstr "Punto de acta"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__month
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__month_date
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__month_date
 msgid "Month"
-msgstr ""
+msgstr "Mes"
+
+#. module: sat_companies_industry
+#: model:ir.actions.act_window,name:sat_companies_industry.action_view_multiple_labels
+#: model:ir.model,name:sat_companies_industry.model_multiple_labels
+#: model:ir.ui.menu,name:sat_companies_industry.menu_multiple_labels
+msgid "Multiple labels"
+msgstr "Múltiples etiquetas"
+
+#. module: sat_companies_industry
+#: model:ir.model,name:sat_companies_industry.model_multiple_labels_lines
+msgid "Multiple labels lines"
+msgstr "Líneas de múltiples etiquetas"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__name
@@ -662,6 +736,8 @@ msgstr "No"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_needaction_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__message_needaction_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_needaction_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_needaction_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_needaction_counter
@@ -674,6 +750,8 @@ msgstr ""
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_has_error_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__message_has_error_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_has_error_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_has_error_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_has_error_counter
@@ -686,6 +764,8 @@ msgstr ""
 #. module: sat_companies_industry
 #: model:ir.model.fields,help:sat_companies_industry.field_maintenance_minute_point__message_needaction_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_maintenance_type_deffect__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_industry.field_multiple_labels__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_industry.field_multiple_labels_lines__message_needaction_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_inspection__message_needaction_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist__message_needaction_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_line__message_needaction_counter
@@ -698,6 +778,8 @@ msgstr ""
 #. module: sat_companies_industry
 #: model:ir.model.fields,help:sat_companies_industry.field_maintenance_minute_point__message_has_error_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_maintenance_type_deffect__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_industry.field_multiple_labels__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_industry.field_multiple_labels_lines__message_has_error_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_inspection__message_has_error_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist__message_has_error_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_line__message_has_error_counter
@@ -710,6 +792,8 @@ msgstr ""
 #. module: sat_companies_industry
 #: model:ir.model.fields,help:sat_companies_industry.field_maintenance_minute_point__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_maintenance_type_deffect__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_industry.field_multiple_labels__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_industry.field_multiple_labels_lines__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_inspection__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_line__message_unread_counter
@@ -772,6 +856,11 @@ msgid "Operator"
 msgstr "Operario"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__checklist_ot_ids
+msgid "Ot checklist"
+msgstr ""
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_pda
 msgid "PDA"
 msgstr ""
@@ -817,6 +906,22 @@ msgid "Prev start date"
 msgstr "Fecha inicio.Prev"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__is_selected
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_multiple_labels_form
+msgid "Print"
+msgstr "IMPRIMIR"
+
+#. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_multiple_labels_form
+msgid "Print QR labels"
+msgstr "Imprimir etiquetas QR"
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__wizard_id
+msgid "Print wizard"
+msgstr ""
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__received_material
 msgid "Received material"
 msgstr "Material pedido/recibido"
@@ -834,6 +939,8 @@ msgstr "Referencia"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_has_sms_error
@@ -856,7 +963,7 @@ msgstr ""
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__task_signature
 msgid "Signature"
-msgstr ""
+msgstr "Firma"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__situation
@@ -875,6 +982,7 @@ msgstr ""
 
 #. module: sat_companies_industry
 #: model:ir.model,name:sat_companies_industry.model_project_task
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__task_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__task_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__task_id
 msgid "Task"
@@ -918,6 +1026,8 @@ msgstr "Tipos de tareas asociadas"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_unread
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_unread
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__message_unread
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__message_unread
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_unread
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_unread
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_unread
@@ -930,6 +1040,8 @@ msgstr ""
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_unread_counter
@@ -947,6 +1059,8 @@ msgstr "Fecha verificación"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__website_message_ids
@@ -959,6 +1073,8 @@ msgstr ""
 #. module: sat_companies_industry
 #: model:ir.model.fields,help:sat_companies_industry.field_maintenance_minute_point__website_message_ids
 #: model:ir.model.fields,help:sat_companies_industry.field_maintenance_type_deffect__website_message_ids
+#: model:ir.model.fields,help:sat_companies_industry.field_multiple_labels__website_message_ids
+#: model:ir.model.fields,help:sat_companies_industry.field_multiple_labels_lines__website_message_ids
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_inspection__website_message_ids
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist__website_message_ids
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_line__website_message_ids
@@ -967,6 +1083,11 @@ msgstr ""
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_type_associated__website_message_ids
 msgid "Website communication history"
 msgstr "Historial de comunicación del website"
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__year
+msgid "Year"
+msgstr "Año"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields.selection,name:sat_companies_industry.selection__project_task_ot_checklist__accomplished__yes
