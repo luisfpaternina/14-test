@@ -44,6 +44,9 @@ class ProjectTaskOtChecklist(models.Model):
     task_id = fields.Many2one(
         'project.task',
         string="Task")
+    month_date = fields.Char(
+        string="Month",
+        compute="calculate_month")
 
 
     @api.onchange('name')
@@ -58,3 +61,10 @@ class ProjectTaskOtChecklist(models.Model):
             vals['line_number'] = self.env['ir.sequence'].next_by_code('checklist') or 'New'
         result = super(ProjectTaskOtChecklist, self).create(vals)
         return result
+
+
+    @api.depends('ot_date')
+    def calculate_month(self):
+        for record in self:
+            dt = datetime.datetime.today()
+            record.month_date = dt.month
