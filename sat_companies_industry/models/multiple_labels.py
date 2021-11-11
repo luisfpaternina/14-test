@@ -11,6 +11,13 @@ class MultipleLabels(models.Model):
         'multiple.labels.lines',
         'wizard_id',
         string="Gadgets")
+    message = fields.Char(
+        string="Message")
+
+
+    def action_print(self):
+        for rec in self:
+            print("Aqui va el codigo")
 
 
 

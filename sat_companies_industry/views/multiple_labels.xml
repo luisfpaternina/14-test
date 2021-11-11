@@ -20,6 +20,15 @@
             <field name="priority" eval="8" />
             <field name="arch" type="xml">
                 <form>
+                    <header>
+                        <button 
+                            name="action_print" 
+                            string="Print" 
+                            help="Print QR labels" 
+                            type="object" 
+                            icon="fa-print" 
+                            class="btn-primary mt8 mb8"/>
+                    </header>
                     <sheet>
                         <div class="oe_title">
                             <h1>
