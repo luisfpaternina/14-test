@@ -7,13 +7,10 @@ class MultipleLabels(models.Model):
     _inherit = 'mail.thread'
     _description = 'Multiple labels'
 
-
-
-
-
-
-
-
+    label_ids = fields.One2many(
+        'multiple.labels.lines',
+        'wizard_id',
+        string="Gadgets")
 
 
 
