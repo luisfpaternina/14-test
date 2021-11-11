@@ -8,3 +8,4 @@ from . import project_task_ot_type
 from . import project_task_inspection
 from . import maintenance_type_deffect
 from . import project_task_ot_checklist_location
+from . import multiple_labels
