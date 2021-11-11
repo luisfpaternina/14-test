@@ -103,6 +103,10 @@ class ProjectTask(models.Model):
         string="Associated type")
     task_signature = fields.Binary(
         string="Signature")
+    checklist_ot_ids = fields.One2many(
+        'project.task.ot.checklist.line',
+        'task_id',
+        string="Ot checklist")
 
 
     @api.onchange('contact_person')
