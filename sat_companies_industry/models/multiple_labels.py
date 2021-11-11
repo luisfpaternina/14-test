@@ -20,7 +20,8 @@ class MultipleLabelsLines(models.Model):
     _description = 'Multiple labels lines'
 
     is_selected = fields.Boolean(
-        string="Print")
+        string="Print",
+        default=True)
     wizard_id = fields.Many2one(
         'multiple.labels',
         string="Print wizard")
