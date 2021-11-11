@@ -27,7 +27,8 @@ class MultipleLabelsLines(models.Model):
         string="Print wizard")
     product_id = fields.Many2one(
         'product.template',
-        string="Gadget")
+        string="Gadget",
+        related="task_id.product_id")
     task_id = fields.Many2one(
         'project.task',
         string="Task")
