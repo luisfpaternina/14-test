@@ -115,11 +115,3 @@ class ProjectTask(models.Model):
         for record in self:
             dt = datetime.datetime.today()
             record.month_date = dt.month
-    
-
-    """
-    @api.onchange('checklist_ids','user_id')
-    def onchange_partner_id(self):
-        for rec in self:
-            return {'domain':{'checklist_ids':[('user_id', '=', rec.user_id.id)]}}
-    """
