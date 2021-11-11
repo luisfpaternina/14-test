@@ -33,6 +33,7 @@
         'views/project_task_type_associated.xml',
         'views/project_task_inspection.xml',
         'views/project_task_ot_checklist_location.xml',
+        'views/multiple_labels.xml',
         'reports/worksheet.xml',
         'data/sequences.xml',
         
