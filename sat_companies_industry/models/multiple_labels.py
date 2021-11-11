@@ -24,3 +24,6 @@ class MultipleLabelsLines(models.Model):
 
     is_selected = fields.Boolean(
         string="Print")
+    wizard_id = fields.Many2one(
+        'multiple.labels',
+        string="Print wizard")
