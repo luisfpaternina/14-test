@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
+from datetime import date
+import datetime
+import logging
 
 class ProjectTaskOtChecklist(models.Model):
     _name = 'project.task.ot.checklist'
