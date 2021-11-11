@@ -25,7 +25,7 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            <field name="name" placeholder="Location"/>
+                                            <field name="name" placeholder="Location" required="1"/>
                                         </td>
                                     </tr>
                                 </table>
