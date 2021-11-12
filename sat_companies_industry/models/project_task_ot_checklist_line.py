@@ -66,4 +66,4 @@ class ProjectTaskOtChecklistLine(models.Model):
         if check_ids:
             logging.info('##########################################')
             logging.info(check_ids)
-            return {'domain':{'checklist_id':[('ids', '=', check_ids)]}}
+            return {'domain':{'checklist_id':[('id', '=', check_ids)]}}
