@@ -123,6 +123,11 @@ class ProjectTask(models.Model):
 
     @api.onchange('checklist_ot_ids')
     def onchange_checklist_ot_ids(self):
-        for rec in self:
-            return {'domain':{'checklist_ot_ids.checklist_id':[('month_date', '=', rec.month_date)]}}
-
+        checklist_obj = self.env['project.task.ot.checklist'].search([])
+        check_ids = []
+        a = []
+        for check in checklist_obj:
+            if check.check_11 == True:
+                a.append(check.id)
+        logging.info('##########################################')
+        logging.info(a)
