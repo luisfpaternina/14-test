@@ -119,3 +119,8 @@ class ProjectTask(models.Model):
         for record in self:
             dt = datetime.datetime.today()
             record.month_date = dt.month
+
+    @api.onchange('checklist_ot_ids')
+    def _onchange_checklist(self):
+        logging.info("+++++++++++++++++++++++++++++++++++++++++++++++++")
+        self.checklist_ot_ids.onchange_checklist()
