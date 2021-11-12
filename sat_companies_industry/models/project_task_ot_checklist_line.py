@@ -56,12 +56,33 @@ class ProjectTaskOtChecklistLine(models.Model):
 
     @api.onchange('checklist_id')
     def onchange_checklist(self):
-        logging.info('*******************************************************')
         checklist_obj = self.env['project.task.ot.checklist'].search([])
         check_ids = []
         a = []
         for check in checklist_obj:
             if check.check_11 == True and check.month_date == '11':
+                check_ids.append(check.id)
+            elif check.check_1 == True and check.month_date == '1':
+                check_ids.append(check.id)
+            elif check.check_2 == True and check.month_date == '2':
+                check_ids.append(check.id)
+            elif check.check_3 == True and check.month_date == '3':
+                check_ids.append(check.id)
+            elif check.check_4 == True and check.month_date == '4':
+                check_ids.append(check.id)
+            elif check.check_5 == True and check.month_date == '5':
+                check_ids.append(check.id)
+            elif check.check_6 == True and check.month_date == '6':
+                check_ids.append(check.id)
+            elif check.check_7 == True and check.month_date == '7':
+                check_ids.append(check.id)
+            elif check.check_8 == True and check.month_date == '8':
+                check_ids.append(check.id)
+            elif check.check_9 == True and check.month_date == '9':
+                check_ids.append(check.id)
+            elif check.check_10 == True and check.month_date == '10':
+                check_ids.append(check.id)
+            elif check.check_12 == True and check.month_date == '12':
                 check_ids.append(check.id)
         if check_ids:
             logging.info('##########################################')
