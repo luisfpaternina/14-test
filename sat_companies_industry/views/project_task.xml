@@ -12,6 +12,7 @@
                             <tree editable="botttom">
                                 <field name="checklist_id" required="1"/>
                                 <field name="is_reviewed_checklist"/>
+                                <field name="create_date"/>
                             </tree>
                         </field>
                     <group name="group_ot_right">
