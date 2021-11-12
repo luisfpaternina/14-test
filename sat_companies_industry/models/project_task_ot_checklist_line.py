@@ -85,6 +85,4 @@ class ProjectTaskOtChecklistLine(models.Model):
             elif check.check_12 == True and check.month_date == '12':
                 check_ids.append(check.id)
         if check_ids:
-            logging.info('##########################################')
-            logging.info(check_ids)
             return {'domain':{'checklist_id':[('id', '=', check_ids)]}}
