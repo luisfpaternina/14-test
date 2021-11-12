@@ -130,7 +130,8 @@ class ProjectTask(models.Model):
             if check.check_11 == True and check.month_date == '11':
                 check_ids.append(check.id)
         if check_ids:
+            logging.info('##########################################')
+            logging.info(check_ids)
             return {'domain':{'checklist_ot_ids.checklist_id':[('ids', '=', check_ids)]}}
 
-        logging.info('##########################################')
-        logging.info(check_ids)
+        
