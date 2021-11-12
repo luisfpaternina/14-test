@@ -133,5 +133,3 @@ class ProjectTask(models.Model):
             logging.info('##########################################')
             logging.info(check_ids)
             return {'domain':{'checklist_ot_ids.checklist_id':[('ids', '=', check_ids)]}}
-
-        
