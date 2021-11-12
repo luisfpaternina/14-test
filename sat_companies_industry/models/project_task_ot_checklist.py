@@ -84,8 +84,7 @@ class ProjectTaskOtChecklist(models.Model):
     is_october = fields.Boolean(
         string="Is October")
     is_november = fields.Boolean(
-        string="Is November",
-        compute="_compute_november")
+        string="Is November")
     is_december = fields.Boolean(
         string="Is December")
 
@@ -109,9 +108,3 @@ class ProjectTaskOtChecklist(models.Model):
         for record in self:
             dt = datetime.datetime.today()
             record.month_date = dt.month
-
-
-    @api.depends('name','check_11')
-    def _compute_november(self):
-        for record in self:
-            record.is_november = True if record.month_date == '11' and record.check_11 == True else False
