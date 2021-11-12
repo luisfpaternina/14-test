@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
+from datetime import date
+import datetime
+import logging
+
 
 class ProjectTaskOtChecklistLine(models.Model):
     _name = 'project.task.ot.checklist.line'
@@ -33,8 +37,18 @@ class ProjectTaskOtChecklistLine(models.Model):
         string="Checklist")
     is_reviewed_checklist = fields.Boolean(
         string="Is reviewed")
+    month_date = fields.Char(
+        string="Month",
+        compute="calculate_month")
 
 
     @api.onchange('name')
     def _upper_name(self):        
         self.name = self.name.upper() if self.name else False
+
+
+    @api.depends('create_date')
+    def calculate_month(self):
+        for record in self:
+            dt = datetime.datetime.today()
+            record.month_date = dt.month
