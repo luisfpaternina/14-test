@@ -63,6 +63,30 @@ class ProjectTaskOtChecklist(models.Model):
     month_date = fields.Char(
         string="Month",
         compute="calculate_month")
+    is_january = fields.Boolean(
+        string="Is January")
+    is_february = fields.Boolean(
+        string="Is February")
+    is_march = fields.Boolean(
+        string="Is March")
+    is_april = fields.Boolean(
+        string="Is April")
+    is_may = fields.Boolean(
+        string="Is May")
+    is_june = fields.Boolean(
+        string="Is June")
+    is_july = fields.Boolean(
+        string="Is July")
+    is_august = fields.Boolean(
+        string="Is August")
+    is_september = fields.Boolean(
+        string="Is September")
+    is_october = fields.Boolean(
+        string="Is October")
+    is_november = fields.Boolean(
+        string="Is November")
+    is_december = fields.Boolean(
+        string="Is December")
 
 
     @api.onchange('name')
