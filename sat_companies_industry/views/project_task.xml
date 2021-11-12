@@ -10,7 +10,7 @@
                   <group name="studio_group_SidLz">
                         <field name="checklist_ot_ids">
                             <tree editable="botttom">
-                                <field name="checklist_id" required="1" domain = "[('is_november','=',True)]"/>
+                                <field name="checklist_id" required="1"/>
                                 <field name="is_reviewed_checklist"/>
                                 <field name="month_date"/>
                                 <field name="create_date"/>
