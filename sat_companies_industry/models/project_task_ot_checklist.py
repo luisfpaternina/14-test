@@ -84,7 +84,8 @@ class ProjectTaskOtChecklist(models.Model):
     is_october = fields.Boolean(
         string="Is October")
     is_november = fields.Boolean(
-        string="Is November")
+        string="Is November",
+        compute="_compute_november")
     is_december = fields.Boolean(
         string="Is December")
 
