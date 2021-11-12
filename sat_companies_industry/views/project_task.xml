@@ -12,7 +12,7 @@
                             <tree editable="botttom">
                                 <field name="checklist_id" required="1"/>
                                 <field name="is_reviewed_checklist"/>
-                                <field name="month_date"/>
+                                <field name="month_date" invisible="1"/>
                                 <field name="create_date"/>
                             </tree>
                         </field>
