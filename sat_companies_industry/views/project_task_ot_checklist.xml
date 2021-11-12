@@ -25,8 +25,7 @@
                     <field name="check_10"/>
                     <field name="check_11"/>
                     <field name="check_12"/>
-                    <field name="month_date"/>
-                    <field name="is_november"/>
+                    <field name="month_date" invisible="1"/>
                 </tree>
             </field>
         </record>
