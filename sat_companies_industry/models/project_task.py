@@ -128,6 +128,9 @@ class ProjectTask(models.Model):
         a = []
         for check in checklist_obj:
             if check.check_11 == True and check.month_date == '11':
-                a.append(check.id)
+                check_ids.append(check.id)
+        if check_ids:
+            return {'domain':{'checklist_ot_ids.checklist_id':[('ids', '=', check_ids)]}}
+
         logging.info('##########################################')
-        logging.info(a)
+        logging.info(check_ids)
