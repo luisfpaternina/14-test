@@ -17,8 +17,3 @@ class ResPartnerPatient(models.Model):
         string="Active",
         tracking=True,
         default=True)
-    
-
-    @api.onchange('name')
-    def _upper_name(self):        
-        self.name = self.name.upper() if self.name else False
