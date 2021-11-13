@@ -68,7 +68,7 @@
 
         <menuitem 
             id="menu_partner_patient" 
-            name="Cities" 
+            name="Patients" 
             parent="contacts.res_partner_menu_config"
             action="action_view_partner_patient"
             sequence="85"
