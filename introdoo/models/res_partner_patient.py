@@ -30,6 +30,9 @@ class ResPartnerPatient(models.Model):
         ('ps','Pasaporte')],string="Identification type")
     identification_image = fields.Binary(
         string="Identification")
+    town_id = fields.Many2one(
+        'res.partner.town',
+        string="Town")
 
 
     @api.onchange('name')

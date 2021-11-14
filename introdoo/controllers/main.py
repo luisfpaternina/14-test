@@ -6,7 +6,9 @@ class Patient(http.Controller):
     @http.route('/patient_webform', type="http", auth="public", website=True)
     def patient_webform(self, **kw):
         countries_rec = request.env['res.country'].sudo().search([])
-        return http.request.render('introdoo.create_patient', {'countries_rec': countries_rec})
+        town_rec = request.env['res.partner.town'].sudo().search([])
+        return http.request.render('introdoo.create_patient', {'countries_rec': countries_rec,
+                                                                'town_rec': town_rec})
 
     @http.route('/create/webpatient', type="http", auth="public", website=True)
     def create_webpatient(self, **kw):
