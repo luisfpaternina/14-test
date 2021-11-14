@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-    <record id="menu_patient_form_website" model="ir.ui.view">
+    <record id="menu_patient_form_website" model="website.menu">
         <field name="name">Create patient</field>
         <field name="url">patient_webform</field>
         <field name="parent_id" ref="website.main_menu"/>
