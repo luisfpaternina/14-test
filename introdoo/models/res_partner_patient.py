@@ -28,6 +28,8 @@ class ResPartnerPatient(models.Model):
         ('nuip','N.U.I.P'),
         ('ti','Tarjeta identidad'),
         ('ps','Pasaporte')],string="Identification type")
+    identification_image = fields.Binary(
+        string="Identification")
 
 
     @api.onchange('name')
