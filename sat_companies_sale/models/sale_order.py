@@ -27,12 +27,15 @@ class SaleOrder(models.Model):
     check_contract_type = fields.Boolean(
         compute="_compute_check_contract_type",
         )
-
     type_service_id = fields.One2many(
         'sale.check.type.contract',
         'order_id',
         string='Type service'
         )
+    delegation_id = fields.Many2one(
+        'res.partner.delegation',
+        string="Delegation")
+    
 
     @api.depends('sale_type_id')
     def _compute_check_contract_type(self):
