@@ -23,6 +23,10 @@
                                 <label for="name" class="control-label">Code</label>
                                 <input type="text" name="code" t-att-value="code" id="code" class="form-control" placeholder="33128780"></input>
                             </div>
+                             <div class="form-group">
+                                <label for="phone" class="control-label">Phone</label>
+                                <input type="text" name="phone" t-att-value="phone" id="phone" class="form-control" placeholder="+573215062357"></input>
+                            </div>
                             <div class="clearfix oe_login_buttons">
                                 <button type="submit" class="btn btn-primary pull-left">SUBMIT</button>
                             </div>
