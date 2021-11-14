@@ -37,7 +37,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="form-control" name="country_id" required="">
+                                <select class="form-control" name="country_id">
                                     <option></option>
                                     <option t-foreach="countries" t-as="country" t-att-value="country.id">
                                         <t t-esc="country.name"/>
