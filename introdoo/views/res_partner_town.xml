@@ -59,7 +59,7 @@
             id="menu_partner_town" 
             name="Towns" 
             parent="contacts.res_partner_menu_config"
-            action="action_view_partner_patient"
+            action="action_view_partner_town"
             sequence="88"
             />
 
