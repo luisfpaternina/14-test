@@ -45,6 +45,14 @@
                                     </t>
                                 </select>
                             </div>
+                            <div class="form-group">
+                                <label for="town_id" class="control-label">Town</label>
+                                <select class="form-control link-style" name="town_id">
+                                    <t t-foreach="town_rec" t-as="town">
+                                        <option t-esc="town.name" t-att-value="town.id"/>
+                                    </t>
+                                </select>
+                            </div>
                             <div class="form-group row form-field o_website_form_required_custom">
                                 <div class="col-lg-3 col-md-4 text-right">
                                     <label class="col-form-label" for="identification_image">
