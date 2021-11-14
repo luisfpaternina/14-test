@@ -38,6 +38,7 @@
         'security/ir.model.access.csv',
         'views/res_company.xml',
         'views/res_partner_patient.xml',
+        'views/res_partner_town.xml',
         'views/website_form.xml',             
     ],
     'installable': True

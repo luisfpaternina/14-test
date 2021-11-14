@@ -2,9 +2,9 @@
 <odoo>
     <data>
 
-        <record id="view_res_partner_patient_tree" model="ir.ui.view">
-            <field name="name">res.partner.patient.tree</field>
-            <field name="model">res.partner.patient</field>
+        <record id="view_res_partner_town_tree" model="ir.ui.view">
+            <field name="name">res.partner.town.tree</field>
+            <field name="model">res.partner.town</field>
             <field name="priority" eval="8" />
             <field name="arch" type="xml">
                 <tree>
@@ -13,9 +13,9 @@
             </field>
         </record>
 
-        <record id="view_res_partner_patient_form" model="ir.ui.view">
-            <field name="name">res.partner.patient.form</field>
-            <field name="model">res.partner.patient</field>
+        <record id="view_res_partner_town_form" model="ir.ui.view">
+            <field name="name">res.partner.town.form</field>
+            <field name="model">res.partner.town</field>
             <field name="priority" eval="8" />
             <field name="arch" type="xml">
                 <form>
@@ -32,20 +32,7 @@
                             </h1>
                         </div>
                         <group>
-                           <group>
-                               <field name="identification_type"/>
-                               <field name="code"/>
-                               <field name="identification_image"/>
-                           </group>
-                           <group>
-                               <field name="phone"/>
-                           </group>
-                           <group>
-                               <field name="country_id"/>
-                           </group>
-                           <group>
-                               <field name="active" widget="boolean_toggle"/>
-                           </group>
+                           
                         </group>
                     </sheet>
                     <div class="oe_chatter">
@@ -56,9 +43,9 @@
             </field>
         </record>
 
-        <record model="ir.actions.act_window" id="action_view_partner_patient">
-            <field name="name">Patients</field>
-            <field name="res_model">res.partner.patient</field>
+        <record model="ir.actions.act_window" id="action_view_partner_town">
+            <field name="name">Towns</field>
+            <field name="res_model">res.partner.town</field>
             <field name="view_mode">tree,form</field>
             <field name="domain">[]</field>
             <field name="help" type="html">
@@ -69,11 +56,11 @@
         </record>
 
         <menuitem 
-            id="menu_partner_patient" 
-            name="Patients" 
+            id="menu_partner_town" 
+            name="Towns" 
             parent="contacts.res_partner_menu_config"
             action="action_view_partner_patient"
-            sequence="85"
+            sequence="88"
             />
 
     </data>
