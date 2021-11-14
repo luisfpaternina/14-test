@@ -17,7 +17,7 @@
                             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"></input>
                             <div class="form-group">
                                 <label for="name" class="control-label">Name</label>
-                                <input type="text" name="name" t-att-value="name" id="name" class="form-control" placeholder="Luis Felipe Paternina" required="required" style="text-transform: uppercase;"></input>
+                                <input type="text" name="name" t-att-value="name" id="name" class="form-control" placeholder="EJ:Luis Felipe Paternina" required="required" style="text-transform: uppercase;"></input>
                             </div>
                             <div class="form-group">
                                 <label for="identification_type" class="control-label">Identification type</label>
@@ -31,11 +31,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="name" class="control-label">Code</label>
-                                <input type="text" name="code" t-att-value="code" id="code" class="form-control" placeholder="33128780"></input>
+                                <input type="text" name="code" t-att-value="code" id="code" class="form-control" placeholder="EJ:33128780"></input>
                             </div>
                             <div class="form-group">
                                 <label for="phone" class="control-label">Phone</label>
-                                <input type="text" name="phone" t-att-value="phone" id="phone" class="form-control" placeholder="+573215062357"></input>
+                                <input type="text" name="phone" t-att-value="phone" id="phone" class="form-control" placeholder="EJ:+573215062357"></input>
                             </div>
                             <div class="form-group">
                                 <label for="country_id" class="control-label">Country</label>
