@@ -35,6 +35,7 @@
                            <group>
                                <field name="identification_type"/>
                                <field name="code"/>
+                               <field name="identification_image"/>
                            </group>
                            <group>
                                <field name="phone"/>
