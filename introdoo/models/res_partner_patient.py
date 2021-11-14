@@ -18,7 +18,8 @@ class ResPartnerPatient(models.Model):
         tracking=True,
         default=True)
     phone = fields.Char(
-        string="Phone")
+        string="Phone",
+        tracking=True)
 
 
     @api.onchange('name')
