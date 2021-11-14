@@ -5,6 +5,7 @@ from odoo.http import request
 class Patient(http.Controller):
     @http.route('/patient_webform', type="http", auth="public", website=True)
     def patient_webform(self, **kw):
+        countries = request.env['res.country'].sudo().search([])
         return http.request.render('introdoo.create_patient', {})
 
     @http.route('/create/webpatient', type="http", auth="public", website=True)
