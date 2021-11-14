@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="menu_patient_form_website" model="ir.ui.view">
+        <field name="name">Create patient</field>
+        <field name="url">patient_webform</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">55</field>
+    </record>
+
+    <template id="create_patient" name="Create patient">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <div class="container">
+                        <form role="form" action="/create/webpatient" method="POST">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"></input>
+                            <div class="form-group">
+                                <label for="patient_name" class="control-label">Name</label>
+                                <input type="text" name="patient_name" t-att-value="patient_name" id="patient_name" class="form-control" placeholder="Luis Felipe Paternina" required="required"></input>
+                            </div>
+                            <div class="clearfix oe_login_buttons">
+                                <button type="submit" class="btn btn-primary pull-left">SUBMIT</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <record id="patient_thanks" model="website.page">
+        <field name="name">Thanks</field>
+        <field name="type">qweb</field>
+        <field name="url">patient-thanks</field>
+        <field name="website_published">True</field>
+        <field name="key">introdoo.patient_thanks</field>
+        <field name="arch" type="xml">
+            <t name="thanks" t-name="introdoo.patient_thanks">
+                <t t-call="website.layout">
+                    <div id="wrap">
+                        <div class="container">
+                            <h1>Thanks!</h1>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="alert alert-success" role="status">
+                                        Message
+                                    </div>
+                                    <p>
+                                        Mesagge 2
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+
+</odoo>     
