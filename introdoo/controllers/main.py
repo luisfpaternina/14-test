@@ -10,4 +10,5 @@ class Patient(http.Controller):
     @http.route('/create/webpatient', type="http", auth="public", website=True)
     def create_webpatient(self, **kw):
         request.env['res.partner.patient'].sudo().create(kw)
+        countries = request.env['res.country'].sudo().search([])
         return request.render("introdoo.patient_thanks", {})
