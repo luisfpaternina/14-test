@@ -123,5 +123,4 @@ class ProjectTask(models.Model):
 
     @api.onchange('checklist_ot_ids')
     def _onchange_checklist(self):
-        logging.info("+++++++++++++++++++++++++++++++++++++++++++++++++")
         self.checklist_ot_ids.onchange_checklist()
