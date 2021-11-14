@@ -48,10 +48,10 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <div class="alert alert-success" role="status">
-                                        Message
+                                        Successfully created record
                                     </div>
                                     <p>
-                                        Mesagge 2
+                                        Thank you for using our web portal!
                                     </p>
                                 </div>
                             </div>
