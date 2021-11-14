@@ -27,6 +27,14 @@
                                 <label for="phone" class="control-label">Phone</label>
                                 <input type="text" name="phone" t-att-value="phone" id="phone" class="form-control" placeholder="+573215062357"></input>
                             </div>
+                            <div class="col-4">
+                                <select class="form-control" name="pais" required="">
+                                    <option></option>
+                                    <option t-foreach="countries" t-as="country" t-att-value="country.id">
+                                        <t t-esc="country.name"/>
+                                    </option>
+                                </select>
+                            </div>
                             <div class="clearfix oe_login_buttons">
                                 <button type="submit" class="btn btn-primary pull-left">SUBMIT</button>
                             </div>
