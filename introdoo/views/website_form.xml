@@ -17,7 +17,7 @@
                             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"></input>
                             <div class="form-group">
                                 <label for="name" class="control-label">Name</label>
-                                <input type="text" name="name" t-att-value="name" id="name" class="form-control" placeholder="Luis Felipe Paternina" required="required"></input>
+                                <input type="text" name="name" t-att-value="name" id="name" class="form-control" placeholder="Luis Felipe Paternina" required="required" style="text-transform: uppercase;"></input>
                             </div>
                             <div class="form-group">
                                 <label for="name" class="control-label">Code</label>
