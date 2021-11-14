@@ -20,6 +20,9 @@ class ResPartnerPatient(models.Model):
     phone = fields.Char(
         string="Phone",
         tracking=True)
+    country_id = fields.Many2one(
+        'res.country',
+        string="Country")
 
 
     @api.onchange('name')
