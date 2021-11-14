@@ -1,11 +1,13 @@
+from odoo import http
+from odoo.http import request
 
 
-from odoo import models, fields, api
+class Patient(http.Controller):
+    @http.route('/patient', type="http", auth="public", website=True)
+    def patient_webform(self, **kw):
+        return http.request.render('introdoo.create_patient', {})
 
-class ResCompany(models.Model):
-    _inherit = 'res.company'
-
-    terms = fields.Text(string="Terminos y condiciones")
-
-    
-    
+    @http.route('/create/webpatient', type="http", auth="public", website=True)
+    def create_webpatient(self, **kw):
+        request.env['res.partner.patient'].sudo().create(kw)
+        return request.render("introdoo.patient_thanks", {})
