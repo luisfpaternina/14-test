@@ -36,7 +36,7 @@
                                <field name="code"/>
                            </group>
                            <group>
-                               
+                               <field name="phone"/>
                            </group>
                            <group>
                                
