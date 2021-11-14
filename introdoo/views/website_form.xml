@@ -16,8 +16,8 @@
                         <form role="form" action="/create/webpatient" method="POST">
                             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"></input>
                             <div class="form-group">
-                                <label for="patient_name" class="control-label">Name</label>
-                                <input type="text" name="patient_name" t-att-value="patient_name" id="patient_name" class="form-control" placeholder="Luis Felipe Paternina" required="required"></input>
+                                <label for="name" class="control-label">Name</label>
+                                <input type="text" name="name" t-att-value="patient_name" id="name" class="form-control" placeholder="Luis Felipe Paternina" required="required"></input>
                             </div>
                             <div class="clearfix oe_login_buttons">
                                 <button type="submit" class="btn btn-primary pull-left">SUBMIT</button>
