@@ -319,13 +319,13 @@ msgstr "Gracias"
 #: model:ir.model.fields,field_description:introdoo.field_res_partner_patient__town_id
 #: model_terms:ir.ui.view,arch_db:introdoo.create_patient
 msgid "Town"
-msgstr "Municipios"
+msgstr "Municipio"
 
 #. module: introdoo
 #: model:ir.actions.act_window,name:introdoo.action_view_partner_town
 #: model:ir.ui.menu,name:introdoo.menu_partner_town
 msgid "Towns"
-msgstr ""
+msgstr "Municipios"
 
 #. module: introdoo
 #: model:ir.model.fields,field_description:introdoo.field_res_partner_patient__message_unread
