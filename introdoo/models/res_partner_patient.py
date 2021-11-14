@@ -23,6 +23,11 @@ class ResPartnerPatient(models.Model):
     country_id = fields.Many2one(
         'res.country',
         string="Country")
+    identification_type = fields.Selection([
+        ('cc','Cédula'),
+        ('nuip','N.U.I.P'),
+        ('ti','Tarjeta identidad'),
+        ('ps','Pasaporte')],string="Identification type")
 
 
     @api.onchange('name')
