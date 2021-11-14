@@ -53,8 +53,7 @@
                                     </div>
                                     <div class="col-4">
                                         <input type="file" class="form-control o_website_form_input"
-                                        name="identification_image"
-                                        required="required"/>
+                                        name="identification_image"/>
                                 </div>
                             </div>
                             <div class="clearfix oe_login_buttons">
