@@ -6,14 +6,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-13 16:59+0000\n"
-"PO-Revision-Date: 2021-11-13 16:59+0000\n"
+"POT-Creation-Date: 2021-11-14 16:46+0000\n"
+"PO-Revision-Date: 2021-11-14 16:46+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: introdoo
+#: model_terms:ir.ui.view,arch_db:introdoo.create_patient
+msgid "33128780"
+msgstr ""
 
 #. module: introdoo
 #: model:ir.model.fields,field_description:introdoo.field_res_partner_patient__message_needaction
@@ -32,6 +37,7 @@ msgstr ""
 
 #. module: introdoo
 #: model:ir.model.fields,field_description:introdoo.field_res_partner_patient__code
+#: model_terms:ir.ui.view,arch_db:introdoo.create_patient
 msgid "Code"
 msgstr "Código"
 
@@ -39,6 +45,16 @@ msgstr "Código"
 #: model:ir.model,name:introdoo.model_res_company
 msgid "Companies"
 msgstr "Compañías"
+
+#. module: introdoo
+#: model_terms:ir.actions.act_window,help:introdoo.action_view_partner_patient
+msgid "Create new record"
+msgstr "Crear nuevo registro"
+
+#. module: introdoo
+#: model:website.menu,name:introdoo.menu_patient_form_website
+msgid "Create patient"
+msgstr "Crear paciente"
 
 #. module: introdoo
 #: model:ir.model.fields,field_description:introdoo.field_res_partner_patient__create_uid
@@ -103,11 +119,16 @@ msgstr "Última Modificación el"
 #. module: introdoo
 #: model:ir.model.fields,field_description:introdoo.field_res_partner_patient__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Última actualicación por"
 
 #. module: introdoo
 #: model:ir.model.fields,field_description:introdoo.field_res_partner_patient__write_date
 msgid "Last Updated on"
+msgstr ""
+
+#. module: introdoo
+#: model_terms:ir.ui.view,arch_db:introdoo.create_patient
+msgid "Luis Felipe Paternina"
 msgstr ""
 
 #. module: introdoo
@@ -133,10 +154,12 @@ msgstr ""
 #. module: introdoo
 #: model:ir.model.fields,field_description:introdoo.field_res_partner_patient__message_ids
 msgid "Messages"
-msgstr ""
+msgstr "Mensajes"
 
 #. module: introdoo
 #: model:ir.model.fields,field_description:introdoo.field_res_partner_patient__name
+#: model_terms:ir.ui.view,arch_db:introdoo.create_patient
+#: model_terms:ir.ui.view,arch_db:introdoo.view_res_partner_patient_form
 msgid "Name"
 msgstr "Nombre"
 
@@ -166,9 +189,16 @@ msgid "Number of unread messages"
 msgstr ""
 
 #. module: introdoo
+#: model:ir.actions.act_window,name:introdoo.action_view_partner_patient
 #: model:ir.model,name:introdoo.model_res_partner_patient
+#: model:ir.ui.menu,name:introdoo.menu_partner_patient
 msgid "Patients"
 msgstr "Pacientes"
+
+#. module: introdoo
+#: model:ir.model.fields,field_description:introdoo.field_res_partner_patient__phone
+msgid "Phone"
+msgstr "Télefono"
 
 #. module: introdoo
 #: model:ir.model.fields,field_description:introdoo.field_res_partner_patient__message_has_sms_error
@@ -176,9 +206,32 @@ msgid "SMS Delivery error"
 msgstr ""
 
 #. module: introdoo
+#: model_terms:ir.ui.view,arch_db:introdoo.create_patient
+msgid "SUBMIT"
+msgstr "ENVIAR"
+
+#. module: introdoo
+#: model_terms:ir.ui.view,arch_db:introdoo.patient_thanks_ir_ui_view
+#: model_terms:website.page,arch_db:introdoo.patient_thanks
+msgid "Successfully created record"
+msgstr "Registro creado exitosamente!"
+
+#. module: introdoo
 #: model:ir.model.fields,field_description:introdoo.field_res_company__terms
 msgid "Terminos y condiciones"
 msgstr ""
+
+#. module: introdoo
+#: model_terms:ir.ui.view,arch_db:introdoo.patient_thanks_ir_ui_view
+#: model_terms:website.page,arch_db:introdoo.patient_thanks
+msgid "Thank you for using our web portal!"
+msgstr "Gracias por usar nuestro portal web"
+
+#. module: introdoo
+#: model_terms:ir.ui.view,arch_db:introdoo.patient_thanks_ir_ui_view
+#: model_terms:website.page,arch_db:introdoo.patient_thanks
+msgid "Thanks!"
+msgstr "Gracias"
 
 #. module: introdoo
 #: model:ir.model.fields,field_description:introdoo.field_res_partner_patient__message_unread
