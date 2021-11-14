@@ -3,7 +3,7 @@ from odoo.http import request
 
 
 class Patient(http.Controller):
-    @http.route('/patient', type="http", auth="public", website=True)
+    @http.route('/patient_webform', type="http", auth="public", website=True)
     def patient_webform(self, **kw):
         return http.request.render('introdoo.create_patient', {})
 

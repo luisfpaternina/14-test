@@ -32,7 +32,7 @@
     <record id="patient_thanks" model="website.page">
         <field name="name">Thanks</field>
         <field name="type">qweb</field>
-        <field name="url">patient-thanks</field>
+        <field name="url">patient_thanks</field>
         <field name="website_published">True</field>
         <field name="key">introdoo.patient_thanks</field>
         <field name="arch" type="xml">
