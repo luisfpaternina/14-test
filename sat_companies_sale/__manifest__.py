@@ -19,6 +19,7 @@
         'base_automation',
         'sale_subscription',
         'sat_companies',
+        'sat_companies_partner',
 
     ],
 
