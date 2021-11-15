@@ -37,6 +37,9 @@ class ResPartnerRoutes(models.Model):
         string="Zone")
     users_ids = fields.Many2many('res.users',
         string="Users")
+    zone_name = fields.Char(
+        string="Zone name",
+        related="zone_id.name")
     
 
     _sql_constraints = [
