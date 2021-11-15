@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-11 22:01+0000\n"
-"PO-Revision-Date: 2021-11-11 22:01+0000\n"
+"POT-Creation-Date: 2021-11-15 20:06+0000\n"
+"PO-Revision-Date: 2021-11-15 20:06+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -476,6 +476,26 @@ msgid "Inspections"
 msgstr "Inspecciones"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_april
+msgid "Is April"
+msgstr ""
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_august
+msgid "Is August"
+msgstr ""
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_december
+msgid "Is December"
+msgstr ""
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_february
+msgid "Is February"
+msgstr ""
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__message_is_follower
@@ -488,6 +508,46 @@ msgstr "Inspecciones"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_is_follower
 msgid "Is Follower"
 msgstr "Es un seguidor"
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_january
+msgid "Is January"
+msgstr ""
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_july
+msgid "Is July"
+msgstr ""
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_june
+msgid "Is June"
+msgstr ""
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_march
+msgid "Is March"
+msgstr ""
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_may
+msgid "Is May"
+msgstr ""
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_november
+msgid "Is November"
+msgstr ""
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_october
+msgid "Is October"
+msgstr ""
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_september
+msgid "Is September"
+msgstr ""
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__is_reviewed
@@ -684,6 +744,7 @@ msgstr "Punto de acta"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels__month
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__month_date
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__month_date
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__month_date
 msgid "Month"
 msgstr "Mes"
 
@@ -987,6 +1048,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__task_id
 msgid "Task"
 msgstr "Tarea"
+
+#. module: sat_companies_industry
+#: code:addons/sat_companies_industry/models/project_task.py:0
+#, python-format
+msgid "The column should be one per line"
+msgstr "No se puede repetir registros en las líneas de la tabla de checklist"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__ot_type_id
