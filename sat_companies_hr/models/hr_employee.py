@@ -93,6 +93,10 @@ class HrEmployee(models.Model):
         related="delegation_id.name")
 
 
+    _sql_constraints = [
+        ('code_uniq', 'unique (code)','This code already exists!')
+    ]
+
     @api.onchange(
         'shoe_size',
         'shirt_size',
