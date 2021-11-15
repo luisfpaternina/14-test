@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-10 12:33+0000\n"
-"PO-Revision-Date: 2021-11-10 12:33+0000\n"
+"POT-Creation-Date: 2021-11-15 19:46+0000\n"
+"PO-Revision-Date: 2021-11-15 19:46+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -220,7 +220,9 @@ msgid "Gadgest Management"
 msgstr "Administrador de aparatos"
 
 #. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__gadget_client_ids
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__gadget_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__gadget_client_ids
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__gadget_ids
 msgid "Gadgets"
 msgstr "Aparatos"
@@ -329,7 +331,7 @@ msgstr "Es administrador"
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__is_maintainer
 #: model_terms:ir.ui.view,arch_db:sat_companies_partner.custom_view_res_partner_search
 msgid "Is maintainer"
-msgstr "Es Mantenedora"
+msgstr "Mantenedora"
 
 #. module: sat_companies_partner
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner____last_update
@@ -500,7 +502,6 @@ msgstr ""
 #. module: sat_companies_partner
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__is_oca
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__is_oca
-#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
 msgid "O.C.A"
 msgstr ""
 
@@ -513,7 +514,6 @@ msgstr ""
 #. module: sat_companies_partner
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__observations_oca
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__observations_oca
-#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
 msgid "Observations"
 msgstr "Observaciones"
 
