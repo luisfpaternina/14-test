@@ -116,6 +116,17 @@
                         </group>
                     </group>
                 </page>
+                <page string="Gagdets" name="gadgest">
+                    <group>
+                        <group>
+                            <field name="gadget_client_ids">
+                                <tree>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </group>
+                </page>
             </xpath>
 
             <xpath expr="//notebook" position="inside">
