@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="sale_order_form_view_qty" model="ir.ui.view">
+            <field name="name">sale_order_form_view_qty</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//form/sheet/div[1]" position="inside">
+                    <div class="alert alert-info" role="alert" style="margin-bottom:0px;" attrs="{'invisible': [('qty_multiplier_info','=',False)]}">
+                        <bold><a class="alert-link" href="#outstanding" role="button">Advertencia:</a></bold>  Cantidades de las líneas para el empaquetado
+                    </div>			
+                </xpath>
+
+                <xpath expr="//page[@name='other_information']//field[@name='invoice_status']" position="after">
+                    <field name="qty_multiplier_info" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
