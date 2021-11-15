@@ -105,7 +105,7 @@
                         <field name="observations" placeholder="Add observations..."/>
                     </group>
                 </page>
-                <page string="Gagdets" name="gadgest">
+                <page string="Gagdets" name="gadgest" attrs="{'invisible': [('is_admin', '!=', True)]}">
                     <group>
                         <group>
                             <field name="gadget_ids">
@@ -116,7 +116,7 @@
                         </group>
                     </group>
                 </page>
-                <page string="Gagdets" name="gadgest">
+                <page string="Gagdets" name="gadgest" attrs="{'invisible': [('is_admin', '!=', False)]}">
                     <group>
                         <group>
                             <field name="gadget_client_ids">
