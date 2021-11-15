@@ -87,21 +87,10 @@ class HrEmployee(models.Model):
     code = fields.Char(
         string="Employee code", 
         tracking=True,
-        readonly=True,
-        required=True,
-        copy=False,
-        default='New')
+        copy=False)
     delegation_name = fields.Char(
         string="Delegation name",
         related="delegation_id.name")
-
-    
-    @api.model
-    def create(self, vals):
-        if vals.get('code', 'New') == 'New':
-            vals['code'] = self.env['ir.sequence'].next_by_code('employee.code') or 'New'
-        result = super(HrEmployee, self).create(vals)
-        return result
 
 
     @api.onchange(
