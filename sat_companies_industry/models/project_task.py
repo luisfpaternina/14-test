@@ -131,6 +131,6 @@ class ProjectTask(models.Model):
         for rec in self:
             exis_record_lines = []
             for line in rec.checklist_ot_ids:
-                if line.checklist_ot_ids.id in exis_record_lines:
+                if line.checklist_id.id in exis_record_lines:
                     raise ValidationError(_('The column should be one per line'))
                 exis_record_lines.append(line.checklist_id.id)
