@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-15 12:10+0000\n"
-"PO-Revision-Date: 2021-11-15 12:10+0000\n"
+"POT-Creation-Date: 2021-11-15 12:31+0000\n"
+"PO-Revision-Date: 2021-11-15 12:31+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -445,6 +445,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__zone_id
 msgid "Zone"
 msgstr "Zona"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__zone_name
+msgid "Zone name"
+msgstr "Nombre zona"
 
 #. module: sat_companies_zones
 #: model:ir.actions.act_window,name:sat_companies_zones.action_view_res_partner_zones
