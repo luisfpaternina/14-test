@@ -123,6 +123,10 @@ class ResPartner(models.Model):
     delegation_name = fields.Char(
         string="Delegation name",
         related="delegation_id.name")
+    gadget_client_ids = fields.Many2many(
+        'product.template',
+        compute="compute_gadgets_client",
+        string='Gadgets')
 
 
     _sql_constraints = [
@@ -140,6 +144,15 @@ class ResPartner(models.Model):
                 record.gadget_ids = products.ids
             else:
                 record.gadget_ids = False
+
+
+    def compute_gadgets_client(self):
+        for record in self:
+            products = self.env['product.template'].search([('partner_id','=',self.id)])
+            if products:
+                record.gadget_client_ids = products.ids
+            else:
+                record.gadget_client_ids = False
 
 
     @api.constrains('percentaje_mto', 'percentaje_rep')
