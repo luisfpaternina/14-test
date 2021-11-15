@@ -43,6 +43,9 @@
                             <group>
                                 <field name="zone_id" options="{'no_create': True, 'no_create_edit':True}"/>
                             </group>
+                            <group>
+                                <field name="zone_name"/>
+                            </group>
                         </group>
                         <group>
                             <field name="users_ids"/>
