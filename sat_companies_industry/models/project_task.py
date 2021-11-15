@@ -124,3 +124,13 @@ class ProjectTask(models.Model):
     @api.onchange('checklist_ot_ids')
     def _onchange_checklist(self):
         self.checklist_ot_ids.onchange_checklist()
+
+
+    @api.constrains('checklist_ot_ids')
+    def _check_exist_record_in_lines(self):
+        for rec in self:
+            exis_record_lines = []
+            for line in rec.checklist_ot_ids:
+                if line.checklist_ot_ids.id in exis_record_lines:
+                    raise ValidationError(_('The column should be one per line'))
+                exis_record_lines.append(line.checklist_id.id)
