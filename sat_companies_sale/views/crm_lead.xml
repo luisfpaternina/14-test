@@ -14,6 +14,7 @@
                 <field name="client_type"/>
                 <field name="managed_by" attrs="{'invisible': [('client_type', '!=', 'neighborhood_community')]}"/>
                 <field name="is_medium_website"/>
+                <field name="is_medium_email"/>
             </xpath>
         </field>
     </record>
