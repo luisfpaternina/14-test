@@ -116,7 +116,7 @@
                         </group>
                     </group>
                 </page>
-                <page string="Gagdets" name="gadgest" attrs="{'invisible': [('is_admin', '!=', False)]}">
+                <page string="Gagdets" name="gadgest" attrs="{'invisible':['|','|',('is_maintainer','!=',False),('is_admin','!=',False),('is_oca','!=',False)]}">
                     <group>
                         <group>
                             <field name="gadget_client_ids">
