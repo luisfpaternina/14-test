@@ -9,7 +9,7 @@
             <xpath expr="//field[(@name='type')]" position="before">
                 <field name="client_code"/>
                 <field name="partner_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
-                <field name="is_admin" attrs="{'invisible':['|',('company_type','!=','company'),('is_maintainer','=',True)]}"/>
+                <field name="is_admin" attrs="{'invisible':['|','|',('company_type','!=','company'),('is_maintainer','=',True),('is_oca','=',True)]}"/>
                 <field name="is_maintainer" attrs="{'invisible':['|',('company_type','!=','company'),('is_admin','=',True)]}"/>
                 <field name="is_oca" attrs="{'invisible':['|',('company_type','!=','company'),('is_admin','=',True)]}"/>
                 <field name="partner_type_id" options="{'no_create': True, 'no_create_edit':True}" invisible="1"/>
