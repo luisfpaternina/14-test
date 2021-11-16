@@ -130,6 +130,9 @@ class ResPartner(models.Model):
     gadget_oca_ids = fields.Many2many(
         'product.template',
         string='Gadgets')
+    gadget_comun_ids = fields.Many2many(
+        'product.template',
+        string='Gadgets')
     
 
     _sql_constraints = [
