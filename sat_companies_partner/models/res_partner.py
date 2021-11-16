@@ -133,7 +133,7 @@ class ResPartner(models.Model):
         string='Gadgets')
     gadget_maintener_ids = fields.Many2many(
         'product.template',
-        compute="compute_gadgets_comunities"
+        compute="compute_gadgets_comunities",
         string='Gadgets')
 
     
