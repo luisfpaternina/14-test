@@ -131,6 +131,7 @@ class ResPartner(models.Model):
         'product.template',
         compute="compute_gadgets_oca",
         string='Gadgets')
+    gadget_maintener_ids = fields.Many2many('product.template')
 
     
     _sql_constraints = [
