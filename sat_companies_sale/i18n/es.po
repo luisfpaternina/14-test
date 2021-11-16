@@ -518,7 +518,7 @@ msgstr "Tipo de contrato"
 #. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__type_service_id
 msgid "Type service"
-msgstr ""
+msgstr "Tipo de servicio"
 
 #. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_unread
