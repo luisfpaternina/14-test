@@ -139,6 +139,18 @@
                         <field name="is_oca" invisible="1"/>
                     </group>
                 </page>
+                <page string="Gagdets" name="gadgest" attrs="{'invisible': [('is_maintainer', '!=', True)]}">
+                    <group>
+                        <group>
+                            <field name="gadget_maintener_ids">
+                                <tree>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </group>
+                        <field name="is_oca" invisible="1"/>
+                    </group>
+                </page>
             </xpath>
 
             <xpath expr="//notebook" position="inside">
