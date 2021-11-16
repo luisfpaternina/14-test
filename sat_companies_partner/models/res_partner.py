@@ -127,6 +127,12 @@ class ResPartner(models.Model):
         'product.template',
         compute="compute_gadgets_client",
         string='Gadgets')
+    gadget_oca_ids = fields.Many2many(
+        'product.template',
+        string='Gadgets')
+    gadget_community_ids = fields.Many2many(
+        'product.template',
+        string='Gadgets')
 
 
     _sql_constraints = [
