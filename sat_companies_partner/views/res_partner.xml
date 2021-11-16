@@ -165,6 +165,7 @@
                
                 <xpath expr="//search/group" position="inside">
                     <filter string="Delegation" name="delegation_id" context="{'group_by':'delegation_id'}"/>
+                    <filter string="Contact type" name="partner_type_id" context="{'group_by':'partner_type_id'}"/>
                 </xpath>
 
                 <xpath expr="//search/filter[@name='type_person']" position="after">
@@ -172,7 +173,6 @@
                     <filter string="Potencial client" name="is_potential_client" domain="[('is_potential_client', '!=', False)]"/>
                     <filter string="Is admin" name="is_admin" domain="[('is_admin', '!=', False)]"/>
                     <filter string="Is O.C.A" name="is_oca" domain="[('is_oca', '!=', False)]"/>
-                    <filter string="Contact type" name="partner_type_id" domain="[('partner_type_id', '!=', False)]"/>
                     <filter string="Is maintainer" name="is_maintainer" domain="[('is_maintainer', '!=', False)]"/>
                 </xpath>
 
