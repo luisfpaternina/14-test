@@ -131,7 +131,10 @@ class ResPartner(models.Model):
         'product.template',
         compute="compute_gadgets_oca",
         string='Gadgets')
-    gadget_maintener_ids = fields.Many2many('product.template')
+    gadget_maintener_ids = fields.Many2many(
+        'product.template',
+        compute="compute_gadgets_comunities"
+        string='Gadgets')
 
     
     _sql_constraints = [
@@ -167,6 +170,15 @@ class ResPartner(models.Model):
                 record.gadget_oca_ids = products.ids
             else:
                 record.gadget_oca_ids = False
+
+
+    def compute_gadgets_comunities(self):
+        for record in self:
+            products = self.env['product.template'].search([('res_partner_high_mto_id','=',self.id)])
+            if products:
+                record.gadget_maintener_ids = products.ids
+            else:
+                record.gadget_maintener_ids = False
 
 
     @api.constrains('percentaje_mto', 'percentaje_rep')
