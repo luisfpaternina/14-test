@@ -7,7 +7,8 @@ class CrmLead(models.Model):
 
     is_external = fields.Boolean(
         string="Is external",
-        tracking=True)
+        tracking=True,
+        compute="_compute_is_external")
     sale_type_id = fields.Many2one(
         'sale.order.type',
         string="Sale type",
@@ -41,4 +42,12 @@ class CrmLead(models.Model):
     def _compute_check_email_medium_id(self):
         for record in self:
             record.is_medium_email = True if record.medium_id and record.medium_id[0].name  == 'Email' else False
-    
+
+
+    @api.depends('medium_id')
+    def _compute_is_external(self):
+        for record in self:
+            if record.is_medium_email == True or record.is_medium_website == True:
+                record.is_external = True
+            else:
+                record.is_external = False
