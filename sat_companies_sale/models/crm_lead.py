@@ -23,4 +23,6 @@ class CrmLead(models.Model):
     managed_by = fields.Selection([
         ('president','President'),
         ('admin','Administrator')],string="Managed by")
+    is_medium_website = fields.Boolean(
+        string="Website medium")
     
