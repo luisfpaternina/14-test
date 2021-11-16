@@ -129,6 +129,7 @@ class ResPartner(models.Model):
         string='Gadgets')
     gadget_oca_ids = fields.Many2many(
         'product.template',
+        compute="compute_gadgets_oca",
         string='Gadgets')
 
     
@@ -156,6 +157,15 @@ class ResPartner(models.Model):
                 record.gadget_client_ids = products.ids
             else:
                 record.gadget_client_ids = False
+
+
+    def compute_gadgets_oca(self):
+        for record in self:
+            products = self.env['product.template'].search([('partner_oca_id','=',self.id)])
+            if products:
+                record.gadget_oca_ids = products.ids
+            else:
+                record.gadget_oca_ids = False
 
 
     @api.constrains('percentaje_mto', 'percentaje_rep')
