@@ -127,7 +127,7 @@
                         </group>
                     </group>
                 </page>
-                <page string="Gagdets" name="gadgest" attrs="{'invisible': [('is_oca', '!=', False)]}">
+                <page string="Gagdets" name="gadgest" attrs="{'invisible': [('is_oca', '!=', True)]}">
                     <group>
                         <group>
                             <field name="gadget_oca_ids">
