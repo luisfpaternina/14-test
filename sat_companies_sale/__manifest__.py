@@ -19,7 +19,6 @@
         'base_automation',
         'sale_subscription',
         'sat_companies',
-        'sat_companies_partner',
 
     ],
 
@@ -31,12 +30,14 @@
         'views/crm_lead.xml',
         'views/crm_lead_type.xml',
         'views/sale_order.xml',
+        'templates/sale_contract_report_web_template.xml',
         'templates/sale_contract_mail_template.xml',
+        'templates/template_sale_sample.xml',
         'data/sale_order_sent_email_data.xml',
         'data/sale_order_maintenance_offer.xml',
         'data/crm_lead_opportunity_notify.xml',
         'data/base_automatization.xml',
-        'reports/sale_order_suspension_contract.xml',
+        'data/mail_contract.xml',
         
     ],
     'installable': True

@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data >
+        <template id="sale_contract_report">
+            <!--<script type="text/javascript" src="/sat_companies_sale/static/src/js/javascript.js"></script>-->
+            <link rel="stylesheet" href="/sat_companies_sale/static/src/css/contract_sale.css"/>
+            <t t-call="website.layout">
+                <main>
+                    <div class = "alert alert-info alert-dismissible rounded-0 fade show d-print-none css_editable_mode_hidden">
+                        <div class = "container">
+                            <div class="text-center">
+                                This is a preview of the customer portal.
+                            </div>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"> × </button>
+                        </div>
+                    </div>
+                    <div class="container text-center" >
+                        <div class="card">
+                            <div class="col-sm-auto mt8">
+                                <a role="button" class="btn btn-primary" data-toggle="modal" data-target="#modalaccept" href="#"><i class="fa fa-check"/>Firmar</a>
+                            </div>
+                            <div class="col-sm-auto mt8">
+                                <button id="upload_signature" type="button" class="btn btn-primary">Cargar firma</button>
+                            </div>
+                            <div class="col-sm-auto mt8">
+                                <button id="preview_sale_contract" type="button" class="btn btn-primary">Ver contrato</button>
+                            </div>
+                        </div>
+                    </div>
+                    <body class="table-light">
+                        <div class="card">
+                            <div role="dialog" class="modal fade" id="modalaccept">
+                            <!--
+                                <form id="accept" method="POST" class="js_accept_json modal-content js_website_submit_form">
+                                    <header class="modal-content">
+                                        <h4 class="modal-title">Adopt Your Signature<span class="o_subtitle text-muted small"></span></h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" tabindex="-1">×</button>
+                                    </header>
+                                    <div class="modal-body">
+                                        DIV
+                                    </div>
+                                    <footer class="modal-footer">
+                                        FOOTER
+                                    </footer>
+                                </form>
+                            -->
+                                <div class="modal-dialog">
+                                    <form id="accept" method="POST" class="js_accept_json modal-content js_website_submit_form">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <header class="modal-header">
+                                            <h4 class="modal-title">Validate Order</h4>
+                                        </header>
+                                        <main class="modal-body" id="sign-dialog">
+                                            <p>
+                                                <span>FIRMA DE CONTRATO:</span>
+                                                <ul>
+                                                    <li><span>Seleccione una de las opciones para proceder con su firma:</span> </li>
+                                                </ul>
+                                                <div class="o_portal_signature_form"/>
+                                            </p>
+                                        </main>
+                                    </form>
+                                </div>
+                                -->
+                            </div>
+                        </div>
+                        
+                        <div id="document_contract_sale" class="card">
+                            <t t-call="web.html_container">
+                                <t t-foreach="sale_object" t-as="o">
+                                    <t t-call="web.external_layout">
+                                        <div class="page">
+                                            <h2>Report title</h2>
+                                            <p>Cotización Número <span t-field="o.name"/></p>
+                                        </div>
+                                    </t>
+                                    <button onclick="copy()">Copy</button>
+                                </t>
+                            </t>
+                        </div>
+                    </body>
+                </main>
+            <!--
+                <div class="container text-center">
+                    <p>Referencia de contrato <span t-esc="name"/></p>
+                    <p id="id_value_sale" t-esc="id_value"/>
+                </div>
+                <link rel="stylesheet"
+                href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+                integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+                crossorigin="anonymous"/>
+                <body class="table-light">
+                    <div role="dialog" class="modal fade" id="modalaccept">
+                        <div class="modal-dialog">
+                            <form id="accept" method="POST" class="js_accept_json modal-content js_website_submit_form">
+                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                <header class="modal-header">
+                                    <h4 class="modal-title">Validate Order</h4>
+                                </header>
+                                <main class="modal-body" id="sign-dialog">
+                                    <p>
+                                        <span>FIRMA DE CONTRATO:</span>
+                                        <ul>
+                                            <li><span>Seleccione una de las opciones para proceder con su firma:</span> </li>
+                                        </ul>
+                                        <div class="o_portal_signature_form"/>
+                                    </p>
+                                </main>
+                            </form>
+                        </div>
+                    </div>
+                    <br></br>
+                    <br></br>
+                    <div id="div_principal_id" style="text-align: -webkit-center" class="table-light">
+                        <form class="col-sm-5">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2>Header</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <label for="formGroupExampleInput">Example label</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="col-sm-auto mt8">
+                                        <a role="button" class="btn btn-primary" data-toggle="modal" data-target="#modalaccept" href="#"><i class="fa fa-check"/>Firmar</a>
+                                    </div>
+                                    <div class="col-sm-auto mt8">
+                                        <button id="upload_signature" type="button" class="btn btn-primary">Cargar firma</button>
+                                    </div>
+                                    <div class="col-sm-auto mt8">
+                                        <button id="preview_sale_contract" type="button" class="btn btn-primary">Ver contrato</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <h1>DOCUMENTO CONTRATO</h1>
+                        <t t-call="web.html_container">
+                            <t t-call="web.external_layout">
+                                <div class="page">
+                                    <h2>Report title</h2>
+                                    <p>Cotización Número <span t-esc="name"/></p>
+                                </div>
+                            </t>
+                        </t>
+                    </div>
+                </body>
+            -->
+            </t>
+        </template>
+    </data>
+</odoo>

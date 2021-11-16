@@ -10,15 +10,16 @@
                 <attribute name="name">get_task_sale_type</attribute>
             </xpath>
 
-            <xpath expr="//field[(@name='payment_term_id')]" position="after">
-                <field name="delegation_id" options="{'no_create': True, 'no_create_edit':True}"/>
-            </xpath> 
+            <xpath expr="//form/header/button[8]" position="after">
+                <button name="action_get_attachment" type="object" string="Send Email to Contact"/>
+            </xpath>
 
             <xpath expr="//field[(@name='partner_id')]" position="after"> 
                 <field name="is_create_task" invisible="1"/>
                 <field name="check_contract_type" invisible="1"/>
                 <field name="sale_type_id" options="{'no_create': True, 'no_create_edit':True}" required="1"/>
                 <field name="type_contract" attrs="{'invisible': [('check_contract_type', '!=', True)]}"/>
+                <field name="pdf_file_sale_contract"/>
             </xpath>
             <xpath expr="//form/sheet/notebook/page[(@name='customer_signature')]" position="after">
                 <page string="Contract" name="type_service_contract">

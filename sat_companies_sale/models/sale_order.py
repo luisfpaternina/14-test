@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
+import base64
 
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
@@ -27,15 +28,13 @@ class SaleOrder(models.Model):
     check_contract_type = fields.Boolean(
         compute="_compute_check_contract_type",
         )
+
     type_service_id = fields.One2many(
         'sale.check.type.contract',
         'order_id',
         string='Type service'
         )
-    delegation_id = fields.Many2one(
-        'res.partner.delegation',
-        string="Delegation")
-    
+    pdf_file_sale_contract = fields.Binary()
 
     @api.depends('sale_type_id')
     def _compute_check_contract_type(self):
@@ -75,3 +74,51 @@ class SaleOrder(models.Model):
         
         table += '</ul>'
         return table if flag else False
+    
+    def action_contract_send(self):
+        self.ensure_one()
+        template = self.env.ref('sat_companies_sale.email_contract_signature')
+        lang = self.env.context.get('lang')
+        template_id = template.id
+        if template.lang:
+            lang = template._render_lang(self.ids)[self.id]
+        ctx = {
+            'default_model': 'sale.order',
+            'default_res_id': self.ids[0],
+            'default_use_template': bool(template_id),
+            'default_template_id': template_id,
+            'default_composition_mode': 'comment',
+            'mark_so_as_sent': True,
+            'custom_layout': "mail.mail_notification_paynow",
+            'proforma': self.env.context.get('proforma', False),
+            'force_email': True,
+            'model_description': self.with_context(lang=lang).type_name,
+        }
+        return {
+            'type': 'ir.actions.act_window',
+            'view_mode': 'form',
+            'res_model': 'mail.compose.message',
+            'views': [(False, 'form')],
+            'view_id': False,
+            'target': 'new',
+            'context': ctx,
+        }
+
+    def _compute_file_sale_contract(self):
+        pdf = self.env.ref('sat_companies_sale.action_email_contract_signature').render_qweb_pdf(self.ids)
+        b64_pdf = base64.b64encode(pdf[0])
+        """
+        for record in self:
+            pdf_file = self.env.ref('sat_companies_sale.action_email_contract_signature').report_action(self)
+            if pdf_file:
+                record.pdf_file_sale_contract = pdf_file
+            else:
+                record.pdf_file_sale_contract = False
+        """
+
+    def action_get_attachment(self):
+        pdf = self.env.ref('sat_companies_sale.action_email_contract_signature')._render_qweb_pdf(self.ids)
+        print('*******************************PDF*****************')
+        print(pdf)
+        b64_pdf = base64.b64encode(pdf[0])
+        self.pdf_file_sale_contract = b64_pdf

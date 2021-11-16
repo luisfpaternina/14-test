@@ -13,8 +13,6 @@
                 <field name="oportunity_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
                 <field name="client_type"/>
                 <field name="managed_by" attrs="{'invisible': [('client_type', '!=', 'neighborhood_community')]}"/>
-                <field name="is_medium_website" invisible="1"/>
-                <field name="is_medium_email" invisible="1"/>
             </xpath>
         </field>
     </record>
