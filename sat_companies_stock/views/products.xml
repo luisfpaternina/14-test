@@ -114,6 +114,12 @@
                             <field name="zone_name"/>
                         </group>
                         <group>
+                            <field name="employee_notice_id"/>
+                        </group>
+                        <group>
+                            <field name="employee_greasing_id"/>
+                        </group>
+                        <group>
                             <field name="route_id" options="{'no_create': True, 'no_create_edit':True}"/>
                             <field name="cabine_phone"/>
                         </group>
