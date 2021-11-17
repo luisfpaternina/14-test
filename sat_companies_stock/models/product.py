@@ -282,7 +282,14 @@ class ProductTemplate(models.Model):
         string="Planning type")
     planning_type_name = fields.Char(
         string="Planning type name")
-
+    employee_notice_id = fields.Many2one(
+        'hr.employee',
+        string="Operator notice",
+        tracking=True)
+    employee_greasing_id = fields.Many2one(
+        'hr.employee',
+        string="Greasing operator",
+        tracking=True)
 
 
     # Ejecutar Secuencia 
