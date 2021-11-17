@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-03 01:14+0000\n"
-"PO-Revision-Date: 2021-11-03 01:14+0000\n"
+"POT-Creation-Date: 2021-11-17 22:04+0000\n"
+"PO-Revision-Date: 2021-11-17 22:04+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -183,7 +183,6 @@ msgstr "Tipo de subscripción"
 
 #. module: sat_companies_stock
 #: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_maintenance_frequency
-#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_planning_type
 #: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_stock_gadgets
 #: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_stock_gadgets_billing_period
 #: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_stock_gadgets_contract_type
@@ -397,6 +396,12 @@ msgid "Gadgets use"
 msgstr "Uso"
 
 #. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__employee_greasing_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__employee_greasing_id
+msgid "Greasing operator"
+msgstr "Operador engrase"
+
+#. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__high_mto_company
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__res_partner_high_mto_id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__high_mto_company
@@ -478,11 +483,6 @@ msgstr ""
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_planning_type__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
-
-#. module: sat_companies_stock
-#: model_terms:ir.ui.view,arch_db:sat_companies_stock.inherit_view_product_template_only_form_view_sat
-msgid "Include maintenance"
-msgstr "Incluir mantenimiento"
 
 #. module: sat_companies_stock
 #: model:ir.actions.act_window,name:sat_companies_stock.action_view_stock_gadgets_increase_type
@@ -761,7 +761,6 @@ msgstr "Meses"
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_gadgets_types_assistance_form
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_gadgets_use_form
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_maintenance_frequency_form
-#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_planning_type_form
 msgid "Name"
 msgstr "Nombre"
 
@@ -882,6 +881,12 @@ msgid "October"
 msgstr "Octubre"
 
 #. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__employee_notice_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__employee_notice_id
+msgid "Operator notice"
+msgstr "Operador aviso"
+
+#. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__pending_date_corrected
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__pending_date_corrected
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__pending_date_corrected
@@ -889,11 +894,9 @@ msgid "Pending date to be corrected"
 msgstr ""
 
 #. module: sat_companies_stock
-#: model:ir.actions.act_window,name:sat_companies_stock.action_view_planning_type
 #: model:ir.model,name:sat_companies_stock.model_stock_planning_type
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__planning_type_id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__planning_type_id
-#: model:ir.ui.menu,name:sat_companies_stock.menu_stock_planning_type
 msgid "Planning type"
 msgstr "Tipo de plannig"
 
@@ -942,6 +945,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__ref
 msgid "Reference"
 msgstr "Referencia"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__responsable_zone_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__responsable_zone_id
+msgid "Responsable"
+msgstr ""
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__route_id
@@ -1095,7 +1104,7 @@ msgstr "Uso"
 #: code:addons/sat_companies_stock/models/sale_subscription.py:0
 #, python-format
 msgid "Validate potential client in partner"
-msgstr ""
+msgstr "Validar si es cliente potencial"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__website_message_ids
