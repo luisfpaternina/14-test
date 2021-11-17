@@ -285,10 +285,12 @@ class ProductTemplate(models.Model):
     employee_notice_id = fields.Many2one(
         'hr.employee',
         string="Operator notice",
+        related="zone_id.employee_id",
         tracking=True)
     employee_greasing_id = fields.Many2one(
         'hr.employee',
         string="Greasing operator",
+        related="zone_id.employee_greasing_id",
         tracking=True)
 
 
