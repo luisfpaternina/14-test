@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<templates id="template" xml:space="preserve"> 
-    
-</templates>
+<template xml:space="preserve">
+
+    <t t-extend="ClientDetailsEdit">
+        <t t-jquery=".client-details-left" t-operation="replace">
+            <div class='client-details-left'>
+                <div class='client-detail'>
+                    <span class='label'>Razón</span>
+                    
+                </div>
+            </div>
+        </t>
+   </t>
