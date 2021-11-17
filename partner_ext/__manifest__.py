@@ -32,9 +32,7 @@
     'views/assets.xml',
                    
     ],
-    'qweb': [
-        'static/src/xml/pos.xml',
-    ],
+    
     'installable': True
 }
 
