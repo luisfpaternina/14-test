@@ -1,22 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<templates id="template" xml:space="preserve">
-
-   
-<t t-name="ClientListScreenNew" t-inherit="point_of_sale.ClientListScreen" t-inherit-mode="extension" owl="1">
-    <xpath expr="//table[hasclass('client-list')]" position="replace">
-            <table class='client-list'>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Tipo Doc.</th>
-                        <th>Número</th>
-                        <th t-if="!env.isMobile">Phone</th>
-                    </tr>
-                </thead>
-                <tbody class='client-list-contents'>
-                </tbody>
-            </table>
+<templates id="template" xml:space="preserve"> 
+    <t t-name="ClientListScreenNew" t-inherit="point_of_sale.ClientDetailsEdit" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[class('client-detail')]" position="after">
+            <div class="client-detail">
+                <span class="label">PATER</span>
+                    <input class="detail client-address-street" name="street" t-on-change="captureChange" t-att-value="props.partner.street || ''" placeholder="Street" />
+            </div> 
         </xpath>
     </t>
-
 </templates>
