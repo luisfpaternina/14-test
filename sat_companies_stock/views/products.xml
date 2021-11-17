@@ -120,7 +120,7 @@
                             <field name="employee_greasing_id"/>
                         </group>
                          <group>
-                            
+                            <field name="responsable_zone_id"/>
                         </group>
                         <group>
                             
