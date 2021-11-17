@@ -32,7 +32,6 @@
     'views/assets.xml',
                    
     ],
-    
     'installable': True
 }
 
