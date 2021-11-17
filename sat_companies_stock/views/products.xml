@@ -117,10 +117,10 @@
                             <field name="employee_notice_id"/>
                         </group>
                         <group>
-                            
+                            <field name="employee_greasing_id"/>
                         </group>
                          <group>
-                            <field name="employee_greasing_id"/>
+                            
                         </group>
                         <group>
                             

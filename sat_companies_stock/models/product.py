@@ -292,7 +292,10 @@ class ProductTemplate(models.Model):
         string="Greasing operator",
         related="zone_id.employee_greasing_id",
         tracking=True)
-
+    responsable_zone_id = fields.Many2one(
+        'hr.employee',
+        related="zone_id.responsable_id")
+    
 
     # Ejecutar Secuencia 
     @api.model
