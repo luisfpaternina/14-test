@@ -8,7 +8,6 @@
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Resp. AFIP</th>
                         <th>Tipo Doc.</th>
                         <th>Número</th>
                         <th t-if="!env.isMobile">Phone</th>
