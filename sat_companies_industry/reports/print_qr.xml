@@ -20,17 +20,18 @@
                     <div class="article o_report_layout_standard">
                        <div class="page">
                             <t t-if="o.qr_pit_image">
-                                <strong><p align="center">Foso</p></strong>
+                                <strong><p align="center">FOSO</p></strong>
                                 <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_pit_image)" width="280" height="280"/>
-                                <span>EAN:</span><span t-field="o.product_id.rae"></span>
+                                <span>EAN:</span><span t-field="o.product_id.rae"></span><br></br>
+                                <span>00005</span>
                             </t>
                             <t t-if="o.qr_cabine_image">
-                                <strong><p align="center">Cabina</p></strong>
+                                <strong><p align="center">CABINA</p></strong>
                                 <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_cabine_image)" width="280" height="280"/>
                                 <span>EAN:</span><span t-field="o.product_id.rae"></span>
                             </t>
                             <t t-if="o.qr_machine_image">
-                                <strong><p align="center">Máquina</p></strong>
+                                <strong><p align="center">MÁQUINA</p></strong>
                                 <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_machine_image)" width="280" height="280"/>
                                 <span>EAN:</span><span t-field="o.product_id.rae"></span>
                             </t>
