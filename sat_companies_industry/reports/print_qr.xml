@@ -17,7 +17,7 @@
                     </div>
                     <div class="article o_report_layout_standard">
                        <div class="page">
-                            cuerpo
+                            <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_pit_image)" width="115" height="90"/>
                        </div>
                     </div>
                     <div class="footer">
