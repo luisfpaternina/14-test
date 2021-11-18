@@ -16,6 +16,7 @@
                        <h3>Print QR labels</h3>
                        <strong><span>OT:</span></strong><span> </span><span t-field="o.name"></span><br></br>
                        <strong><span>Aparato:</span></strong><span> </span><span t-field="o.product_id"></span>
+                       <strong><span>Delegación:</span></strong><span> </span><span t-field="o.product_id.delegation_id"></span>
                     </div>
                     <div class="article o_report_layout_standard">
                        <div class="page">
@@ -23,9 +24,6 @@
                                 <strong><p align="center">FOSO</p></strong>
                                 <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_pit_image)" width="280" height="280"/>
                                 <span>EAN:</span><span t-field="o.product_id.rae"></span><br></br>
-                            </t>
-                            <t t-if="o.qr_pit_image">
-                                <span>00005</span>
                             </t>
                             <t t-if="o.qr_cabine_image">
                                 <strong><p align="center">CABINA</p></strong>
