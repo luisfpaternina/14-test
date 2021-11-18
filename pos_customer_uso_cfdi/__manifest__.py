@@ -1,15 +1,21 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'POS Customer Extend',
+
     'summary': "Set Default Customer in POS and CFDI Use.",
+
     'description': 'Set Default Customer in POS',
 
     'author': '',
+
     'website': '',
+
     "support": "",
 
     'category': 'Point of Sale',
+
     'version': '13.0.0.1.0',
+
     'depends': ['point_of_sale','l10n_mx_edi'],
 
     'data': [
@@ -21,6 +27,7 @@
     'license': "OPL-1",
 
     'installable': True,
+    
     'application': True,
 
 }
