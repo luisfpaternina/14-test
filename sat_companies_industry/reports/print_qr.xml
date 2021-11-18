@@ -17,7 +17,10 @@
                     </div>
                     <div class="article o_report_layout_standard">
                        <div class="page">
-                            <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_pit_image)" width="115" height="90"/>
+                            <t t-if="o.qr_pit_image">
+                                <p>Foso</p>
+                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_pit_image)" width="200" height="200"/>
+                            </t>
                        </div>
                     </div>
                     <div class="footer">
