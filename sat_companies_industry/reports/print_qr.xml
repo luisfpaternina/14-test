@@ -22,7 +22,7 @@
                             <t t-if="o.qr_pit_image">
                                 <p align="center">Foso</p>
                                 <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_pit_image)" width="280" height="280"/>
-                                <span>EAN:</span>
+                                <span>EAN:</span><span t-field="o.product_id.rae"></span>
                             </t>
                             <t t-if="o.qr_cabine_image">
                                 <p align="center">Cabina</p>
