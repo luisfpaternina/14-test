@@ -21,15 +21,15 @@
                        <div class="page">
                             <t t-if="o.qr_pit_image">
                                 <p align="center">Foso</p>
-                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_pit_image)" width="300" height="300"/>
+                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_pit_image)" width="280" height="280"/>
                             </t>
                             <t t-if="o.qr_cabine_image">
                                 <p align="center">Cabina</p>
-                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_cabine_image)" width="300" height="300"/>
+                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_cabine_image)" width="280" height="280"/>
                             </t>
                             <t t-if="o.qr_machine_image">
                                 <p align="center">Máquina</p>
-                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_machine_image)" width="300" height="300"/>
+                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_machine_image)" width="280" height="280"/>
                             </t>
                        </div>
                     </div>
