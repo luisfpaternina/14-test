@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-15 20:06+0000\n"
-"PO-Revision-Date: 2021-11-15 20:06+0000\n"
+"POT-Creation-Date: 2021-11-18 13:20+0000\n"
+"PO-Revision-Date: 2021-11-18 13:20+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -30,11 +30,23 @@ msgid ""
 msgstr ""
 
 #. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_qr
+msgid ""
+"<br/>\n"
+"                       <strong><span>Aparato:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_industry
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template
 msgid ""
 "<span>PUESTA EN MARCHA:</span><br/>\n"
 "                                    <span>REPARACIÓN:</span><br/>\n"
 "                                    <span>MANTENIMIENTO:</span>"
+msgstr ""
+
+#. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_qr
+msgid "<strong><span>OT:</span></strong><span> </span>"
 msgstr ""
 
 #. module: sat_companies_industry
@@ -196,6 +208,11 @@ msgid "August"
 msgstr "Agosto"
 
 #. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_qr
+msgid "Cabina"
+msgstr ""
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__checklist_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__checklist_id
 msgid "Checklist"
@@ -227,7 +244,6 @@ msgstr "Contacto"
 #. module: sat_companies_industry
 #: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_inspection
 #: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_minute_point
-#: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_multiple_labels
 #: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_ot_checklist
 #: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_ot_checklist_location
 #: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_ot_type
@@ -383,6 +399,11 @@ msgid "Formated date"
 msgstr "Formato fecha"
 
 #. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_qr
+msgid "Foso"
+msgstr ""
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__product_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__gadget_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__product_id
@@ -478,22 +499,22 @@ msgstr "Inspecciones"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_april
 msgid "Is April"
-msgstr ""
+msgstr "Es abril"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_august
 msgid "Is August"
-msgstr ""
+msgstr "Es agosto"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_december
 msgid "Is December"
-msgstr ""
+msgstr "Es diciembre"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_february
 msgid "Is February"
-msgstr ""
+msgstr "Es febrero"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_is_follower
@@ -512,42 +533,42 @@ msgstr "Es un seguidor"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_january
 msgid "Is January"
-msgstr ""
+msgstr "Es enero"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_july
 msgid "Is July"
-msgstr ""
+msgstr "Es julio"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_june
 msgid "Is June"
-msgstr ""
+msgstr "Es junio"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_march
 msgid "Is March"
-msgstr ""
+msgstr "Es marzo"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_may
 msgid "Is May"
-msgstr ""
+msgstr "Es mayo"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_november
 msgid "Is November"
-msgstr ""
+msgstr "Is noviembre"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_october
 msgid "Is October"
-msgstr ""
+msgstr "Es octubre"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_september
 msgid "Is September"
-msgstr ""
+msgstr "Is septiembre"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__is_reviewed
@@ -749,9 +770,7 @@ msgid "Month"
 msgstr "Mes"
 
 #. module: sat_companies_industry
-#: model:ir.actions.act_window,name:sat_companies_industry.action_view_multiple_labels
 #: model:ir.model,name:sat_companies_industry.model_multiple_labels
-#: model:ir.ui.menu,name:sat_companies_industry.menu_multiple_labels
 msgid "Multiple labels"
 msgstr "Múltiples etiquetas"
 
@@ -759,6 +778,11 @@ msgstr "Múltiples etiquetas"
 #: model:ir.model,name:sat_companies_industry.model_multiple_labels_lines
 msgid "Multiple labels lines"
 msgstr "Líneas de múltiples etiquetas"
+
+#. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_qr
+msgid "Máquina"
+msgstr ""
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__name
@@ -963,14 +987,13 @@ msgstr "Fecha inicio.Prev"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__is_selected
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_multiple_labels_form
 msgid "Print"
 msgstr "IMPRIMIR"
 
 #. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_multiple_labels_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_qr
 msgid "Print QR labels"
-msgstr "Imprimir etiquetas QR"
+msgstr "Impresión de etiquetas QR"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_multiple_labels_lines__wizard_id
@@ -1188,6 +1211,11 @@ msgstr "Nombre"
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_ot_typet_form
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_type_associated_form
 msgid "ot_checklist_form"
+msgstr ""
+
+#. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_qr
+msgid "pie de pagina"
 msgstr ""
 
 #. module: sat_companies_industry
