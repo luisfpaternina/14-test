@@ -2,7 +2,7 @@
 <templates id="template" xml:space="preserve">
 
     <t t-extend="ClientDetailsEdit">
-        <t t-jquery=".client-details-right div:nth-child(4)" t-operation="after">
+        <t t-jquery=".client-details-right div:nth-child(2)" t-operation="after">
             <div class='client-detail'>
                 <span class='label'>Uso CFDI</span>
                 <select class="detail l10n_mx_edi_usage" name='l10n_mx_edi_usage' >
