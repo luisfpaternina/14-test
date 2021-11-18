@@ -14,8 +14,8 @@
                 <t t-foreach="docs" t-as="o">                    
                     <div class="header">
                        <h3>Print QR labels</h3>
-                       <span>OT:</span><span> </span><span t-field="o.name"></span><br></br>
-                       <span>Aparato:</span><span> </span><span t-field="o.product_id"></span>
+                       <strong><span>OT:</span></strong><span> </span><span t-field="o.name"></span><br></br>
+                       <strong><span>Aparato:</span></strong><span> </span><span t-field="o.product_id"></span>
                     </div>
                     <div class="article o_report_layout_standard">
                        <div class="page">
