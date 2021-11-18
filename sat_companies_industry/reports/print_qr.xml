@@ -3,7 +3,7 @@
   <data>
         <report
                 id="report_print_qr"
-                string="Print QR labels"
+                string="Imprimir etiquetas QR"
                 model="project.task"
                 report_type="qweb-pdf"
                 name="sat_companies_industry.report_print_qr"
@@ -36,12 +36,7 @@
                     <div class="footer">
                         <div class="row">
                             <div class="col-xs-2 pull-left">
-                                <small>
-                                    <span>Page</span>
-                                    <span class="page" />
-                                        of
-                                    <span class="topage" />
-                                </small>
+                               
                             </div>
                         </div>
                     </div>
