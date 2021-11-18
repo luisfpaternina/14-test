@@ -34,6 +34,7 @@
         'views/project_task_inspection.xml',
         'views/project_task_ot_checklist_location.xml',
         'reports/worksheet.xml',
+        'reports/print_qr.xml',
         'data/sequences.xml',
         
     ],
