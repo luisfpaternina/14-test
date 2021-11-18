@@ -19,9 +19,13 @@
                             <h2>Report title</h2>
                             <p>Cotización Número <span t-field="o.name"/></p>
                         </div>
+                        <div>
+                            <img  id="signature_pad_image_document" t-att-src="o.signature_url_text"/>
+                        </div>
                     </t>
                 </t>
             </t>
+
         </template>
 
         <record id="email_contract_signature" model="mail.template">
@@ -53,6 +57,11 @@
                         <br/><br/>
                         Do not hesitate to contact us if you have any questions.
                         <br/>
+                        <div style="margin:16px 0px 16px 0px;">
+                                <a href="/contract/${object.id}" style="background-color:#875A7B;padding: 20px 30px 20px 30px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;">
+                                    Signature Contract
+                                </a>
+                        </div>
                     </p>
                 </div>
             </field>

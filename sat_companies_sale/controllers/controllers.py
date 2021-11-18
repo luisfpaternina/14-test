@@ -40,6 +40,11 @@ class SaleContractController(http.Controller):
         return(s)
 
     @http.route(['/send_sale'], type='json', auth='public', website=True)
-    def send_sale_data(self, text_input = None):
-        print('sample')
-        print(text_input)
+    def send_sale_data(self, url_signature = None, id_sale=None):
+        if id_sale and url_signature:
+            id_sale = int(id_sale)
+            sales = request.env['sale.order'].sudo().search([('id','=',id_sale)])
+            for sale in sales:
+                sale.signature_url_text = url_signature
+                sale.check_signature = True
+

@@ -1,63 +1,198 @@
 odoo.define('sat_companies_sale.javascript', ['web.ajax'], function(require){
 
-    "use strict";
+  "use strict";
 
-    var ajax = require('web.ajax');
-    var button_sig_upload = document.getElementById("upload_signature")
-    var button_dowload_contract = document.getElementById("preview_sale_contract")
-
-    $(document).ready(function (){
-        var container = document.getElementById("contract_test");
-
-        if (container){
-            container.innerHTML = "";
-            container.innerHTML = "<div class='col text-center'>Cargando</div>";
-
-            ajax.jsonRpc('/get_sale', 'call', {}).then(function(data){
-                container.innerHTML = "";
-                console.log(data)
-                for (var i=0; i < data.length; i++){
-                    container.innerHTML += '<h6 class="text-center mt-3 pb-1">' + data[i].name + '</h6>';
-                }
-                
-            });
-
-        }
-    });
-
-    
-
-    button_sig_upload.onclick = function () {
-        console.log('1')
-        var c = document.getElementsByClassName("jSignature");
-        console.log('2')
-        var ctx = c.getContext("2d");
-        ctx.fillRect(10, 10, 50, 50);
-        console.log('3')
-        function copy() {
-            var imgData = ctx.getImageData(10, 10, 50, 50);
-            ctx.putImageData(imgData, 10, 70);
-        }
-        console.log('test sample')
-        var text_input = document.getElementById("formGroupExampleInput").value
-        console.log('test  2')
-        //var image_signature = document.getElementsByClassName("jSignature")
-        //var context = image_signature.getContext('2d');
-
-        console.log(text_input)
-
-        ajax.jsonRpc('/send_sale', 'call', {text_input: text_input});
-    
+  var ajax = require('web.ajax');
+  var id_sale = document.getElementById("id_value_sale").textContent;
+  
+  //SIGNATURE PAD JQUERY
+  (function() {
+    window.requestAnimFrame = (function(callback) {
+      return window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimaitonFrame ||
+        function(callback) {
+          window.setTimeout(callback, 1000 / 60);
+        };
+    })();
+  
+    var canvas = document.getElementById("sig-canvas");
+    var ctx = canvas.getContext("2d");
+    ctx.strokeStyle = "#222222";
+    ctx.lineWidth = 4;
+  
+    var drawing = false;
+    var mousePos = {
+      x: 0,
+      y: 0
     };
+    var lastPos = mousePos;
+  
+    canvas.addEventListener("mousedown", function(e) {
+      drawing = true;
+      lastPos = getMousePos(canvas, e);
+    }, false);
+  
+    canvas.addEventListener("mouseup", function(e) {
+      drawing = false;
+    }, false);
+  
+    canvas.addEventListener("mousemove", function(e) {
+      mousePos = getMousePos(canvas, e);
+    }, false);
+  
+    // Add touch event support for mobile
+    canvas.addEventListener("touchstart", function(e) {
+  
+    }, false);
+  
+    canvas.addEventListener("touchmove", function(e) {
+      var touch = e.touches[0];
+      var me = new MouseEvent("mousemove", {
+        clientX: touch.clientX,
+        clientY: touch.clientY
+      });
+      canvas.dispatchEvent(me);
+    }, false);
+  
+    canvas.addEventListener("touchstart", function(e) {
+      mousePos = getTouchPos(canvas, e);
+      var touch = e.touches[0];
+      var me = new MouseEvent("mousedown", {
+        clientX: touch.clientX,
+        clientY: touch.clientY
+      });
+      canvas.dispatchEvent(me);
+    }, false);
+  
+    canvas.addEventListener("touchend", function(e) {
+      var me = new MouseEvent("mouseup", {});
+      canvas.dispatchEvent(me);
+    }, false);
+  
+    function getMousePos(canvasDom, mouseEvent) {
+      var rect = canvasDom.getBoundingClientRect();
+      return {
+        x: mouseEvent.clientX - rect.left,
+        y: mouseEvent.clientY - rect.top
+      }
+    }
+  
+    function getTouchPos(canvasDom, touchEvent) {
+      var rect = canvasDom.getBoundingClientRect();
+      return {
+        x: touchEvent.touches[0].clientX - rect.left,
+        y: touchEvent.touches[0].clientY - rect.top
+      }
+    }
+  
+    function renderCanvas() {
+      if (drawing) {
+        ctx.moveTo(lastPos.x, lastPos.y);
+        ctx.lineTo(mousePos.x, mousePos.y);
+        ctx.stroke();
+        lastPos = mousePos;
+      }
+    }
+  
+    // Prevent scrolling when touching the canvas
+    document.body.addEventListener("touchstart", function(e) {
+      if (e.target == canvas) {
+        e.preventDefault();
+      }
+    }, false);
+    document.body.addEventListener("touchend", function(e) {
+      if (e.target == canvas) {
+        e.preventDefault();
+      }
+    }, false);
+    document.body.addEventListener("touchmove", function(e) {
+      if (e.target == canvas) {
+        e.preventDefault();
+      }
+    }, false);
+  
+    (function drawLoop() {
+      requestAnimFrame(drawLoop);
+      renderCanvas();
+    })();
+  
+    function clearCanvas() {
+      canvas.width = canvas.width;
+    }
+  
+    // Set up the UI
+    var sigText = document.getElementById("sig-dataUrl");
+    var sigImage = document.getElementById("sig-image");
+    var sigImagedoc = document.getElementById("signature_pad_image_document");
+    var clearBtn = document.getElementById("sig-clearBtn");
+    var submitBtn = document.getElementById("sig-submitBtn");
+    clearBtn.addEventListener("click", function(e) {
+      clearCanvas();
+      sigText.innerHTML = "Data URL for your signature will go here!";
+      sigImage.setAttribute("src", "");
+      sigImagedoc.setAttribute("src", "");
+    }, false);
+    submitBtn.addEventListener("click", function(e) {
+      var dataUrl = canvas.toDataURL();
+      sigText.innerHTML = dataUrl; 
+      sigImage.setAttribute("src", dataUrl);
+      sigImagedoc.setAttribute("src", dataUrl);
 
-    button_dowload_contract.onclick = function () {
-        console.log("TEST  BUTTON DOWLOAD")
-        var id_sale = document.getElementById("id_value_sale").textContent;
-        ajax.jsonRpc('/get_sale/print_report_contract/', 'call', {id_sale: id_sale});
-    
-    };
+      var buttonSendDoc = document.getElementById("send_document")
+      buttonSendDoc.onclick = function () {
+      ajax.jsonRpc('/send_sale', 'call', {url_signature: dataUrl,
+                                          id_sale: id_sale});
+
+      };
+    }, false);
+  
+  })();
 
 
+  const image_input = document.querySelector("#image_input");
+  //var clearBtnfile = document.getElementById("sig_clearBtn_file");
+  //var submitBtnfile = document.getElementById("sig_submitBtn_file");
+  image_input.addEventListener("change", function() {
+    //var sigImagedoc = document.getElementById("signature_pad_image_document");
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+    const uploaded_image = reader.result;
+    document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
+    //
+    //clearBtnfile.addEventListener("click", function() {
+    //  sigImagedoc.setAttribute("src", "");
+    //  document.querySelector("#display_image").setAttribute("src", "");;
+    //}, false);
 
+    //submitBtnfile.addEventListener("click", function(e) {
+    //  document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
+    //  sigImagedoc.setAttribute("src", `url(${uploaded_image})`);
+    //}, false);
+  });
+    reader.readAsDataURL(this.files[0]);
+  });
+
+  // Hidden options
+  var draw_select_option = document.getElementById("signature_draw_option")
+  var upload_select_option = document.getElementById("signature_upload_option")
+
+  upload_select_option.addEventListener("click", function() {
+    console.log("upload_select_option")
+    document.getElementById("menu_signature_pad").hidden = true;
+    console.log("upload_select_option")
+    document.getElementById("menu_signature_upload").hidden = false;
+    console.log("upload_select_option")
+  }, false);
+
+  draw_select_option.addEventListener("click", function() {
+    console.log("draw_select_option")
+    document.getElementById("menu_signature_upload").hidden = true;
+    console.log("draw_select_option")
+    document.getElementById("menu_signature_pad").hidden = false;
+    console.log("draw_select_option")
+  }, false);
 
 });

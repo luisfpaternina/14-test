@@ -35,6 +35,8 @@ class SaleOrder(models.Model):
         string='Type service'
         )
     pdf_file_sale_contract = fields.Binary()
+    signature_url_text = fields.Text()
+    check_signature = fields.Boolean()
 
     @api.depends('sale_type_id')
     def _compute_check_contract_type(self):
