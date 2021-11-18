@@ -15,7 +15,7 @@
                     <div class="header">
                        <h3>Print QR labels</h3>
                        <strong><span>OT:</span></strong><span> </span><span t-field="o.name"></span><br></br>
-                       <strong><span>Aparato:</span></strong><span> </span><span t-field="o.product_id"></span>
+                       <strong><span>Aparato:</span></strong><span> </span><span t-field="o.product_id"></span><br></br>
                        <strong><span>Delegación:</span></strong><span> </span><span t-field="o.product_id.delegation_id"></span>
                     </div>
                     <div class="article o_report_layout_standard">
