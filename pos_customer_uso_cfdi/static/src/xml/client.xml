@@ -34,7 +34,7 @@
     </t>
 
     <t t-extend="ClientDetails">
-        <t t-jquery=".client-details-right div:nth-child(1)" t-operation="after">
+        <t t-jquery=".client-details-right div:nth-child(2)" t-operation="after">
             <div class='client-detail'>
                 <span class='label'>Uso CFDI</span>
                 <t t-if='partner.l10n_mx_edi_usage'>
