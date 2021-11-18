@@ -24,6 +24,9 @@
                                 <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_pit_image)" width="280" height="280"/>
                                 <span>EAN:</span><span t-field="o.product_id.rae"></span><br></br>
                             </t>
+                            <t t-if="o.qr_pit_image">
+                                <span>00005</span>
+                            </t>
                             <t t-if="o.qr_cabine_image">
                                 <strong><p align="center">CABINA</p></strong>
                                 <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_cabine_image)" width="280" height="280"/>
