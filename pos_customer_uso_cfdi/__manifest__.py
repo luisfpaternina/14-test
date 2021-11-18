@@ -4,9 +4,9 @@
     'summary': "Set Default Customer in POS and CFDI Use.",
     'description': 'Set Default Customer in POS',
 
-    'author': 'German Ponce Dominguez',
-    'website': 'http://poncesoft.blogspot.com',
-    "support": "german.poncce@outlook.com",
+    'author': '',
+    'website': '',
+    "support": "",
 
     'category': 'Point of Sale',
     'version': '13.0.0.1.0',
@@ -23,5 +23,4 @@
     'installable': True,
     'application': True,
 
-    'images': ['static/description/banner.png'],
 }
