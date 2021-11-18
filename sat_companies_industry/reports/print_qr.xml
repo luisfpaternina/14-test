@@ -34,7 +34,16 @@
                        </div>
                     </div>
                     <div class="footer">
-                        pie de pagina
+                        <div class="row">
+                            <div class="col-xs-2 pull-left">
+                                <small>
+                                    <span>Page</span>
+                                    <span class="page" />
+                                        of
+                                    <span class="topage" />
+                                </small>
+                            </div>
+                        </div>
                     </div>
                 </t>
             </t>
