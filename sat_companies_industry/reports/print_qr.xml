@@ -24,8 +24,9 @@
                                 <center>
                                     <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_pit)"/>
                                     <div>
-                                        <strong><span>FOSO</span></strong><br></br>
-                                        <span>RAE:</span><span t-field="o.product_id.rae"></span>
+                                        <span>RAE:</span><span t-field="o.product_id.rae"></span><br></br>
+                                        <span t-field="o.product_id.delegation_id"></span><span> </span><span>Foso</span><br></br>
+                                        <span t-field="o.product_id"></span>
                                     </div>
                                 </center>
                             </t>
@@ -33,8 +34,9 @@
                                 <center>
                                     <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_cabine)"/>
                                     <div>
-                                        <strong><span>CABINA</span></strong><br></br>
-                                        <span>RAE:</span><span t-field="o.product_id.rae"></span>
+                                        <span>RAE:</span><span t-field="o.product_id.rae"></span><br></br>
+                                        <span t-field="o.product_id.delegation_id"></span><span> </span><span>Cabina</span><br></br>
+                                        <span t-field="o.product_id"></span>
                                     </div>
                                 </center>
                             </t>
@@ -42,8 +44,9 @@
                                 <center>
                                     <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_machine)"/>
                                     <div>
-                                        <strong><span>MÁQUINA</span></strong><br></br>
-                                        <span>RAE:</span><span t-field="o.product_id.rae"></span>
+                                        <span>RAE:</span><span t-field="o.product_id.rae"></span><br></br>
+                                        <span t-field="o.product_id.delegation_id"></span><span> </span><span>Máquina</span><br></br>
+                                        <span t-field="o.product_id"></span>
                                     </div>
                                 </center>
                             </t>
