@@ -10,49 +10,76 @@ class ProjectTaskInherit(models.Model):
     _inherit = 'project.task'
     
     ##QR SCANNER FIELDS##
-    qr_scanner = fields.Char('Qr Scanner')
-
+    qr_scanner = fields.Char(
+        'Qr Scanner')
     state_check_qr = fields.Selection([
         ('checking','Checking'),
         ('done','Done')],string="State Check Gagdest", default='checking', tracking=True)
-    
-    delegation = fields.Many2one('res.partner.delegation', string="Delegation")
-    from_gadget = fields.Many2one('stock.gadgets', string="From the Gadget")
-    to_gadget = fields.Many2one('stock.gadgets', string="To the Gadget")
-    from_zone = fields.Many2one('res.partner.zones', string="From the Zone")
-    to_zone = fields.Many2one('res.partner.zones', string="To the Zone")
-    
-    delegation_location = fields.Char(string="Name",
-                                        related='delegation.name')
-    from_gadget_location = fields.Char(string="Name",
-                                        related='from_gadget.name')
-    to_gadget_location = fields.Char(string="Name",
-                                    related='to_gadget.name')
-    from_zone_location = fields.Char(string="Name",
-                                    related='from_zone.name')
-    to_zone_location = fields.Char(string="Name",
-                                    related='to_zone.name')
-    
-    qr_scanner = fields.Char(String = 'Qr Scanner')
-    #url_home = fields.Char('Url Home', compute="_generate_qr_code")
+    delegation = fields.Many2one(
+        'res.partner.delegation',
+        string="Delegation")
+    from_gadget = fields.Many2one(
+        'stock.gadgets',
+        string="From the Gadget")
+    to_gadget = fields.Many2one(
+        'stock.gadgets',
+        string="To the Gadget")
+    from_zone = fields.Many2one(
+        'res.partner.zones',
+        string="From the Zone")
+    to_zone = fields.Many2one(
+        'res.partner.zones',
+        string="To the Zone")
+    delegation_location = fields.Char(
+        string="Name",
+        related='delegation.name')
+    from_gadget_location = fields.Char(
+        string="Name",
+        related='from_gadget.name')
+    to_gadget_location = fields.Char(
+        string="Name",
+        related='to_gadget.name')
+    from_zone_location = fields.Char(
+        string="Name",
+        related='from_zone.name')
+    to_zone_location = fields.Char(
+        string="Name",
+        related='to_zone.name')
+    qr_scanner = fields.Char(
+        String = 'Qr Scanner')
+    check_pit = fields.Boolean(
+        String = 'Pit', tracking=True)
+    check_cabine = fields.Boolean(
+        String = 'Cabine', tracking=True)
+    check_machine = fields.Boolean(
+        String = 'Machine', tracking=True)
+    qr_pit = fields.Binary(
+        'Dowload Qr Image Pit',
+        compute="_generate_qr_code")
+    qr_pit_image = fields.Binary(
+        'QR CODE IMAGE PIT',
+        compute="_generate_qr_code")
+    qr_cabine = fields.Binary(
+        'Dowload QR Image Cabine',
+        compute="_generate_qr_code")
+    qr_cabine_image = fields.Binary(
+        'QR CODE IMAGE CABINE',
+        compute="_generate_qr_code")
+    qr_machine = fields.Binary(
+        'Dowload QR Image Machine',
+        compute="_generate_qr_code")
+    qr_machine_image = fields.Binary(
+        'QR CODE IMAGE MACHINE',
+        compute="_generate_qr_code")
+    check_qr_active = fields.Boolean(
+        'Check Qr')
+    pit_confirm = fields.Boolean(
+        'Pit confirm')
+    cabin_confirm = fields.Boolean(
+        'Cabine confirm')
+    machine_confirm = fields.Boolean(
+        'Machine confirm')
 
-    check_pit = fields.Boolean(String = 'Pit', tracking=True)
-    check_cabine = fields.Boolean(String = 'Cabine', tracking=True)
-    check_machine = fields.Boolean(String = 'Machine', tracking=True)
-    
-    qr_pit = fields.Binary('Dowload Qr Image Pit', compute="_generate_qr_code")
-    qr_pit_image = fields.Binary('QR CODE IMAGE PIT', compute="_generate_qr_code")
-
-    qr_cabine = fields.Binary('Dowload QR Image Cabine', compute="_generate_qr_code")
-    qr_cabine_image = fields.Binary('QR CODE IMAGE CABINE', compute="_generate_qr_code")
-
-    qr_machine = fields.Binary('Dowload QR Image Machine', compute="_generate_qr_code")
-    qr_machine_image = fields.Binary('QR CODE IMAGE MACHINE', compute="_generate_qr_code")
-
-    check_qr_active = fields.Boolean('Check Qr')
-    pit_confirm = fields.Boolean('Pit confirm')
-    cabin_confirm = fields.Boolean('Cabine confirm')
-    machine_confirm = fields.Boolean('Machine confirm')
 
     def confirm_check_gadget(self):
         for record in self:
@@ -83,6 +110,7 @@ class ProjectTaskInherit(models.Model):
                             record.machine_confirm = False
                             record.qr_scanner = False
     
+
     @api.onchange('qr_scanner')
     def _onchange_qr_scanner(self):
         for record in self:
@@ -100,6 +128,7 @@ class ProjectTaskInherit(models.Model):
                     record.state_check_qr = 'done'
                 else:
                     record.state_check_qr = 'checking'
+
 
     def _generate_qr_code(self):
         for record in self:
@@ -120,6 +149,7 @@ class ProjectTaskInherit(models.Model):
                 record.qr_cabine_image = False
                 record.qr_machine = False
                 record.qr_machine_image = False
+
 
     def action_url(self):
         return {  
