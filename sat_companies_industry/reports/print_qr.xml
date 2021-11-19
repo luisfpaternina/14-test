@@ -22,7 +22,7 @@
                        <div class="page">
                             <t t-if="o.qr_pit_image">
                                 <strong><p align="center">FOSO</p></strong>
-                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_pit_image)" width="280" height="280"/>
+                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_pit)"/>
                                 <span>RAE:</span><span t-field="o.product_id.rae"></span><br></br>
                             </t>
                             <t t-if="o.qr_cabine_image">
