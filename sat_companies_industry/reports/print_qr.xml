@@ -27,12 +27,12 @@
                             </t>
                             <t t-if="o.qr_cabine_image">
                                 <strong><p align="center">CABINA</p></strong>
-                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_cabine_image)" width="280" height="280"/>
+                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_cabine)"/>
                                 <span>RAE:</span><span t-field="o.product_id.rae"></span>
                             </t>
                             <t t-if="o.qr_machine_image">
                                 <strong><p align="center">MÁQUINA</p></strong>
-                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_machine_image)" width="280" height="280"/>
+                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_machine)"/>
                                 <span>RAE:</span><span t-field="o.product_id.rae"></span>
                             </t>
                        </div>
