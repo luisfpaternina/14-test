@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <data>
-        <report
-                id="report_custom_template"
-                string="Trabajos OT"
-                model="project.task"
-                report_type="qweb-pdf"
-                name="sat_companies_industry.report_custom_template"
-        />
-
-        <template id="report_custom_template">
+        
+        <template id="report_custom_template_worksheet">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="o">                    
                     <div class="header">
@@ -133,5 +126,13 @@
                 </t>
             </t>
         </template>
+        
+        <report
+                id="report_custom_template"
+                string="Trabajos OT"
+                model="project.task"
+                report_type="qweb-pdf"
+                name="sat_companies_industry.report_custom_template_worksheet"
+        />
     </data>
 </odoo>

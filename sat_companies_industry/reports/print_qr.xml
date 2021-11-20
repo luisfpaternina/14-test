@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
   <data>
-        <report
-                id="report_print_qr"
-                string="Imprimir etiquetas QR"
-                model="project.task"
-                report_type="qweb-pdf"
-                name="sat_companies_industry.report_print_qr"
-        />
-
-        <template id="report_print_qr">
+       
+        <template id="report_print_labels_qr">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="o">                    
                     <div class="header">
@@ -62,5 +55,14 @@
                 </t>
             </t>
         </template>
+        
+        <report
+                id="report_print_qr"
+                string="Imprimir etiquetas QR"
+                model="project.task"
+                report_type="qweb-pdf"
+                name="sat_companies_industry.report_print_labels_qr"
+        />
+
   </data>
 </odoo>
