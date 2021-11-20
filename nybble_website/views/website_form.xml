@@ -6,7 +6,7 @@
             <field name="model">helpdesk.ticket</field>
             <field name="inherit_id" ref="website_helpdesk.team"/>
             <field name="arch" type="xml">
-                <xpath expr="//div[@class='card-body']" position="after">
+                <xpath expr="//button[@class='navbar-toggler']" position="after">
                     <div>
                         <p>PATER - 1993</p>
                     </div>
