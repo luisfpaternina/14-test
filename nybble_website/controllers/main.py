@@ -7,6 +7,7 @@ class Patient(http.Controller):
     def patient_webform(self, **kw):
         return http.request.render('nybble_website.create_patient', {})
 
+
     @http.route('/create/webpatient', type="http", auth="public", website=True)
     def create_webpatient(self, **kw):
         request.env['helpdesk.ticket'].sudo().create(kw)
