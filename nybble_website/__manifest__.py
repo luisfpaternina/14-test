@@ -15,6 +15,7 @@
 
         'website',
         'helpdesk',
+        'website_helpdesk',
         'base',
     ],
 
