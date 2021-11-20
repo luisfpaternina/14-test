@@ -6,7 +6,7 @@
             <field name="model">helpdesk.ticket</field>
             <field name="inherit_id" ref="website_helpdesk_form.ticket_submit_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//t[1]/div[5]" position="after">
+                <xpath expr="//div[5]" position="after">
                     <div class="form-group col-12 s_website_form_field s_website_form_model_required" data-type="ticket_type_id" data-name="Field">
                         <div class="row s_col_no_resize s_col_no_bgcolor">
                             <label class="col-form-label col-auto s_website_form_label" style="width: 200px" for="helpdesk2">
