@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+     <data>
+        <record id="view_web_helpdesk_ticket_form_inherit" model="ir.ui.view">
+            <field name="name">helpdesk.ticket.website.inherit</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="website_helpdesk.team"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='card-body']" position="after">
+                    <div>
+                        <p>PATER - 1993</p>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>     
