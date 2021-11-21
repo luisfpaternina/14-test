@@ -1,6 +1,7 @@
 import json
 import random
 import urllib.request
+import logging
 
 HOST = 'localhost'
 PORT = 8069
@@ -36,3 +37,4 @@ args = {
     'create_uid': uid,
 }
 note_id = call(url, "object", "execute", DB, uid, PASS, 'note.note', 'create', args)
+logging.info("****************************************************************", note_id)
