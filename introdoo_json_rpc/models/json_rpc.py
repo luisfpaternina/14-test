@@ -4,7 +4,6 @@ import urllib.request
 import logging
 
 HOST = 'https://luisfpaternina-14-test-1112021-3515570.dev.odoo.com/'
-PORT = 
 DB = 'luisfpaternina-14-test-1112021-3515570'
 USER = 'admin'
 PASS = 'admin'
