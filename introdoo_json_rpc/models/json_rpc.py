@@ -2,6 +2,8 @@ import json
 import random
 import urllib.request
 
+HOST = 'localhost'
+PORT = 8069
 DB = 'luisfpaternina-14-test-1112021-3515570'
 USER = 'admin'
 PASS = 'admin'
@@ -23,3 +25,14 @@ def json_rpc(url, method, params):
 
 def call(url, service, method, *args):
     return json_rpc(url, "call", {"service": service, "method": method, "args": args})
+
+url = "http://%s:%s/jsonrpc" % (HOST, PORT)
+uid = call(url, "common", "login", DB, USER, PASS)
+
+# create a new note
+args = {
+    'color': 8,
+    'memo': 'This is another note',
+    'create_uid': uid,
+}
+note_id = call(url, "object", "execute", DB, uid, PASS, 'note.note', 'create', args)
