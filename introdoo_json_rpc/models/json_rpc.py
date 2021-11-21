@@ -2,9 +2,7 @@ import json
 import random
 import urllib.request
 
-HOST = 'localhost'
-PORT = 8069
-DB = 'openacademy'
+DB = 'luisfpaternina-14-test-1112021-3515570'
 USER = 'admin'
 PASS = 'admin'
 
