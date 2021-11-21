@@ -26,7 +26,7 @@ def json_rpc(url, method, params):
 def call(url, service, method, *args):
     return json_rpc(url, "call", {"service": service, "method": method, "args": args})
 
-url = "http://%s:%s/jsonrpc" % (HOST, PORT)
+url = "http://%s:%s/jsonrpc" % (HOST)
 uid = call(url, "common", "login", DB, USER, PASS)
 
 # create a new note
