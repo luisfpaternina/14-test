@@ -5,7 +5,7 @@
         <field name="name">Crear ausencia</field>
         <field name="url">holidays_webform</field>
         <field name="parent_id" ref="website.main_menu"/>
-        <field name="sequence">55</field>
+        <field name="sequence">56</field>
     </record>
 
     <template id="create_holidays" name="Create holidays">
@@ -40,7 +40,7 @@
     <record id="holidays_thanks" model="website.page">
         <field name="name">Thanks</field>
         <field name="type">qweb</field>
-        <field name="url">patient_thanks</field>
+        <field name="url">holidays_thanks</field>
         <field name="website_published">True</field>
         <field name="key">website_holidays.holidays_thanks</field>
         <field name="arch" type="xml">
