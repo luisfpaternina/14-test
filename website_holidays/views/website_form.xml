@@ -28,7 +28,7 @@
                                 <input type="text" name="name" t-att-value="name" id="name" class="form-control" placeholder="EJ: description..." style="text-transform: uppercase;"></input>
                             </div>
                             <div class="clearfix oe_login_buttons">
-                                <button type="submit" class="btn btn-primary pull-left">SUBMIT</button>
+                                <button type="submit" class="btn btn-primary pull-left">ENVIAR</button>
                             </div>
                         </form>
                     </div>
