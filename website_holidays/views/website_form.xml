@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-    <record id="menu_hr_holidays_form_website" model="website.menu">
+    <record id="menu_hr_holiday_form_website" model="website.menu">
         <field name="name">Crear ausencia</field>
         <field name="url">holidays_webform</field>
         <field name="parent_id" ref="website.main_menu"/>
@@ -25,7 +25,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="name" class="control-label">Descripción</label>
-                                <input type="text" name="name" t-att-value="name" id="name" class="form-control" placeholder="EJ: description..." required="required" style="text-transform: uppercase;"></input>
+                                <input type="text" name="name" t-att-value="name" id="name" class="form-control" placeholder="EJ: description..." style="text-transform: uppercase;"></input>
                             </div>
                             <div class="clearfix oe_login_buttons">
                                 <button type="submit" class="btn btn-primary pull-left">SUBMIT</button>
