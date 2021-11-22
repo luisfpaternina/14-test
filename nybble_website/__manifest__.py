@@ -16,6 +16,7 @@
         'website',
         'helpdesk',
         'website_helpdesk',
+        'website_helpdesk_form',
         'base',
     ],
 
