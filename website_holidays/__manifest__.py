@@ -36,7 +36,7 @@
     'data': [
        
         
-        'views/website_form.xml',
+        #'views/website_form.xml',
                     
     ],
     'installable': True
