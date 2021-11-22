@@ -11,4 +11,4 @@ class HrHolidays(http.Controller):
     @http.route('/create/webholidays', type="http", auth="public", website=True)
     def create_webholidays(self, **kw):
         request.env['hr.leave'].sudo().create(kw)
-        return request.render("website_holidays.patient_thanks", {})
+        return request.render("website_holidays.holidays_thanks", {})
