@@ -1,5 +1,6 @@
 from odoo import http
 from odoo.http import request
+from odoo.addons.website_form.controllers.main import WebsiteForm
 
 class Patient(http.Controller):
     @http.route('/patient_webform', type="http", auth="public", website=True)
