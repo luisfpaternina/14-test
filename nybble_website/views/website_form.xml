@@ -2,7 +2,7 @@
 <odoo>
      <data>
         <template id="report_custom_helpdesk_ticket" name="inherit_website_helpdesk_ticket_form" inherit_id="website_helpdesk_form.team_form_1">
-            <xpath expr="//div[@class='col-sm col-xs-12']" position="after">
+            <xpath expr="//div[5]" position="after">
                 <h2>PATER</h2>
             </xpath>
         </template>
