@@ -3,7 +3,8 @@ import random
 import urllib.request
 import logging
 
-
+HOST = 'https://luisfpaternina-14-test-1112021-3515570.dev.odoo.com/'
+PORT = 8069
 DB = 'luisfpaternina-14-test-1112021-3515570'
 USER = 'admin'
 PASS = 'admin'
@@ -26,7 +27,7 @@ def json_rpc(url, method, params):
 def call(url, service, method, *args):
     return json_rpc(url, "call", {"service": service, "method": method, "args": args})
 
-url = "http://%s:%s/jsonrpc" % ()
+url = "http://%s:%s/jsonrpc" % (HOST, PORT)
 uid = call(url, "common", "login", DB, USER, PASS)
 
 # create a new note
