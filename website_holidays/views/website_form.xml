@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="menu_hr_holidays_form_website" model="website.menu">
+        <field name="name">Create holiday</field>
+        <field name="url">holidays_webform</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">55</field>
+    </record>
+
+    <template id="create_holidays" name="Create holidays">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <div class="container">
+                        <form role="form" action="/create/webholidays" method="POST">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"></input>
+                            <div class="form-group">
+                                <label for="name" class="control-label">Name</label>
+                                <input type="text" name="name" t-att-value="name" id="name" class="form-control" placeholder="EJ: description..." required="required" style="text-transform: uppercase;"></input>
+                            </div>
+                            <div class="form-group">
+                                <label for="holiday_status_id" class="control-label">Tipo de ausencia</label>
+                                <select class="form-control link-style" name="holiday_status_id">
+                                    <t t-foreach="leave_type_rec" t-as="leave">
+                                        <option t-esc="leave.name" t-att-value="leave.id"/>
+                                    </t>
+                                </select>
+                            </div>
+                            <div class="clearfix oe_login_buttons">
+                                <button type="submit" class="btn btn-primary pull-left">SUBMIT</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <record id="patient_thanks" model="website.page">
+        <field name="name">Thanks</field>
+        <field name="type">qweb</field>
+        <field name="url">patient_thanks</field>
+        <field name="website_published">True</field>
+        <field name="key">introdoo.patient_thanks</field>
+        <field name="arch" type="xml">
+            <t name="thanks" t-name="introdoo.patient_thanks">
+                <t t-call="website.layout">
+                    <div id="wrap">
+                        <div class="container">
+                            <h1>Thanks!</h1>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="alert alert-success" role="status">
+                                        Successfully created record
+                                    </div>
+                                    <p>
+                                        Thank you for using our web portal!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+
+</odoo>     
