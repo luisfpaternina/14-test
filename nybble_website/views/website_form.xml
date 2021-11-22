@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
      <data>
-        <template id="report_custom_helpdesk_ticket" name="inherit_website_helpdesk_ticket_form" inherit_id="website_helpdesk_form.ticket_submit_form">
+        <template id="report_custom_helpdesk_ticket" name="inherit_website_helpdesk_ticket_form" inherit_id="website_helpdesk_form.team_form_1">
             <xpath expr="//div[@class='col-sm col-xs-12']" position="after">
                 <h2>PATER</h2>
             </xpath>
