@@ -3,7 +3,14 @@
      <data>
         <template id="report_custom_helpdesk_ticket" name="inherit_website_helpdesk_ticket_form" inherit_id="website_helpdesk_form.team_form_1">
             <xpath expr="//div[5]" position="after">
-                <h2>PATER</h2>
+                <div class="form-group">
+                    <label for="ticket_type_id" class="control-label">Tipo de ticket</label>
+                        <select class="form-control link-style" name="ticket_type_id">
+                            <t t-foreach="ticket_type_rec" t-as="type">
+                                <option t-esc="type.name" t-att-value="type.id"/>
+                            </t>
+                        </select>
+                </div>
             </xpath>
         </template>
     </data>
