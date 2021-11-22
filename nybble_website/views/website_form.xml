@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
      <data>
-        <record id="view_web_helpdesk_ticket_form_inherit" model="ir.ui.view">
-            <field name="name">helpdesk.ticket.website.inherit</field>
-            <field name="model">helpdesk.ticket</field>
-            <field name="inherit_id" ref="website_helpdesk_form.ticket_submit_form"/>
-            <field name="arch" type="xml">
-                <xpath expr="//div[last()]" position="after">
-                    <div class="form-group field-login">
-                        <label for="street">Ticket type</label>
-                        <input type="text" name="ticket_type_id" id="ticket_type_id" class="form-control form-control-sm"/>
-                    </div>
-                </xpath>
-            </field>
-        </record>
+        <template id="report_custom_helpdesk_ticket" inherit_id="website_helpdesk_form.website_helpdesk_form.ticket_submit_form">
+            <xpath expr="//div[1]" position="after">
+                <h2>PATER</h2>
+            </xpath>
+        </template>
     </data>
 </odoo>     
