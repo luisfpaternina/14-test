@@ -37,6 +37,10 @@
         'views/stock_gadgets_increase_type.xml',
         'views/sale_subscription.xml',
         'views/stock_gadgets_maintenance_frequency.xml',
+        'views/stock_elevator_type.xml',
+        'views/stock_soil_type.xml',
+        'views/stock_cockpit_keypad.xml',
+        'views/stock_cockpit_push.xml',
         
     ],
     'installable': True

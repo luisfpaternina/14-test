@@ -15,6 +15,7 @@
 
         'sale_management',
         'crm',
+        'website',
         'sat_companies_project',
         'base_automation',
         'sale_subscription',

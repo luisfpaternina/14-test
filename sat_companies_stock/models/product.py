@@ -295,7 +295,102 @@ class ProductTemplate(models.Model):
     responsable_zone_id = fields.Many2one(
         'hr.employee',
         related="zone_id.responsable_id")
-    
+    elevator_type_id = fields.Many2one(
+        'stock.elevator.type',
+        string="Elevator type")
+    is_machine_room = fields.Boolean(
+        string="Machine room")
+    gadget_model = fields.Char(
+        string="Gadget model")
+    partner_maker_id = fields.Many2one(
+        'res.partner',
+        string="Maker")
+    tractor_group = fields.Char(
+        string="Tractor group")
+    bench = fields.Selection([
+        ('high','High'),
+        ('low','Low')],string="Bench")
+    motor_power = fields.Char(
+        string="Motor power")
+    motor_brake = fields.Char(
+        string="Motor brake")
+    number_stops = fields.Integer(
+        string="Number of stops")
+    numer_people = fields.Integer(
+        string="Number of people")
+    load = fields.Float(
+        string="Load")
+    nominal_speed = fields.Float(
+        string="Nominal speed")
+    route = fields.Char(
+        string="Gadget route")
+    is_reduced_pit = fields.Boolean(
+        string="Reduced pit")
+    is_reduced_flight = fields.Boolean(
+        string="Reduced flight")
+    gate_operator = fields.Char(
+        string="Gate operator")
+    shipment = fields.Selection([
+        ('simple','Simple'),
+        ('double','Doble'),
+        ('triple','Triple')],string="Shipment")
+    soil_type_id = fields.Many2one(
+        'stock.soil.type',
+        string="Soil type")
+    cockpit_keypad_id = fields.Many2one(
+        'stock.cockpit.type',
+        string="Cockpit keypad type")
+    cockpit_push_id = fields.Many2one(
+        'stock.cockpit.push.type',
+        string="Cockpit push type")
+    wash_cabin = fields.Char(
+        string="Wash cabin")
+    traction_cables = fields.Float(
+        string="Traction cables")
+    maneuver = fields.Char(
+        string="Maneuver")
+    maneuvering_box = fields.Char(
+        string="Maneuvering box")
+    belt_operator = fields.Char(
+        string="Belt operator")
+    is_operator_brake = fields.Boolean(
+        string="Operator brake")
+    is_timed_cabin_light = fields.Boolean(
+        string="Timed cabin light")
+    cabin_tube_types = fields.Char(
+        string="Cabin tube types")
+    number_of_tubes = fields.Integer(
+        string="N° tubes")
+    is_weighing_scales = fields.Boolean(
+        string="Weighing scales")
+    tractor_pulley = fields.Float(
+        string="Tractor pulley")
+    tensioner_pulley = fields.Float(
+        string="Tensioner pulley")
+    limiter_pulley = fields.Float(
+        string="Limiter pulley")
+    deflection_pulley = fields.Float(
+        string="Deflection pulley")
+    counterweight_pulley = fields.Float(
+        string="Counterweight pulley")
+    counterweight_wedging = fields.Boolean(
+        string="Counterweight wedging")
+    cabine_wedging = fields.Boolean(
+        string="Cabine wedging")
+    cabin_puffer = fields.Boolean(
+        string="Cabin puffer")
+    counterweight_puffer = fields.Boolean(
+        string="Counterweight puffer")
+    bidirectional_model = fields.Char(
+        string="Bidirectional model")
+    gsm_model = fields.Char(
+        string="Model GSM")
+    line = fields.Selection([
+        ('1','fixed'),
+        ('2','movil')],string="Line")
+    is_netel_line = fields.Boolean(
+        string="Netel line")
+
 
     # Ejecutar Secuencia 
     @api.model
@@ -311,3 +406,24 @@ class ProductTemplate(models.Model):
         if self.start_date_contract > self.end_date_contract:
             raise ValidationError(_(
                 'The contract start date cannot be greater than the end date'))
+
+
+    @api.onchange('gadget_model')
+    def _upper_gadget_model(self):        
+        self.gadget_model = self.gadget_model.upper() if self.gadget_model else False
+
+
+    @api.constrains('number_stops')
+    def _check_number_stops(self):
+        for record in self:
+            if record.number_stops < 0:
+                raise ValidationError(_(
+                    "The number of stops cannot lesser cero! : %s" % record.number_stops))
+
+
+    @api.constrains('numer_people')
+    def _check_number_people(self):
+        for record in self:
+            if record.numer_people < 0:
+                raise ValidationError(_(
+                    "The number of people cannot lesser cero! : %s" % record.numer_people))
