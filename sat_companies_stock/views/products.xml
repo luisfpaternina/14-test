@@ -161,6 +161,16 @@
                         </group>
                     </group>
                 </page>
+                <page string="Technical data" attrs="{'invisible': [('is_gadget', '!=', True)]}">
+                    <group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                            
+                        </group>
+                    </group>
+                </page>
             </xpath>
 
         </field>
