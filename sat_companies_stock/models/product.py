@@ -390,6 +390,16 @@ class ProductTemplate(models.Model):
         ('2','movil')],string="Line")
     is_netel_line = fields.Boolean(
         string="Netel line")
+    landing_gate = fields.Selection([
+        ('1','Manual'),
+        ('2','Automatic'),
+        ('3','Semiautomatic')],string="Landing gate")
+    landing_keypad = fields.Char(
+        string="Landing keypad")
+    landing_lock = fields.Char(
+        string="Landing lock")
+    landing_key = fields.Char(
+        string="Landing key")
 
 
     # Ejecutar Secuencia 

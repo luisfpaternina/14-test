@@ -229,7 +229,10 @@
                             <field name="is_netel_line"/>
                         </group>
                         <group>
-                            
+                            <field name="landing_gate"/>
+                            <field name="landing_keypad"/>
+                            <field name="landing_lock"/>
+                            <field name="landing_key"/>
                         </group>
                     </group>
                 </page>

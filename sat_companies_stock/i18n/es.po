@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-23 22:06+0000\n"
-"PO-Revision-Date: 2021-11-23 22:06+0000\n"
+"POT-Creation-Date: 2021-11-24 15:01+0000\n"
+"PO-Revision-Date: 2021-11-24 15:01+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -32,6 +32,338 @@ msgstr "4 años"
 #: model:ir.model.fields.selection,name:sat_companies_stock.selection__stock_gadgets__years__six
 msgid "6 years"
 msgstr "6 años"
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Acuñamiento cabina:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Acuñamiento contrapeso:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Bancada:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Cables tracción:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Carga(kgs):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Correa operador:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Cuadro de maniobras:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Embarque:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Fabricante:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Foso reducido:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Freno motor(V):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Freno operador:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Grupo tractor:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Huida reducida:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Linea netel:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Linea:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Llavín cabina:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Llavín rellano:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Luz temporizada cabina:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Maniobra:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Modelo GSM:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Modelo aparato:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Modelo bidireccional:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>N° paradas:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>N° personas:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Operador puerta:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Pesacargas:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Polea contrapeso (cm):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Polea desvío (cm):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Polea limitador (cm):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Polea tensora (cm):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Polea tractora (cm):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Potencia motor(KW):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Puertas Rellano:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Puffer cabina:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Puffer contrapeso:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Recorrido(mm):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Sala de máquinas:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Tipo ascensor:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Tipo botonera cabina:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Tipo botonera rellano:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Tipo cerraduras rellano:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Tipo pulsador cabina:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Tipo suelo:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Tipos tubo cabina:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Velocidad nominal(m/s):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid "<strong><span>R.A.E:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid "<strong>Aparato:</strong><span> </span>"
+msgstr ""
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__message_needaction
@@ -143,6 +475,11 @@ msgid "August"
 msgstr "Agosto"
 
 #. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__landing_gate__2
+msgid "Automatic"
+msgstr "Automática"
+
+#. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__belt_operator
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__belt_operator
 msgid "Belt operator"
@@ -177,7 +514,7 @@ msgstr "Periodo de facturación"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__cabin_puffer
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__cabin_puffer
 msgid "Cabin puffer"
-msgstr ""
+msgstr "Puffer cabina"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__cabin_tube_types
@@ -247,7 +584,7 @@ msgstr "Tipo de subscripción"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__counterweight_puffer
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__counterweight_puffer
 msgid "Counterweight puffer"
-msgstr ""
+msgstr "Puffer contrapeso"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__counterweight_pulley
@@ -739,6 +1076,30 @@ msgid "Keys"
 msgstr "Llaves"
 
 #. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__landing_gate
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__landing_gate
+msgid "Landing gate"
+msgstr "Puertas rellano"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__landing_key
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__landing_key
+msgid "Landing key"
+msgstr "Llavín rellano"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__landing_keypad
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__landing_keypad
+msgid "Landing keypad"
+msgstr "Tipo botonera rellano"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__landing_lock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__landing_lock
+msgid "Landing lock"
+msgstr "Tipo cerradura rellano"
+
+#. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template____last_update
 #: model:ir.model.fields,field_description:sat_companies_stock.field_sale_subscription____last_update
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type____last_update
@@ -918,6 +1279,11 @@ msgstr "Maniobra"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__maneuvering_box
 msgid "Maneuvering box"
 msgstr "Cuadro de maniobras"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__landing_gate__1
+msgid "Manual"
+msgstr "Manual"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_march
@@ -1191,6 +1557,11 @@ msgid "Operator notice"
 msgstr "Operador aviso"
 
 #. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid "PLANTILLA DATOS TÉCNICOS"
+msgstr ""
+
+#. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__pending_date_corrected
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__pending_date_corrected
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__pending_date_corrected
@@ -1208,6 +1579,11 @@ msgstr "Tipo de plannig"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__planning_type_name
 msgid "Planning type name"
 msgstr "Nombre tipo de planning"
+
+#. module: sat_companies_stock
+#: model:ir.actions.report,name:sat_companies_stock.report_print_template_data
+msgid "Plantilla datos técnicos"
+msgstr ""
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__city
@@ -1240,6 +1616,11 @@ msgstr "Plantilla de producto"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__rae
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__rae
 msgid "R.A.E."
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid "RECOPILACIÓN DATOS APARATOS"
 msgstr ""
 
 #. module: sat_companies_stock
@@ -1294,6 +1675,11 @@ msgstr "Nombre de la ruta"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_has_sms_error
 msgid "SMS Delivery error"
 msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__landing_gate__3
+msgid "Semiautomatic"
+msgstr "Semiautomática"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_september

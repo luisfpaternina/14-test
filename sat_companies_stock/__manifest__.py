@@ -41,6 +41,7 @@
         'views/stock_soil_type.xml',
         'views/stock_cockpit_keypad.xml',
         'views/stock_cockpit_push.xml',
+        'reports/technical_data_template.xml',
         
     ],
     'installable': True
