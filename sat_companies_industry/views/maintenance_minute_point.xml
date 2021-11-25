@@ -9,7 +9,7 @@
             <field name="arch" type="xml">
                 <tree string="maintenance_minute_point_tree">
                     <field name="code"/>
-                    <field name="name"/>
+                    <field name="description"/>
                     <field name="type_deffect_id"/>
                 </tree>
             </field>
