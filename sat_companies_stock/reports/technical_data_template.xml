@@ -6,8 +6,26 @@
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="o">                    
                     <div class="header">
-                       <h3>PLANTILLA DATOS TÉCNICOS</h3>
-                       <strong>Aparato:</strong><span> </span><span t-field="o.name"></span>
+                        <table style="width:100%">
+                          <tr>
+                            <th>
+                                <h4>DATOS TÉCNICOS</h4>
+                                <strong style="font-size:12px">Código aparato:</strong><span> </span><span t-field="o.default_code" style="font-size:12px"></span><br></br>
+                                <strong style="font-size:12px">Nombre aparato:</strong><span> </span><span t-field="o.name" style="font-size:12px"></span>
+                            </th>
+                            <th>
+                                <p align="right">
+                                    <img t-att-src="'data:image/png;base64,%s' % to_text(o.company_product_id.logo)" width="115" height="95"/>
+                                </p>
+                                <p align="right" style="font-size:10px">
+                                    <span t-field="o.company_product_id"></span><br></br>
+                                    <span t-field="o.company_product_id.street"></span><br></br>
+                                    <span t-field="o.company_product_id.phone"></span><br></br>
+                                    <span t-field="o.company_product_id.email"></span>
+                                </p>
+                            </th>
+                          </tr>
+                        </table>
                     </div>
                     <div class="article o_report_layout_standard">
                         <div class="page">
@@ -34,11 +52,15 @@
                                   background-color: #04AA6D;
                                   color: white;
                                 }
+                                span {
+                                font-size: 10px
+                                }
                             </style>
+                            <br></br>
                             <table style="width:100%" id="customers">
                                 <tr>
-                                    <th>
-                                        <p align="center">
+                                    <th colspan="2">
+                                        <p align="center" style="font-size:13px">
                                             RECOPILACIÓN DATOS APARATOS
                                         </p>
                                     </th>
@@ -77,6 +99,8 @@
                                         <strong><span>Cuadro de maniobras:</span></strong><span> </span><span t-field="o.maneuvering_box"></span><br></br>
                                         <strong><span>Correa operador:</span></strong><span> </span><span t-field="o.belt_operator"></span><br></br>
                                         <strong><span>Freno operador:</span></strong><span> </span><span t-field="o.is_operator_brake"></span><br></br>
+                                    </td>
+                                    <td>
                                         <strong><span>Luz temporizada cabina:</span></strong><span> </span><span t-field="o.is_timed_cabin_light"></span><br></br>
                                         <strong><span>Tipos tubo cabina:</span></strong><span> </span><span t-field="o.cabin_tube_types"></span><br></br>
                                         <strong><span>Polea tractora (cm):</span></strong><span> </span><span t-field="o.tractor_pulley"></span><br></br>
@@ -92,7 +116,6 @@
                                         <strong><span>Modelo GSM:</span></strong><span> </span><span t-field="o.gsm_model"></span><br></br>
                                         <strong><span>Linea:</span></strong><span> </span><span t-field="o.line"></span><br></br>
                                         <strong><span>Linea netel:</span></strong><span> </span><span t-field="o.is_netel_line"></span><br></br>
-
                                     </td>
                                 </tr>
                             </table>

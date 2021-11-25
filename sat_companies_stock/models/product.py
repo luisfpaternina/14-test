@@ -400,6 +400,17 @@ class ProductTemplate(models.Model):
         string="Landing lock")
     landing_key = fields.Char(
         string="Landing key")
+    company_id = fields.Many2one(
+    'res.company',
+    'Company',
+    default=lambda self: self.env.user.company_id 
+    )
+    company_product_id = fields.Many2one(
+        'res.company',
+        string='Company',
+        required=True,
+        readonly=True,
+        default=lambda self: self.env.user.company_id)
 
 
     # Ejecutar Secuencia 
