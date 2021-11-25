@@ -47,10 +47,7 @@ class ProjectTaskOtChecklist(models.Model):
         string="December")
     line_number = fields.Char(
         string="N° line",
-        readonly=True,
-        required=True,
-        copy=False,
-        default='New')
+        copy=False)
     location_id = fields.Many2one(
         'project.task.ot.checklist.location',
         string="Location")
@@ -92,15 +89,6 @@ class ProjectTaskOtChecklist(models.Model):
     @api.onchange('name')
     def _upper_name(self):        
         self.name = self.name.upper() if self.name else False
-
-
-    # Ejecutar Secuencia 
-    @api.model
-    def create(self, vals):
-        if vals.get('line_number', 'New') == 'New':
-            vals['line_number'] = self.env['ir.sequence'].next_by_code('checklist') or 'New'
-        result = super(ProjectTaskOtChecklist, self).create(vals)
-        return result
 
 
     @api.depends('create_date')

@@ -7,13 +7,55 @@
            <field name="model">wizard.sale.order.type</field>
            <field name="arch" type="xml">
                <form string="Sale order Type">
-                   <sheet>
+                   <sheet string="Create or Related a Project">
+                       <group colspan="2">
+                           <group colspan="1" col="2">
+                                <field name="is_new_project"
+                                      widget="boolean_toggle" 
+                                />
+                           </group>
+                           <group colspan="1" col="2">
+                                <field name="add_task_line"
+                                        widget="boolean_toggle"
+                                        attrs="{'invisible': [('is_new_project', '!=', True)]}"
+                                />
+                            </group>
+                        </group>
                        <group>
-                           <field name="sale_order_id"/>
-                           <group string="Crear o seleccionar proyecto">
+                           
+                       </group>
+                       <group>
+                           <group>
+                               <field name="sale_order_id" invisible="True"/>
                                <field name="sale_type_id"/>
+                            </group>
+                       </group>
+                       <group string="Project name" 
+                              attrs="{'invisible': [('is_new_project', '=', True)]}">
+                           <group>
+                               <div class="oe_title">
+                                    <h1>
+                                        <field name="name"
+                                               attrs="{'invisible': [('is_new_project', '=', True)],
+                                                      'required': [('is_new_project', '!=', True)]}"/>
+                                    </h1>
+                                </div>
                            </group>
                        </group>
+                       <group string="Project related"
+                              attrs="{'invisible': [('is_new_project', '!=', True)]}">
+                            <group>
+                                <field name="project_id"  
+                                       options="{'no_create': True, 'no_create_edit':True}"
+                                       attrs="{'invisible': [('is_new_project', '!=', True)],
+                                              'required': [('is_new_project', '=', True)]}"/>
+                            </group>
+                       </group>
+                       <notebook>
+                                <page string="Related Lines" id="related_lines"  attrs="{'invisible': [('add_task_line', '!=', True)]}">
+                                    <field name="project_line_ids" string="Task lines" widget="many2many_tags"/>
+                                </page>
+                        </notebook>
                        <footer>
                             <button string="Cancel"
                                 class="btn-secondary"

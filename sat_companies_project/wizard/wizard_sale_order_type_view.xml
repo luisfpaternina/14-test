@@ -8,10 +8,21 @@
            <field name="arch" type="xml">
                <form string="Sale order Type">
                    <sheet string="Create or Related a Project">
+                       <group colspan="2">
+                           <group colspan="1" col="2">
+                                <field name="is_new_project"
+                                      widget="boolean_toggle" 
+                                />
+                           </group>
+                           <group colspan="1" col="2">
+                                <field name="add_task_line"
+                                        widget="boolean_toggle"
+                                        attrs="{'invisible': [('is_new_project', '!=', True)]}"
+                                />
+                            </group>
+                        </group>
                        <group>
-                           <field name="is_new_project"
-                                  widget="boolean_toggle" 
-                            />
+                           
                        </group>
                        <group>
                            <group>
@@ -40,6 +51,11 @@
                                               'required': [('is_new_project', '=', True)]}"/>
                             </group>
                        </group>
+                       <notebook>
+                                <page string="Related Lines" id="related_lines"  attrs="{'invisible': [('add_task_line', '!=', True)]}">
+                                    <field name="project_line_ids" string="Task lines" widget="many2many_tags"/>
+                                </page>
+                        </notebook>
                        <footer>
                             <button string="Cancel"
                                 class="btn-secondary"

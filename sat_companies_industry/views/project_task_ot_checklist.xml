@@ -9,7 +9,7 @@
             <field name="arch" type="xml">
                 <tree string="project_task_ot_checklist_tree" editable="bottom">
                     <field name="line_number"/>
-                    <field name="user_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                    <field name="user_id" options="{'no_create': True, 'no_create_edit':True}" invisible="1"/>
                     <field name="name" required="1"/>
                     <field name="location_id" required="1" options="{'no_create': True, 'no_create_edit':True}"/>
                     <field name="task_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_fsm','=',True)]" invisible="1"/>
