@@ -28,8 +28,9 @@ class ResPartner(models.Model):
         for record in self:
             if record.company_type == 'company':
                 if record.is_potential_client != True:
-                    if not record.bank_ids:
-                        raise ValidationError(_('The bank account field must be filled out'))
+                    if not record.is_oca or record.is_maintainer:
+                        if not record.bank_ids:
+                            raise ValidationError(_('The bank account field must be filled out'))
             else:
                 print("Nothing!")
 
@@ -39,8 +40,9 @@ class ResPartner(models.Model):
         for record in self:
             if record.company_type == 'company':
                 if record.is_potential_client != True:
-                    if not record.vat:
-                        raise ValidationError(_('The identification number field must be filled out'))
+                    if not record.is_oca or record.is_maintainer:
+                        if not record.vat:
+                            raise ValidationError(_('The identification number field must be filled out'))
             else:
                 print('Nothing')
 
