@@ -43,3 +43,15 @@ class ResPartner(models.Model):
                         raise ValidationError(_('The identification number field must be filled out'))
             else:
                 print('Nothing')
+
+
+    @api.constrains('name','is_potential_client')
+    def _validate_is_potential_client_country(self):
+        for record in self:
+            if record.company_type == 'company':
+                if record.is_potential_client != True:
+                    if not record.is_oca or record.is_maintainer:
+                        if not record.country_id:
+                            raise ValidationError(_('The country field must be filled out'))
+            else:
+                print('Nothing')
