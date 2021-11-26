@@ -11,7 +11,7 @@
             </xpath>
 
             <xpath expr="//form/header/button[8]" position="after">
-                <button name="action_get_attachment" type="object" string="Send Email to Contact"/>
+                <button name="action_get_attachment" type="object" string="Send Email to Contact" invisible="1"/>
             </xpath>
 
             <xpath expr="//field[(@name='partner_id')]" position="after"> 
