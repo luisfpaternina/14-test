@@ -36,6 +36,7 @@
         'reports/worksheet.xml',
         'reports/print_qr.xml',
         'reports/technical_data_template.xml',
+        'reports/print_gadget_qr.xml',
         'data/sequences.xml',
         
     ],

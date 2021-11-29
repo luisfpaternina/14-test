@@ -2,7 +2,7 @@
 <odoo>
   <data>
        
-        <template id="report_print_labels_qr">
+        <template id="report_print_labels_gadget_qr">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="o">                    
                     <div class="header">
@@ -14,9 +14,9 @@
                                 <center>
                                     <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_pit)"/>
                                     <div>
-                                        <span>RAE:</span><span t-field="o.product_id.rae"></span><br></br>
-                                        <span t-field="o.product_id.delegation_id"></span><span> </span><span>Foso</span><br></br>
-                                        <span t-field="o.product_id"></span>
+                                        <span>RAE:</span><span t-field="o.rae"></span><br></br>
+                                        <span t-field="o.delegation_id"></span><span> </span><span>Foso</span><br></br>
+                                        <span t-field="o.name"></span>
                                     </div>
                                 </center>
                             </t>
@@ -24,9 +24,9 @@
                                 <center>
                                     <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_cabine)"/>
                                     <div>
-                                        <span>RAE:</span><span t-field="o.product_id.rae"></span><br></br>
-                                        <span t-field="o.product_id.delegation_id"></span><span> </span><span>Cabina</span><br></br>
-                                        <span t-field="o.product_id"></span>
+                                        <span>RAE:</span><span t-field="o.rae"></span><br></br>
+                                        <span t-field="o.delegation_id"></span><span> </span><span>Cabina</span><br></br>
+                                        <span t-field="o.name"></span>
                                     </div>
                                 </center>
                             </t>
@@ -34,9 +34,9 @@
                                 <center>
                                     <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_machine)"/>
                                     <div>
-                                        <span>RAE:</span><span t-field="o.product_id.rae"></span><br></br>
-                                        <span t-field="o.product_id.delegation_id"></span><span> </span><span>Máquina</span><br></br>
-                                        <span t-field="o.product_id"></span>
+                                        <span>RAE:</span><span t-field="o.rae"></span><br></br>
+                                        <span t-field="o.delegation_id"></span><span> </span><span>Máquina</span><br></br>
+                                        <span t-field="o.name"></span>
                                     </div>
                                 </center>
                             </t>
@@ -54,11 +54,11 @@
         </template>
         
         <report
-                id="report_print_qr"
+                id="report_print_gadget_qr"
                 string="Imprimir etiquetas QR de aparatos"
-                model="project.task"
+                model="product.template"
                 report_type="qweb-pdf"
-                name="sat_companies_industry.report_print_labels_qr"
+                name="sat_companies_industry.report_print_labels_gadget_qr"
         />
 
   </data>
