@@ -20,9 +20,6 @@
             <xpath expr="//field[(@name='street')]" position="attributes">
                 <attribute name="attrs">{'required':[('is_admin', '=', False),('is_oca', '=', False),('is_maintainer', '=', False),('is_potential_client', '=', False)]}</attribute>
             </xpath>
-            <xpath expr="//field[(@name='street2')]" position="attributes">
-                <attribute name="attrs">{'required':[('is_admin', '=', False),('is_oca', '=', False),('is_maintainer', '=', False),('is_potential_client', '=', False)]}</attribute>
-            </xpath>
             <xpath expr="//field[(@name='city')]" position="attributes">
                 <attribute name="attrs">{'required':[('is_admin', '=', False),('is_oca', '=', False),('is_maintainer', '=', False),('is_potential_client', '=', False)]}</attribute>
             </xpath>
