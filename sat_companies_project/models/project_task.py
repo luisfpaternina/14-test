@@ -1,7 +1,6 @@
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 from odoo.http import request
-from .qr_code_base import generate_qr_code
 import base64
 from io import BytesIO
 import qrcode
@@ -55,22 +54,22 @@ class ProjectTaskInherit(models.Model):
         String = 'Machine', tracking=True)
     qr_pit = fields.Binary(
         'Dowload Qr Image Pit',
-        compute="_generate_qr_code")
+        related="product_id.qr_pit")
     qr_pit_image = fields.Binary(
         'QR CODE IMAGE PIT',
-        compute="_generate_qr_code")
+        related="product_id.qr_pit_image")
     qr_cabine = fields.Binary(
         'Dowload QR Image Cabine',
-        compute="_generate_qr_code")
+        related="product_id.qr_cabine")
     qr_cabine_image = fields.Binary(
         'QR CODE IMAGE CABINE',
-        compute="_generate_qr_code")
+        related="product_id.qr_cabine_image")
     qr_machine = fields.Binary(
         'Dowload QR Image Machine',
-        compute="_generate_qr_code")
+        related="product_id.qr_machine")
     qr_machine_image = fields.Binary(
         'QR CODE IMAGE MACHINE',
-        compute="_generate_qr_code")
+        related="product_id.qr_machine_image")
     check_qr_active = fields.Boolean(
         'Check Qr')
     pit_confirm = fields.Boolean(
@@ -79,6 +78,8 @@ class ProjectTaskInherit(models.Model):
         'Cabine confirm')
     machine_confirm = fields.Boolean(
         'Machine confirm')
+    rae_gadget = fields.Char("R.A.E",
+                            related="product_id.rae")
 
 
     def confirm_check_gadget(self):
@@ -87,8 +88,8 @@ class ProjectTaskInherit(models.Model):
                 if 'pit' in record.qr_scanner or 'machine' in record.qr_scanner or 'cabine' in record.qr_scanner:
                     scanner_value = record.qr_scanner.split(",")
                     gadget_value = scanner_value[0]
-                    id_task = int(scanner_value[1])
-                    domain = ('id','=',id_task)
+                    id_product = int(scanner_value[1])
+                    domain = ('product_id','=',id_product)
                     project_task = self.env['project.task'].search([domain])
                     for task in project_task:
                         if gadget_value == 'pit':
@@ -130,25 +131,6 @@ class ProjectTaskInherit(models.Model):
                     record.state_check_qr = 'checking'
 
 
-    def _generate_qr_code(self):
-        for record in self:
-            if record.product_id:
-                base_url_pit = "pit,%d" % (record.id)
-                base_url_cabine = "cabine,%d" % (record.id)
-                base_url_machine = "machine,%d" % (record.id)
-                record.qr_pit = generate_qr_code(base_url_pit)
-                record.qr_pit_image = generate_qr_code(base_url_pit)
-                record.qr_cabine = generate_qr_code(base_url_cabine)
-                record.qr_cabine_image = generate_qr_code(base_url_cabine)
-                record.qr_machine = generate_qr_code(base_url_machine)
-                record.qr_machine_image = generate_qr_code(base_url_machine)
-            else:
-                record.qr_pit = False
-                record.qr_pit_image = False
-                record.qr_cabine = False
-                record.qr_cabine_image = False
-                record.qr_machine = False
-                record.qr_machine_image = False
 
 
     def action_url(self):
